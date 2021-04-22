@@ -56,7 +56,8 @@ module.exports = {
   }
 };
 
-// [*1] - Optional but improves the linting for TS: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
+// [*1] - Optional but improves the linting for TS:
+// https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
 ```
 
 

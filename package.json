@@ -1,6 +1,6 @@
 {
   "name": "@srbrahma/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My usual eslint configs for Typescript projects.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/SrBrahma/eslint-config.git"
   },
-  "keywords": ["eslint", "eslintconfig", "eslint-config", "SrBrahma"],
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "SrBrahma"
+  ],
   "author": "SrBrahma",
   "license": "ISC",
   "bugs": {
@@ -23,6 +28,5 @@
     "typescript": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*"
-
   }
 }
