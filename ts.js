@@ -84,10 +84,13 @@ module.exports = {
     "@typescript-eslint/no-misused-promises": "off",
 
     // Wasn't simply allowing `const a = x.y.functionA`.
-    "@typescript-eslint/unbound-method": "off"
+    "@typescript-eslint/unbound-method": "off",
 
+    // [1.1.0] Allows to use `const a = require('...')`. This is specially useful for `const pkg = require('../package.json')`,
+    // as TS will complain about importing a file outside rootDir (defined in tsconfig)
+    "@typescript-eslint/no-var-requires": "off"
 
-  // Limbo. Disabled, but may be reenabled at some point.
+    // Limbo. Disabled, but may be reenabled at some point.
 
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
     // "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type
@@ -96,5 +99,8 @@ module.exports = {
     // "@typescript-eslint/strict-boolean-expressions": ["warn", {
     //   allowNullableBoolean: true,
     // }],
+    //
+
+
   }
 };
