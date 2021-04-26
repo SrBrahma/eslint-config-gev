@@ -6,6 +6,7 @@ You can also use my [**`gev`** npx package](https://github.com/srbrahma/gev) tha
 
 Works according to https://eslint.org/docs/developer-guide/shareable-configs
 
+
 # Install:
 
 The other packages after this one are there to ensure the basic requirements are installed and updated.
@@ -16,7 +17,7 @@ The other packages after this one are there to ensure the basic requirements are
 
 - For Typescript + React Native projects:
 
-`npm i -D eslint-config-gev@latest eslint@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
+`npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest eslint-plugin-react-native@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
 
 
 # Usage:
