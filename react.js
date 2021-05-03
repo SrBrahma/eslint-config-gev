@@ -2,14 +2,13 @@
 // add further configs
 
 module.exports = {
+  "plugins": [
+    "react",
+  ],
   "extends": [
     "./ts.js",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-  ],
-
-  "plugins": [
-    "react",
   ],
   "rules": {
     "react/prop-types": "off",

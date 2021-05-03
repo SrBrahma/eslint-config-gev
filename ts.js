@@ -3,14 +3,13 @@
 // plugin vs extends: https://stackoverflow.com/a/61232480/10247962
 
 module.exports = {
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-  ],
-
-  "plugins": [
-    "@typescript-eslint"
   ],
 
   "rules": {
@@ -88,7 +87,12 @@ module.exports = {
 
     // [1.1.0] Allows to use `const a = require('...')`. This is specially useful for `const pkg = require('../package.json')`,
     // as TS will complain about importing a file outside rootDir (defined in tsconfig)
-    "@typescript-eslint/no-var-requires": "off"
+    "@typescript-eslint/no-var-requires": "off",
+
+    // Allow having a `function a(callback: () => void) {...}` to be called with a(async () => {...})`
+    "@typescript-eslint/no-misused-promises": [ "error", {
+      "checksVoidReturn": false
+    }]
 
     // Limbo. Disabled, but may be reenabled at some point.
 
