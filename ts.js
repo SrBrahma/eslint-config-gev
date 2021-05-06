@@ -67,6 +67,12 @@ module.exports = {
 
   // Etc
 
+    // Async functions that don't use await them will throw a warn. The default behaviour with the current extends, is to throw an error.
+    "@typescript-eslint/require-await": "warn",
+    // As said in https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md,
+    // the above rule (@typescript-eslint/require-await) requires this one.
+    "require-await": "warn",
+
     // Allows explicitating implicit types, like `const a: number = 10`
     "@typescript-eslint/no-inferrable-types": "off",
 

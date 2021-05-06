@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 2.0.2 (2021-05-06)
+
+* **`[ts]`** - `@typescript-eslint/require-await` now throws a warn instead of error.
+
+
 ## 2.0.1 (2021-05-03)
 
 * **`[ts]`** - Added
