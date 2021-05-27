@@ -6,9 +6,9 @@ module.exports = {
     "react",
   ],
   "extends": [
-    "./ts.js",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "./ts.js",
   ],
   "rules": {
     "react/prop-types": "off",

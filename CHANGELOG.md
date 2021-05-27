@@ -1,6 +1,12 @@
 # Changelog
 
 
+## 2.0.3 (2021-05-27)
+
+* **`[react]`** - Reordered extends
+* Reordered extends in README example
+
+
 ## 2.0.2 (2021-05-06)
 
 * **`[ts]`** - `@typescript-eslint/require-await` now throws a warn instead of error.
