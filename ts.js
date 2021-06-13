@@ -10,36 +10,10 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
+    "./js.js", // Further configs!
   ],
 
   "rules": {
-
-  // Prettyfier / Utils
-
-    // 2 spaces ftw. I used to use 4 and reject 2. People change! Sometimes for worse! >:D
-    "indent": ["warn", 2],
-
-    // \n instead of \r\n
-    "linebreak-style": ["warn", "unix"],
-
-    // Single quotes instead of double. Allows using template even if not required.
-    "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
-
-    // Adds `;` to every possible line end.
-    "semi": ["warn", "always"],
-
-    // Adds space after `,`
-    "comma-spacing": ["warn"],
-
-    // Adds trailing `,` on multiline items using `,`. Easier to add new items.
-    "comma-dangle": ["warn", "always-multiline"],
-
-    // TODO may/should be specified the cases https://eslint.org/docs/rules/space-in-brackets#exceptions
-    "array-bracket-spacing": ["warn", "never"],
-
-    // Spacing `{ spaceBeforeAndAfterItemsInCurlyBrackets }`
-    "object-curly-spacing": ["warn", "always"],
-
 
   // `any` / unsafe stuff handling. But, be responsible and careful!
 
@@ -69,9 +43,6 @@ module.exports = {
 
     // Async functions that don't use await them will throw a warn. The default behaviour with the current extends, is to throw an error.
     "@typescript-eslint/require-await": "warn",
-    // As said in https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md,
-    // the above rule (@typescript-eslint/require-await) requires this one.
-    "require-await": "warn",
 
     // Allows explicitating implicit types, like `const a: number = 10`
     "@typescript-eslint/no-inferrable-types": "off",
@@ -101,8 +72,6 @@ module.exports = {
     }]
 
     // Limbo. Disabled, but may be reenabled at some point.
-
-    // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
     // "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type
     // TS doesn't allow "== false" yet (4.1.2), so, this rule isn't good enough to test for falsy values.
     // https://github.com/microsoft/TypeScript/issues/26592#issuecomment-731608973
@@ -110,7 +79,5 @@ module.exports = {
     //   allowNullableBoolean: true,
     // }],
     //
-
-
   }
 };

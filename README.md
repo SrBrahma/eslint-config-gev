@@ -7,29 +7,41 @@ You can also use my [**`gev`** npx package](https://github.com/srbrahma/gev) tha
 Works according to https://eslint.org/docs/developer-guide/shareable-configs
 
 
+If interested, take a look into the source files to see what will be used as plugins, extends and rules.
+
+
 # Install:
 
 The other packages after this one are there to ensure the basic requirements are installed and updated.
 
-- For Typescript projects:
+## Typescript projects:
 
-`npm i -D eslint-config-gev@latest eslint@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
++ `npm i -D eslint-config-gev@latest eslint@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
 
-- For Typescript + React Native projects:
-
-`npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest eslint-plugin-react-native@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
+* Add `"eslint-config-gev"` *(or `"eslint-config-gev/ts"`)* to the `"extends": [...]` field in your eslintrc.
 
 
-# Usage:
+## Typescript + React Native projects:
 
-After installing, you just need to add `"eslint-config-gev"` to the `"extends": [...]` field in your eslintrc.
+* `npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
 
-Besides my customized rules, it will also add `"@typescript-eslint"` to the `"plugins"` field, and `"eslint:recommended"`, `"plugin:@typescript-eslint/recommended"` and `"plugin:@typescript-eslint/eslint-recommended"` to the `"extends"` field. You don't need to also have them in your eslintrc.
-
-[Read the **ts.js** file to see what it exactly changes](./ts.js).
+* Add `"eslint-config-gev/react"` to the `"extends": [...]` field in your eslintrc.
 
 
-Your eslintrc.js will look like this (you may copy & paste):
+## Typescript + React Native projects:
+
+* `npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest eslint-plugin-react-native@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
+
+* Add `"eslint-config-gev/react-native"` to the `"extends": [...]` field in your eslintrc.
+
+## Javascript:
+* `npm i -D eslint-config-gev@latest eslint@latest`
+* Add `"eslint-config-gev/js"` to the `"extends": [...]` field in your eslintrc.
+
+
+
+
+## Your eslintrc.js will look like this (you may copy & paste):
 
 
 <details><summary><b>eslintrc.js for Typescript</b></summary>
@@ -42,7 +54,7 @@ module.exports = {
   },
   "extends": [
     "plugin:@typescript-eslint/recommended-requiring-type-checking" // *1
-    "eslint-config-gev", // https://github.com/SrBrahma/eslint-config-gev
+    "eslint-config-gev", // https://github.com/SrBrahma/eslint-config-gev-gev
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -57,8 +69,42 @@ module.exports = {
 
 // [*1] - Optional but improves the linting for Typescript:
 // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
+
 ```
 </details>
+
+
+<details><summary><b>eslintrc.js for Typescript + React</b></summary>
+
+```js
+module.exports = {
+  "env": {
+    "es2021": true,
+    "node": true,
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended-requiring-type-checking", // *1
+    "eslint-config-gev/react", // https://github.com/SrBrahma/eslint-config-gev
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "tsconfigRootDir": __dirname, // *1
+    "project": ['./tsconfig.json'], // *1
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": { // To support .jsx files
+      "jsx": true
+    }
+  },
+  "rules": {
+  }
+};
+
+// [*1] - https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
+```
+
+</details>
+
 
 <details><summary><b>eslintrc.js for Typescript + React Native</b></summary>
 
@@ -71,7 +117,7 @@ module.exports = {
   },
   "extends": [
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // *1
-    "eslint-config-gev/react-native", // https://github.com/SrBrahma/eslint-config
+    "eslint-config-gev/react-native", // https://github.com/SrBrahma/eslint-config-gev
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -94,6 +140,29 @@ module.exports = {
 </details>
 
 
+
+
+<details><summary><b>eslintrc.js for Javascript</b></summary>
+
+```js
+module.exports = {
+  "env": {
+    "es2021": true,
+    "node": true,
+  },
+  "extends": [
+    "eslint-config-gev/js", // https://github.com/SrBrahma/eslint-config-gev
+  ],
+  "rules": {
+  }
+};
+
+```
+
+</details>
+
+
+
 </br>
 
 *You can still add other extends, plugins, rules etc to your **eslintrc**.*
@@ -105,5 +174,3 @@ module.exports = {
 # Future
 
 * **lerna** integration for multiple packages (and different peerDeps)
-
-* Since npm v7, peerDeps are automatically installed. But they probably aren't easily updatable by the user. This eslint-config could have them as devDeps, and have some kind of hook to automatically increase its version when a eslint dep updates. No more installing **all** those eslint packages! Maybe this would mess npm lint scripts, but there may be a workaround.

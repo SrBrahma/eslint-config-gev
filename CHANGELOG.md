@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0 (2021-06-13)
+
+* **`[js]`** - Added Javascript (for a friend that still doesn't know the wonderful world of TS!)
+* **`[ts]`** - Now extends `js.js`. No rules were changed, just some of its content was moved to js file.
+
 
 ## 2.0.3 (2021-05-27)
 
