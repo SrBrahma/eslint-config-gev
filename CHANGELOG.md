@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 2.1.1 (2021-06-17)
+
+* **`[js]`** - Changed `no-unused-vars` from **error** to **warn**.
+
 ## 2.1.0 (2021-06-13)
 
 * **`[js]`** - Added Javascript (for a friend that still doesn't know the wonderful world of TS!)
