@@ -53,7 +53,7 @@ module.exports = {
     "node": true
   },
   "extends": [
-    "plugin:@typescript-eslint/recommended-requiring-type-checking" // *1
+    "plugin:@typescript-eslint/recommended-requiring-type-checking", // *1
     "eslint-config-gev", // https://github.com/SrBrahma/eslint-config-gev-gev
   ],
   "parser": "@typescript-eslint/parser",
