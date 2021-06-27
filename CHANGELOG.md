@@ -1,5 +1,7 @@
 # Changelog
 
+## 2.1.2 (2021-06-27)
+* **`[js]`** - Added `"space-before-blocks": "warn"`.
 
 ## 2.1.1 (2021-06-17)
 

@@ -37,6 +37,9 @@ module.exports = {
     // "eslint:recommended" sets it as "error". We change it to "warn"!
     "no-unused-vars": "warn",
 
+    // Space before curly brackets
+    "space-before-blocks": "warn",
+
 
   // Etc
     // As said in https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md,
