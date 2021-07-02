@@ -72,6 +72,11 @@ module.exports = {
       "checksVoidReturn": false
     }],
 
+    // js "no-unused-vars" will complain about unused arguments in type declaration of functions.
+    // The extends order would already fix this, but as js-no-extends.js contains the "no-unused-vars",
+    // we have to unset it. https://stackoverflow.com/a/61555310/10247962
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
 
     // Limbo. Disabled, but may be reenabled at some point.
     // "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type
