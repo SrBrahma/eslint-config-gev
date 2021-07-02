@@ -8,9 +8,9 @@ module.exports = {
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "./js.js", // Further configs!
+    "plugin:@typescript-eslint/recommended", // After the others https://stackoverflow.com/a/61555310/10247962
+    "./js-no-extends.js", // Further configs!
   ],
 
   "rules": {
@@ -72,11 +72,6 @@ module.exports = {
       "checksVoidReturn": false
     }],
 
-    // js "no-unused-vars" will complain about unused arguments in type declaration of functions.
-    // This is a fix.
-    // https://stackoverflow.com/a/61555310/10247962
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["warn"],
 
     // Limbo. Disabled, but may be reenabled at some point.
     // "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type

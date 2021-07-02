@@ -1,5 +1,7 @@
 # Changelog
 
+## 2.1.5 (2021-07-02)
+* **`[ts]`** - Fixed the extends order. Also, we were extending `"./js.js"` and it extended `"eslint-recommended"`. ts is now extending the new `"js-no-extends.js"`, that don't extends the `"eslint-recommended"`. The `"./js.js"` also extends that new file.
 
 ## 2.1.4 (2021-07-02)
 * **`[ts]`** - Fixed "no-unused-vars". Ref: https://stackoverflow.com/a/61555310/10247962

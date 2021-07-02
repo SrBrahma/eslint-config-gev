@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.1.4",
-  "description": "My usual eslint configs for Typescript projects.",
+  "version": "2.1.5",
+  "description": "Common ESLint configs for my JS/TS projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
