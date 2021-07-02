@@ -50,8 +50,9 @@ module.exports = {
     // Else would complain about // @ts-ignore in .js files. If I didn't need this ts-comment, this could be removed
     "@typescript-eslint/ban-ts-comment": "off",
 
+    // Warn if using a Promise without await/then/catch. Good to avoid running stuff in background non intentionally.
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
-    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-floating-promises": "warn",
 
     // This wasn't allowing different data types in `templates string`. Why the fuck not?
     "@typescript-eslint/restrict-template-expressions": "off",

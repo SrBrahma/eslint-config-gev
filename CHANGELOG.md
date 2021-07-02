@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.3 (2021-07-02)
+* **`[ts]`** - Changed `"@typescript-eslint/no-floating-promises": "off"` to `"@typescript-eslint/no-floating-promises": "warn"`
+
 ## 2.1.2 (2021-06-27)
 * **`[js]`** - Added `"space-before-blocks": "warn"`.
 
