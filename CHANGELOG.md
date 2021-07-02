@@ -1,5 +1,9 @@
 # Changelog
 
+
+## 2.1.4 (2021-07-02)
+* **`[ts]`** - Fixed "no-unused-vars". Ref: https://stackoverflow.com/a/61555310/10247962
+
 ## 2.1.3 (2021-07-02)
 * **`[ts]`** - Changed `"@typescript-eslint/no-floating-promises": "off"` to `"@typescript-eslint/no-floating-promises": "warn"`
 

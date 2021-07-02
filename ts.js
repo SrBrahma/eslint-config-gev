@@ -70,7 +70,13 @@ module.exports = {
     // Allow having a `function a(callback: () => void) {...}` to be called with a(async () => {...})`
     "@typescript-eslint/no-misused-promises": [ "error", {
       "checksVoidReturn": false
-    }]
+    }],
+
+    // js "no-unused-vars" will complain about unused arguments in type declaration of functions.
+    // This is a fix.
+    // https://stackoverflow.com/a/61555310/10247962
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
 
     // Limbo. Disabled, but may be reenabled at some point.
     // "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type
