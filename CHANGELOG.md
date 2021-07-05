@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.7
+### js
+* Added `"no-constant-condition": ["warn", { "checkLoops": false }]`
 
 ## 2.1.5~6 (2021-07-02)
 * **`[ts]`** - Fixed the extends order. Also, we were extending `"./js.js"` and it extended `"eslint-recommended"`. ts is now extending the new `"js-no-extends.js"`, that don't extends the `"eslint-recommended"`. The `"./js.js"` also extends that new file.
