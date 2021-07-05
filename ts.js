@@ -42,6 +42,7 @@ module.exports = {
   // Etc
 
     // Async functions that don't use await them will throw a warn. The default behaviour with the current extends, is to throw an error.
+    "require-await": "off", // Turn off js equivalent.
     "@typescript-eslint/require-await": "warn",
 
     // Allows explicitating implicit types, like `const a: number = 10`
@@ -75,7 +76,7 @@ module.exports = {
     // js "no-unused-vars" will complain about unused arguments in type declaration of functions.
     // The extends order would already fix this, but as js-no-extends.js contains the "no-unused-vars",
     // we have to unset it. https://stackoverflow.com/a/61555310/10247962
-    "no-unused-vars": "off",
+    "no-unused-vars": "off", // Turn off js equivalent.
     "@typescript-eslint/no-unused-vars": ["warn"],
 
     // Limbo. Disabled, but may be reenabled at some point.

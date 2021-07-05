@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.8
+### ts
+* Added `"require-await": "off"` (there is already a ts equivalent rule for it)
+
 ## 2.1.7
 ### js
 * Added `"no-constant-condition": ["warn", { "checkLoops": false }]`
