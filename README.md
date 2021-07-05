@@ -21,7 +21,7 @@ The other packages after this one are there to ensure the basic requirements are
 * Add `"eslint-config-gev"` *(or `"eslint-config-gev/ts"`)* to the `"extends": [...]` field in your eslintrc.
 
 
-## Typescript + React Native projects:
+## Typescript + React projects:
 
 * `npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
 
