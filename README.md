@@ -1,3 +1,11 @@
+<div align="center">
+
+[![npm](https://img.shields.io/npm/v/eslint-config-gev)](https://www.npmjs.com/package/eslint-config-gev)
+[![npm](https://img.shields.io/npm/dw/eslint-config-gev)](https://www.npmjs.com/package/eslint-config-gev)
+
+</div>
+
+
 # eslint-config-gev
 
 My common ESLint configs for Typescript. Intended to work without Prettier, as ESLint can really manage the code basic looks by itself.
@@ -10,7 +18,7 @@ Works according to https://eslint.org/docs/developer-guide/shareable-configs
 If interested, take a look into the source files to see what will be used as plugins, extends and rules.
 
 
-# Install:
+# 💿 Install:
 
 The other packages after this one are there to ensure the basic requirements are installed and updated.
 
@@ -21,7 +29,7 @@ The other packages after this one are there to ensure the basic requirements are
 * Add `"eslint-config-gev"` *(or `"eslint-config-gev/ts"`)* to the `"extends": [...]` field in your eslintrc.
 
 
-## Typescript + React Native projects:
+## Typescript + React projects:
 
 * `npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
 
@@ -41,7 +49,7 @@ The other packages after this one are there to ensure the basic requirements are
 
 
 
-## Your eslintrc.js will look like this (you may copy & paste):
+# 🦉 Your eslintrc.js will look like this (you may copy & paste):
 
 
 <details><summary><b>eslintrc.js for Typescript</b></summary>
@@ -169,8 +177,8 @@ module.exports = {
 
 </br>
 
-# [Changelog](./CHANGELOG.md)
+# 📰 [Changelog](./CHANGELOG.md)
 
-# Future
+# 🔮 Future
 
 * **lerna** integration for multiple packages (and different peerDeps)
