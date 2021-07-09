@@ -27,9 +27,36 @@ module.exports = {
     // Spacing `{ spaceBeforeAndAfterItemsInCurlyBrackets }`
     "object-curly-spacing": ["warn", "always"],
 
-
     // Space before curly brackets
     "space-before-blocks": "warn",
+
+    // Space before and after keywords.
+    // https://eslint.org/docs/rules/keyword-spacing
+    "keyword-spacing": ["warn", {
+      "after": true, // wrong: if(); right: if ();
+      "before": true, // wrong: }else; right: } else
+    }],
+
+    // There are other configs for values aligning https://eslint.org/docs/rules/key-spacing
+    "key-spacing": ["warn", {
+      "beforeColon": false, // wrong: {a : 3}; right: {a: 3};
+      "afterColon": true // wrong: {a:3}; right: {a: 3};
+    }],
+
+    // Space after unary operators, like void, new, delete... Won't apply to non-words operators like ++.
+    // https://eslint.org/docs/rules/space-unary-ops
+    "space-unary-ops": ["warn", {
+      "words": true,
+      "nonwords": false
+    }],
+
+    // Space between operators. Wrong: 1+2; right: 1 + 2
+    // https://eslint.org/docs/rules/space-infix-ops
+    "space-infix-ops": ["warn", { "int32Hint": true }],
+
+    // No spaces after rest/spread. Wrong: ... [1,2]; right: ...[1,2]
+    // https://eslint.org/docs/rules/rest-spread-spacing
+    "rest-spread-spacing": ["warn", "never"],
 
 
   // Etc

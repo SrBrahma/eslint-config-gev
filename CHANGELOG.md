@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.0
+### js
+* Added `"keyword-spacing"`, `"key-spacing"`, `"space-unary-ops"`, `"space-infix-ops"`, `"rest-spread-spacing"`. I could and should have added them earlier!
+
+
 ## 2.1.8
 ### ts
 * Added `"require-await": "off"` (there is already a ts equivalent rule for it)
