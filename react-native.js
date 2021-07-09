@@ -1,4 +1,9 @@
 module.exports = {
+  "settings": {
+    "react": {
+      "version": "detect", // To remove the warning.
+    }
+  },
   "plugins": [
     "react",
     "react-native",
@@ -6,7 +11,7 @@ module.exports = {
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "./ts.js", // On conflicting rules, ours have priority.
+    "./ts.js",
   ],
   "rules": {
     "react/prop-types": "off",

@@ -2,6 +2,11 @@
 // add further configs
 
 module.exports = {
+  "settings": {
+    "react": {
+      "version": "detect", // To remove the warning.
+    }
+  },
   "plugins": [
     "react",
   ],

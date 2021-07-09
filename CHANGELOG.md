@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.1
+### react,react-native
+* Added `"settings": { "react": { "version": "detect" }} to remove those pesky warnings.
+
 ## 2.2.0
 ### js
 * Added `"keyword-spacing"`, `"key-spacing"`, `"space-unary-ops"`, `"space-infix-ops"`, `"rest-spread-spacing"`. I could and should have added them earlier!
