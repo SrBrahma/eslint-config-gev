@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0
+### js
+* Added `"brace-style"`, `"array-bracket-newline"`, `"object-curly-newline"`
+
 ## 2.2.1
 ### react,react-native
 * Added `"settings": { "react": { "version": "detect" }} to remove those pesky warnings.

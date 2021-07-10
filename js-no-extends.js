@@ -58,6 +58,18 @@ module.exports = {
     // https://eslint.org/docs/rules/rest-spread-spacing
     "rest-spread-spacing": ["warn", "never"],
 
+    // { on same line of if/try, } on newline. else/catch on same line of }. Allows singleline.
+    // https://eslint.org/docs/rules/brace-style
+    "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+
+    // Newline after [ and before ] on multiline arrays.
+    // https://eslint.org/docs/rules/array-bracket-newline
+    "array-bracket-newline": ["warn", { "multiline": true }],
+
+    // Newline after { and before } on multiline objects.
+    // https://eslint.org/docs/rules/object-curly-newline
+    "object-curly-newline": ["warn", { "multiline": true, "consistent": true }],
+
 
   // Etc
 
