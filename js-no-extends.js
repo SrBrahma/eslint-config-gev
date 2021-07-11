@@ -4,7 +4,7 @@ module.exports = {
   "rules": {
   // Prettyfier / Utils
     // 2 spaces ftw. I used to use 4 and reject 2. People change! Sometimes for worse! >:D
-    "indent": ["warn", 2],
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
 
     // \n instead of \r\n
     "linebreak-style": ["warn", "unix"],

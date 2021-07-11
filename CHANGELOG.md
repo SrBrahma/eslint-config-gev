@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.1
+### js
+* Added `{"SwitchCase": 1}` to indent.
+
 ## 2.3.0
 ### js
 * Added `"brace-style"`, `"array-bracket-newline"`, `"object-curly-newline"`
