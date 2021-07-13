@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.2
+### ts
+* Added `"@typescript-eslint/explicit-module-boundary-types": ["warn", {
+      allowArgumentsExplicitlyTypedAsAny: true
+    }]`
+
 ## 2.3.1
 ### js
 * Added `{"SwitchCase": 1}` to indent.

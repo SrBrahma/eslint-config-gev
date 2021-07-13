@@ -38,6 +38,12 @@ module.exports = {
     // Allows calling new (Intl as any).RelativeTimeFormat(...), as TS doesn't know it yet.
     "@typescript-eslint/no-unsafe-call": "off",
 
+    // Allow exported function to have an argument typed as any.
+    // TODO ?: https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.2/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
+    "@typescript-eslint/explicit-module-boundary-types": ["warn", {
+      allowArgumentsExplicitlyTypedAsAny: true
+    }],
+
 
   // Etc
 
