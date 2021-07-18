@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.1
+### ts
+* Added `"@typescript-eslint/prefer-regexp-exec": "off"`.
+
 ## 2.4.0
 ### react, react-native
 * Added `"react/jsx-equals-spacing"` and `"react/jsx-curly-spacing"`

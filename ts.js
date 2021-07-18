@@ -85,6 +85,10 @@ module.exports = {
     "no-unused-vars": "off", // Turn off js equivalent.
     "@typescript-eslint/no-unused-vars": ["warn"],
 
+    // Allow 'aString'.match('a').
+    // https://github.com/typescript-eslint/typescript-eslint/blob/v4.28.3/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
+    "@typescript-eslint/prefer-regexp-exec": "off",
+
     // Limbo. Disabled, but may be reenabled at some point.
     // "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type
     // TS doesn't allow "== false" yet (4.1.2), so, this rule isn't good enough to test for falsy values.
