@@ -10,7 +10,7 @@ module.exports = {
     "linebreak-style": ["warn", "unix"],
 
     // Single quotes instead of double. Allows using template even if not required.
-    "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
+    "quotes": ["warn", "single", { "allowTemplateLiterals": true, "avoidEscape": true }],
 
     // Adds `;` to every possible line end.
     "semi": ["warn", "always"],
