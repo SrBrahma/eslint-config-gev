@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.0
+### react, react-native
+* Added `"react/jsx-equals-spacing"` and `"react/jsx-curly-spacing"`
+* Both are now using the new shared react-common.js file.
+
+
 ## 2.3.2
 ### ts
 * Added `"@typescript-eslint/explicit-module-boundary-types": ["warn", {
