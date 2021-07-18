@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.3
+### js
+* Switched from `"prefer-const"` to `"no-autofix/prefer-const"`. No more auto-fix for `prefer-const`!
+
 ## 2.4.2
 ### js
 * Added `"avoidEscape": true` option to `"quotes"`.

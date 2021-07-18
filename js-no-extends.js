@@ -1,6 +1,9 @@
 // By not having extends here, we can use it in ts.js without messing its extends order.
 
 module.exports = {
+  "plugins": [
+    "no-autofix"
+  ],
   "rules": {
   // Prettyfier / Utils
     // 2 spaces ftw. I used to use 4 and reject 2. People change! Sometimes for worse! >:D
@@ -72,7 +75,6 @@ module.exports = {
 
 
   // Etc
-
     // "eslint:recommended" sets it as "error". We change it to "warn"!
     "no-unused-vars": "warn",
 
@@ -83,8 +85,14 @@ module.exports = {
     // the above rule (@typescript-eslint/require-await) requires this one.
     "require-await": "warn",
 
-    // Limbo. Disabled, but may be reenabled at some point.
+    /** Still warn about using let instead of const, but won't auto-fix (no more ctrl+s fixing it!)
+     * https://eslint.org/docs/rules/prefer-const
+     * https://www.npmjs.com/package/eslint-plugin-no-autofix */
+    "prefer-const": "off", // Disable the default rule
+    "no-autofix/prefer-const": "warn", // Use the no-autofix
 
+
+  // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
   }
 };

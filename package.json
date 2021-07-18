@@ -1,10 +1,9 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Common ESLint configs for my JS/TS projects",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SrBrahma/eslint-config.git"
@@ -26,9 +25,12 @@
   },
   "homepage": "https://github.com/SrBrahma/eslint-config#readme",
   "optionalDependencies": {
-    "eslint": "*",
-    "typescript": "*",
     "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*"
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "eslint-plugin-no-autofix": "1.1.2"
   }
 }
