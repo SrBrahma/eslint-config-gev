@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.4.5
+### ts
+```js
+"semi": "off",
+"@typescript-eslint/semi": ["warn"],
+"@typescript-eslint/member-delimiter-style",
+```
+
 ## 2.4.3~4
 ### js
 * Switched from `"prefer-const"` to `"no-autofix/prefer-const"`. No more auto-fix for `prefer-const`!

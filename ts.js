@@ -89,7 +89,18 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/v4.28.3/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
     "@typescript-eslint/prefer-regexp-exec": "off",
 
-    // Limbo. Disabled, but may be reenabled at some point.
+    /** Semicolons everywhere!
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md */
+    "semi": "off",
+    "@typescript-eslint/semi": ["warn"],
+    "@typescript-eslint/member-delimiter-style": "warn",
+
+  }
+};
+
+
+  // Limbo. Disabled, but may be reenabled at some point.
     // "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type
     // TS doesn't allow "== false" yet (4.1.2), so, this rule isn't good enough to test for falsy values.
     // https://github.com/microsoft/TypeScript/issues/26592#issuecomment-731608973
@@ -97,5 +108,3 @@ module.exports = {
     //   allowNullableBoolean: true,
     // }],
     //
-  }
-};
