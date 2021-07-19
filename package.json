@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "Common ESLint configs for my JS/TS projects",
   "main": "index.js",
   "scripts": {},
@@ -30,7 +30,7 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "devDependencies": {
+  "dependencies": {
     "eslint-plugin-no-autofix": "1.1.2"
   }
 }

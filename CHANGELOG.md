@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.4.3
+## 2.4.3~4
 ### js
 * Switched from `"prefer-const"` to `"no-autofix/prefer-const"`. No more auto-fix for `prefer-const`!
 
