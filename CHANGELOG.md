@@ -1,4 +1,22 @@
+<!-- template:
+## 2..
+###
+```js
+```
+-->
+
 # Changelog
+
+
+
+## 2.5.0
+### js
+```js
+"no-loss-of-precision": "error",
+```
+### ts
+* Added function to better replace js based rules.
+* Replaced ~5 js rules by ts rules.
 
 ## 2.4.6
 ### ts

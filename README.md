@@ -8,7 +8,9 @@
 
 # eslint-config-gev
 
-My common ESLint configs for Typescript. Intended to work without Prettier, as ESLint can really manage the code basic looks by itself.
+My curated ESLint configs for Javascript/Typescript. All my recent projects are using this.
+
+Intended to work without Prettier, as ESLint can really manage the code looks by itself.
 
 You can also use my [**`gev`** npx package](https://github.com/srbrahma/gev) that will create a new project with everything properly and automatically configured.
 

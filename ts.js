@@ -1,6 +1,21 @@
 // Add https://www.npmjs.com/package/eslint-plugin-import ?
 
-// plugin vs extends: https://stackoverflow.com/a/61232480/10247962
+
+const jsRules = require('./js-no-extends').rules;
+
+/** Get value from the given rule name, set it off and turn on the TS version.
+ *
+ * Uses fallback if rule isn't present in js-no-extends.js file.
+ *
+ * @returns An object containing the base rule deactivation and the new rule.
+ * Use ...on it. */
+function replaceBaseRule(name, fallback = ["warn"], force = false) {
+  const value = force ? fallback : (jsRules[name] ?? fallback);
+  return {
+    [name]: "off",
+    ['@typescript-eslint/' + name]: value
+  }
+}
 
 module.exports = {
   "plugins": [
@@ -15,41 +30,33 @@ module.exports = {
 
   "rules": {
 
-  // `any` / unsafe stuff handling. But, be responsible and careful!
+  /** ========== Style ========== */
 
-    // Allows using `a!.b`. Not safe, but sometimes we really know it is valid.
-    "@typescript-eslint/no-non-null-assertion": "off",
+    /** Semicolons everywhere!
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md */
+     ...replaceBaseRule("semi"),
+     "@typescript-eslint/member-delimiter-style": "warn",
 
-    // Let us have our empty stuff!
-    "@typescript-eslint/no-empty-interface": "off",
+     /** Trailing commas in multiline also for TS stuff
+      *
+      * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-dangle.md */
+     ...replaceBaseRule("comma-dangle", ["warn", "always-multiline"]),
 
-    // Allows using `any` as explicit type. Sometimes, we know what we are doing!
-    "@typescript-eslint/no-explicit-any": "off",
+     /** Require consistent spacing around type annotations
+      * Wrong: let a :string; Right: let a: string;
+      * Wrong: type F = ()=>null; Right: type F = () => null;
+      * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/type-annotation-spacing.md */
+     "@typescript-eslint/type-annotation-spacing": "warn",
 
-    // Allows `as any`. Sometimes it's really useful for really complex types.
-    "@typescript-eslint/no-unsafe-assignment": "off",
-
-    // Allows the function return as `any`.
-    "@typescript-eslint/no-unsafe-return": "off",
-
-    // Allows acessing props of any type var. Useful for `if ((X as any).Y)`, to check if it exists.
-    "@typescript-eslint/no-unsafe-member-access": "off",
-
-    // Allows calling new (Intl as any).RelativeTimeFormat(...), as TS doesn't know it yet.
-    "@typescript-eslint/no-unsafe-call": "off",
-
-    // Allow exported function to have an argument typed as any.
-    // TODO ?: https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.2/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
-    "@typescript-eslint/explicit-module-boundary-types": ["warn", {
-      allowArgumentsExplicitlyTypedAsAny: true
-    }],
+     /** Other replaces. Keeps the js rule behavior, integrate TS. */
+     ...replaceBaseRule("quotes"),
 
 
-  // Etc
+  /** =========== Etc =========== */
 
     // Async functions that don't use await them will throw a warn. The default behaviour with the current extends, is to throw an error.
-    "require-await": "off", // Turn off js equivalent.
-    "@typescript-eslint/require-await": "warn",
+    ...replaceBaseRule("require-await"),
 
     // Allows explicitating implicit types, like `const a: number = 10`
     "@typescript-eslint/no-inferrable-types": "off",
@@ -82,26 +89,49 @@ module.exports = {
     // js "no-unused-vars" will complain about unused arguments in type declaration of functions.
     // The extends order would already fix this, but as js-no-extends.js contains the "no-unused-vars",
     // we have to unset it. https://stackoverflow.com/a/61555310/10247962
-    "no-unused-vars": "off", // Turn off js equivalent.
-    "@typescript-eslint/no-unused-vars": ["warn"],
+    ...replaceBaseRule("no-unused-vars"),
 
     // Allow 'aString'.match('a').
     // https://github.com/typescript-eslint/typescript-eslint/blob/v4.28.3/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
     "@typescript-eslint/prefer-regexp-exec": "off",
 
-    /** Semicolons everywhere!
-     *
-     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md */
-    "semi": "off",
-    "@typescript-eslint/semi": ["warn"],
-    "@typescript-eslint/member-delimiter-style": "warn",
 
-    /** Trailing commas in multiline also for TS stuff
-     *
-     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-dangle.md */
-    "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": ["warn", "always-multiline"],
+    /** Other replaces. Keeps the js rule behavior, integrate TS. */
+    ...replaceBaseRule("keyword-spacing"),
+    ...replaceBaseRule("no-loss-of-precision"),
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/default-param-last.md
+    ...replaceBaseRule("default-param-last", ["error"]),
 
+
+  /** =========== Unsafe / any ===========
+   *  === Be responsible and careful! ==== */
+
+    // Allows using `a!.b`. Not safe, but sometimes we really know it is valid.
+    "@typescript-eslint/no-non-null-assertion": "off",
+
+    // Let us have our empty stuff!
+    "@typescript-eslint/no-empty-interface": "off",
+
+    // Allows using `any` as explicit type. Sometimes, we know what we are doing!
+    "@typescript-eslint/no-explicit-any": "off",
+
+    // Allows `as any`. Sometimes it's really useful for really complex types.
+    "@typescript-eslint/no-unsafe-assignment": "off",
+
+    // Allows the function return as `any`.
+    "@typescript-eslint/no-unsafe-return": "off",
+
+    // Allows acessing props of any type var. Useful for `if ((X as any).Y)`, to check if it exists.
+    "@typescript-eslint/no-unsafe-member-access": "off",
+
+    // Allows calling new (Intl as any).RelativeTimeFormat(...), as TS doesn't know it yet.
+    "@typescript-eslint/no-unsafe-call": "off",
+
+    // Allow exported function to have an argument typed as any.
+    // TODO ?: https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.2/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
+    "@typescript-eslint/explicit-module-boundary-types": ["warn", {
+      "allowArgumentsExplicitlyTypedAsAny": true
+    }],
 
   }
 };

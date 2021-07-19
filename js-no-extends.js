@@ -91,6 +91,10 @@ module.exports = {
     "prefer-const": "off", // Disable the default rule
     "no-autofix/prefer-const": "warn", // Use the no-autofix
 
+    /** Disallow Number Literals That Lose Precision
+     * https://eslint.org/docs/rules/no-loss-of-precision */
+    "no-loss-of-precision": "error",
+
 
   // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
