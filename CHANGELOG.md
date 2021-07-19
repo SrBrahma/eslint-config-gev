@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.4.6
+### ts
+```js
+"comma-dangle": "off",
+"@typescript-eslint/comma-dangle": ["warn", "always-multiline"],
+```
+
 ## 2.4.5
 ### ts
 ```js

@@ -96,6 +96,13 @@ module.exports = {
     "@typescript-eslint/semi": ["warn"],
     "@typescript-eslint/member-delimiter-style": "warn",
 
+    /** Trailing commas in multiline also for TS stuff
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-dangle.md */
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": ["warn", "always-multiline"],
+
+
   }
 };
 
