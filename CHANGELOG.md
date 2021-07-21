@@ -8,6 +8,17 @@
 # Changelog
 
 
+## 2.5.2
+### js
+```js
+"no-multiple-empty-lines": ["warn", { "max": 5, "maxEOF": 0, "maxBOF": 0 }],
+```
+
+## 2.5.1
+### js
+```js
+"no-trailing-spaces": "warn",
+```
 
 ## 2.5.0
 ### js

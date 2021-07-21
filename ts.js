@@ -51,6 +51,7 @@ module.exports = {
 
      /** Other replaces. Keeps the js rule behavior, integrate TS. */
      ...replaceBaseRule("quotes"),
+     // ...replaceBaseRule("indent"), // problematic, open issue: https://github.com/typescript-eslint/typescript-eslint/issues/1824
 
 
   /** =========== Etc =========== */

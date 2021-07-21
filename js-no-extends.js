@@ -57,6 +57,14 @@ module.exports = {
     // https://eslint.org/docs/rules/space-infix-ops
     "space-infix-ops": ["warn", { "int32Hint": true }],
 
+    /** Remove trailing spaces. */
+    "no-trailing-spaces": "warn",
+
+    /** Limits and cleans excess lines.
+     * https://eslint.org/docs/rules/no-multiple-empty-lines */
+    "no-multiple-empty-lines": ["warn", { "max": 5, "maxEOF": 0, "maxBOF": 0 }],
+
+
     // No spaces after rest/spread. Wrong: ... [1,2]; right: ...[1,2]
     // https://eslint.org/docs/rules/rest-spread-spacing
     "rest-spread-spacing": ["warn", "never"],
