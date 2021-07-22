@@ -106,8 +106,11 @@ module.exports = {
 
     /** Warn about unreachable code. */
     "no-unreachable-loop": "warn",
-    "no-unreachable": "warn"
-
+    "no-unreachable": "warn",
+    /** Warn about empty blocks. Recommended was 'error'. */
+    "no-empty": "warn",
+    /** Warn about empty functions. Recommended was 'error'. */
+    "no-empty-function": "warn",
 
 
   // Limbo. Disabled, but may be reenabled at some point.

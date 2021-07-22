@@ -7,6 +7,14 @@
 
 # Changelog
 
+## 2.5.4
+### js
+"error" to "warn":
+```js
+"no-empty": "warn",
+"no-empty-function": "warn",
+```
+
 ## 2.5.3
 ### js
 ```js

@@ -9,7 +9,7 @@ const jsRules = require('./js-no-extends').rules;
  *
  * @returns An object containing the base rule deactivation and the new rule.
  * Use ...on it. */
-function replaceBaseRule(name, fallback = ["warn"], force = false) {
+function replaceBaseRule(name, fallback = "warn", force = false) {
   const value = force ? fallback : (jsRules[name] ?? fallback);
   return {
     [name]: "off",
@@ -101,7 +101,8 @@ module.exports = {
     ...replaceBaseRule("keyword-spacing"),
     ...replaceBaseRule("no-loss-of-precision"),
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/default-param-last.md
-    ...replaceBaseRule("default-param-last", ["error"]),
+    ...replaceBaseRule("default-param-last", "error"),
+    ...replaceBaseRule("no-empty-function"),
 
 
   /** =========== Unsafe / any ===========
