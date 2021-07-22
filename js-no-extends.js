@@ -104,6 +104,12 @@ module.exports = {
     "no-loss-of-precision": "error",
 
 
+    /** Warn about unreachable code. */
+    "no-unreachable-loop": "warn",
+    "no-unreachable": "warn"
+
+
+
   // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
   }

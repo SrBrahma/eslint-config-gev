@@ -7,6 +7,12 @@
 
 # Changelog
 
+## 2.5.3
+### js
+```js
+"no-unreachable-loop": "warn",
+"no-unreachable": "warn"
+```
 
 ## 2.5.2
 ### js
