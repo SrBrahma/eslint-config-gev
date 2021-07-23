@@ -7,6 +7,13 @@
 
 # Changelog
 
+## 2.5.5~6
+### js
+"error" to "warn":
+```js
+"no-multi-spaces": "warn",
+```
+
 ## 2.5.4
 ### js
 "error" to "warn":

@@ -57,6 +57,10 @@ module.exports = {
     // https://eslint.org/docs/rules/space-infix-ops
     "space-infix-ops": ["warn", { "int32Hint": true }],
 
+    /** No excess spaces.
+     * Wrong `let a =  1;` Right `let a = 1;` */
+    "no-multi-spaces": "warn",
+
     /** Remove trailing spaces. */
     "no-trailing-spaces": "warn",
 
