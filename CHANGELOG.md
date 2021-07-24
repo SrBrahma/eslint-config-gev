@@ -7,6 +7,12 @@
 
 # Changelog
 
+## 2.6.0
+### js
+```js
+"no-whitespace-before-property": "warn",
+```
+
 ## 2.5.5~6
 ### js
 "error" to "warn":

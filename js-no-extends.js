@@ -68,6 +68,9 @@ module.exports = {
      * https://eslint.org/docs/rules/no-multiple-empty-lines */
     "no-multiple-empty-lines": ["warn", { "max": 5, "maxEOF": 0, "maxBOF": 0 }],
 
+    /** Wrong: foo .bar; foo. bar; Right: foo.bar
+     * https://eslint.org/docs/rules/no-whitespace-before-property */
+    "no-whitespace-before-property": "warn",
 
     // No spaces after rest/spread. Wrong: ... [1,2]; right: ...[1,2]
     // https://eslint.org/docs/rules/rest-spread-spacing
