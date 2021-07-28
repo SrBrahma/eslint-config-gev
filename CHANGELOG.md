@@ -7,6 +7,12 @@
 
 # Changelog
 
+## 2.6.1
+### js
+```js
+"no-useless-catch": "warn" // was error, in recommended extends
+```
+
 ## 2.6.0
 ### js
 ```js

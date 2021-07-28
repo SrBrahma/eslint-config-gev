@@ -118,6 +118,10 @@ module.exports = {
     "no-empty": "warn",
     /** Warn about empty functions. Recommended was 'error'. */
     "no-empty-function": "warn",
+    /** Default recommended is error. Changed it to warn to avoid confusions, as I had.
+     * https://eslint.org/docs/rules/no-useless-catch */
+    "no-useless-catch": "warn",
+
 
 
   // Limbo. Disabled, but may be reenabled at some point.
