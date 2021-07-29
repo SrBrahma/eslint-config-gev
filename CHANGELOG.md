@@ -7,6 +7,14 @@
 
 # Changelog
 
+## 2.6.2
+### js
+```js
+"operator-linebreak": ["warn", "before", { "overrides": {
+  "=": "after", "+=": "after", "-=": "after", "*=": "after", "/=": "after",
+}}],
+```
+
 ## 2.6.1
 ### js
 ```js

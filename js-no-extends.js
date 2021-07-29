@@ -122,6 +122,12 @@ module.exports = {
      * https://eslint.org/docs/rules/no-useless-catch */
     "no-useless-catch": "warn",
 
+    /** Make multi line operators to be in the start of the new lines, not on the ending
+     * of the previous line. But, make '='-like operators to be on the same line of the first operand.
+     */
+    "operator-linebreak": ["warn", "before", { "overrides": {
+      "=": "after", "+=": "after", "-=": "after", "*=": "after", "/=": "after",
+    }}],
 
 
   // Limbo. Disabled, but may be reenabled at some point.
