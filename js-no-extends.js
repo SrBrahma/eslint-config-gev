@@ -2,7 +2,8 @@
 
 module.exports = {
   "plugins": [
-    "no-autofix"
+    "no-autofix",
+    "unused-imports"
   ],
   "rules": {
   // Prettyfier / Utils
@@ -92,6 +93,13 @@ module.exports = {
   // Etc
     // "eslint:recommended" sets it as "error". We change it to "warn"!
     "no-unused-vars": "warn",
+
+    /** Automatically remove unused imports. It saves time! - but may remove your
+     * imports that you will still use, when ctrl-s'ing.
+     *
+     * https://github.com/sweepline/eslint-plugin-unused-imports */
+    "unused-imports/no-unused-imports": "warn",
+
 
     // Changes from error to warn, and allows `while (true)`.
     "no-constant-condition": ["warn", { "checkLoops": false }],

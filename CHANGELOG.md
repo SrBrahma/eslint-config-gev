@@ -7,6 +7,10 @@
 
 # Changelog
 
+## 2.7.0
+### js
+* Added `"unused-imports/no-unused-imports": "warn"`
+
 ## 2.6.2
 ### js
 ```js
