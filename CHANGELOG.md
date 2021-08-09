@@ -7,6 +7,11 @@
 
 # Changelog
 
+## 2.7.1
+### js
+* Added `"spaced-comment": ["warn", "always", { "exceptions": ["-", "+"], "markers": ["/"] }]`
+* Added `"switch-colon-spacing": "warn"`
+
 ## 2.7.0
 ### js
 * Added `"unused-imports/no-unused-imports": "warn"`

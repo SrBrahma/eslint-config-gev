@@ -131,12 +131,18 @@ module.exports = {
     "no-useless-catch": "warn",
 
     /** Make multi line operators to be in the start of the new lines, not on the ending
-     * of the previous line. But, make '='-like operators to be on the same line of the first operand.
-     */
+     * of the previous line. But, make '='-like operators to be on the same line of the first operand. */
     "operator-linebreak": ["warn", "before", { "overrides": {
       "=": "after", "+=": "after", "-=": "after", "*=": "after", "/=": "after",
     }}],
 
+    /** Space after comment.
+     * https://eslint.org/docs/rules/spaced-comment */
+    "spaced-comment": ["warn", "always", { "exceptions": ["-", "+"], "markers": ["/"] }],
+
+    /** Wrong: `case 0 :break`; Right: `case 0: break`
+     * https://eslint.org/docs/rules/switch-colon-spacing */
+    "switch-colon-spacing": "warn",
 
   // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
