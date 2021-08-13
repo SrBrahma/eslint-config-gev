@@ -7,6 +7,12 @@
 
 # Changelog
 
+## 2.8.0
+### js
+* Removed `operator-linebreak` - would mess React conditional components.
+* Removed `unused-imports/no-unused-imports` - would sometimes remove imports when I didn't want to.
+
+
 ## 2.7.1
 ### js
 * Added `"spaced-comment": ["warn", "always", { "exceptions": ["-", "+"], "markers": ["/"] }]`
