@@ -73,7 +73,7 @@ module.exports = {
     "ecmaVersion": 12,
     "sourceType": "module",
   },
-  ignorePatterns: [
+  "ignorePatterns": [
     "/lib/**/*", // Ignore built files.
     "/dist/**/*",
     "/.eslintrc.js" // Ignore itself
@@ -111,7 +111,7 @@ module.exports = {
       "jsx": true
     }
   },
-  ignorePatterns: [
+  "ignorePatterns": [
     "/lib/**/*", // Ignore built files.
     "/dist/**/*",
     "/.eslintrc.js" // Ignore itself
@@ -149,7 +149,7 @@ module.exports = {
       "jsx": true
     }
   },
-  ignorePatterns: [
+  "ignorePatterns": [
     "/lib/**/*", // Ignore built files.
     "/dist/**/*",
     "/.eslintrc.js" // Ignore itself
@@ -178,7 +178,7 @@ module.exports = {
   "extends": [
     "eslint-config-gev/js", // https://github.com/SrBrahma/eslint-config-gev
   ],
-  ignorePatterns: [
+  "ignorePatterns": [
     "/.eslintrc.js" // Ignore itself
   ],
   "rules": {
