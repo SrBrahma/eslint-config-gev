@@ -7,6 +7,10 @@
 
 # Changelog
 
+## 2.8.1
+### js
+* Removed old 'unused-imports' plugin from js-no-extends
+
 ## 2.8.0
 ### js
 * Removed `operator-linebreak` - would mess React conditional components.

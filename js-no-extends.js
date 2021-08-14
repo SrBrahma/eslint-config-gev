@@ -3,7 +3,6 @@
 module.exports = {
   "plugins": [
     "no-autofix",
-    "unused-imports"
   ],
   "rules": {
   // Prettyfier / Utils
