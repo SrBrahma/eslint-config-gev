@@ -7,6 +7,11 @@
 
 # Changelog
 
+## 2.8.2
+* Added GitHub Action to this package
+### ts
+* Changed ?? to || in its replaceBaseRule function to be Node 12 friendly.
+
 ## 2.8.1
 ### js
 * Removed old 'unused-imports' plugin from js-no-extends

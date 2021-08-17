@@ -10,7 +10,7 @@ const jsRules = require('./js-no-extends').rules;
  * @returns An object containing the base rule deactivation and the new rule.
  * Use ...on it. */
 function replaceBaseRule(name, fallback = "warn", force = false) {
-  const value = force ? fallback : (jsRules[name] ?? fallback);
+  const value = force ? fallback : (jsRules[name] || fallback);
   return {
     [name]: "off",
     ['@typescript-eslint/' + name]: value
