@@ -145,8 +145,19 @@ module.exports = {
     "switch-colon-spacing": "warn",
 
     /** Sort imports and exports
-     * https://github.com/lydell/eslint-plugin-simple-import-sort */
-    "simple-import-sort/imports": "warn",
+     * https://github.com/lydell/eslint-plugin-simple-import-sort
+     * https://github.com/lydell/eslint-plugin-simple-import-sort/issues/83#issue-976190535
+     * */
+    "simple-import-sort/imports": ["warn", { groups: [[
+      "^\\u0000", // Side effect imports.
+      "^react", // `react` related packages come first.
+      // Node.js builtins.
+      "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
+      "^@?\\w",
+      "^\\.\\.(?!/?$)", "^\\.\\./?$", // Parent imports. Put `..` last.
+      "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$", // Other relative imports. Put same-folder imports and `.` last.
+      "^.+\\.s?css$", // Style imports.
+    ]]}],
     "simple-import-sort/exports": "warn",
 
   // Limbo. Disabled, but may be reenabled at some point.

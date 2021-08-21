@@ -7,6 +7,10 @@
 
 # Changelog
 
+## 2.10.0
+### js
+* Improved import sort (It's amazing now :)!)
+
 ## 2.9.0
 ### js
 * Added "space-in-parens", "space-before-function-paren"
