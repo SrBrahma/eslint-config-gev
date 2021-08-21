@@ -1,7 +1,5 @@
 https://github.com/gajus/eslint-plugin-jsdoc - JSDoc!
 https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
-https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
-https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.md
 https://github.com/lydell/eslint-plugin-simple-import-sort but i would like to React for eg to come first
 https://github.com/Bkucera/eslint-plugin-json-format it's also for package.json
 https://github.com/hapijs/eslint-plugin hapi, but it would make everybody to have it. gev would have to add it by outside.

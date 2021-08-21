@@ -3,6 +3,7 @@
 module.exports = {
   "plugins": [
     "no-autofix",
+    "simple-import-sort"
   ],
   "rules": {
   // Prettyfier / Utils
@@ -88,6 +89,19 @@ module.exports = {
     // https://eslint.org/docs/rules/object-curly-newline
     "object-curly-newline": ["warn", { "multiline": true, "consistent": true }],
 
+    /** No space inside parentheses.
+     * Wrong: ( 1 + 2 ); Right: (1 + 2)
+     * https://eslint.org/docs/rules/space-in-parens */
+    "space-in-parens": ["warn", "never"],
+
+    /** No space before function definition / call (but anon/async).
+     * Wrong: function foo (); async() => null; function();
+     *
+     * Right: function foo(); async () => null; function ();
+     *
+     * https://eslint.org/docs/rules/space-before-function-paren */
+    "space-before-function-paren": ["warn", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
+
 
   // Etc
     // "eslint:recommended" sets it as "error". We change it to "warn"!
@@ -129,6 +143,11 @@ module.exports = {
     /** Wrong: `case 0 :break`; Right: `case 0: break`
      * https://eslint.org/docs/rules/switch-colon-spacing */
     "switch-colon-spacing": "warn",
+
+    /** Sort imports and exports
+     * https://github.com/lydell/eslint-plugin-simple-import-sort */
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
 
   // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins

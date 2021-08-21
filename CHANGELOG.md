@@ -7,6 +7,11 @@
 
 # Changelog
 
+## 2.9.0
+### js
+* Added "space-in-parens", "space-before-function-paren"
+* Added "simple-import-sort" plugin
+
 ## 2.8.2
 * Added GitHub Action to this package
 ### ts
