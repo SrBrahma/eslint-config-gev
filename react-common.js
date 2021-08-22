@@ -33,6 +33,18 @@ module.exports = {
      * `Wrong: <C>{ value }</C>; Right: <C>{value}</C>`
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md */
-    "react/jsx-curly-spacing": ["warn", { "when": "never", "children": true }]
+    "react/jsx-curly-spacing": ["warn", { "when": "never", "children": true }],
+
+    /** No spaces after tag opening and before tag closing.
+     *
+     * Wrong: < View >< /View >; Right: <View></View>;
+     *
+     * Wrong: <View />; Right: <View/>
+     *
+     * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md */
+    "react/jsx-tag-spacing": ["warn", {
+      "beforeSelfClosing": "never",
+      "beforeClosing": "never"
+    }]
   }
 };

@@ -7,6 +7,10 @@
 
 # Changelog
 
+## 2.11.0
+### js
+* Added "react/jsx-tag-spacing"
+
 ## 2.10.0
 ### js
 * Improved import sort (It's amazing now :)!)
