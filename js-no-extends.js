@@ -160,6 +160,15 @@ module.exports = {
     ]]}],
     "simple-import-sort/exports": "warn",
 
+
+    /** https://eslint.org/docs/rules/no-confusing-arrow */
+    "no-confusing-arrow": "warn",
+
+    /** Always add () to arrow functions params. Makes clearer and increases dev code understanding speed.
+     *
+     * https://eslint.org/docs/rules/arrow-parens */
+    "arrow-parens": "warn",
+
   // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
 

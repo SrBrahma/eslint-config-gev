@@ -7,6 +7,10 @@
 
 # Changelog
 
+## 2.12.0
+### js
+* Added "no-confusing-arrow": "warn" and "arrow-parens": "warn"
+
 ## 2.11.0
 ### js
 * Added "react/jsx-tag-spacing"
