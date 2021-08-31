@@ -7,6 +7,10 @@
 
 # Changelog
 
+## 2.13.0
+### js
+* Removed `"brace-style": ["warn", "1tbs", { "allowSingleLine": true }]` because it's limited and complains when it shouldn't, like on comments on line above.
+
 ## 2.12.0
 ### js
 * Added "no-confusing-arrow": "warn" and "arrow-parens": "warn"
