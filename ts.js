@@ -104,6 +104,12 @@ module.exports = {
     ...replaceBaseRule("default-param-last", "error"),
     ...replaceBaseRule("no-empty-function"),
 
+    /** This is kinda useless. It's more of a pain, actually:
+     * If you are writting a function like f({}: Props) to later fill the object with the desired props,
+     * it will mark it as an error.
+     * https://eslint.org/docs/rules/no-empty-pattern */
+     "no-empty-pattern": "off",
+
 
   /** =========== Unsafe / any ===========
    *  === Be responsible and careful! ==== */

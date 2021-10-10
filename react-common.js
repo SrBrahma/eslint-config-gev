@@ -45,6 +45,11 @@ module.exports = {
     "react/jsx-tag-spacing": ["warn", {
       "beforeSelfClosing": "never",
       "beforeClosing": "never"
-    }]
+    }],
+
+    /** Allow to use <Component children={x}/>. Sometimes it's useful to simplify the code and to do some nice hacks,
+     * like conditional wrapping component.
+     * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md */
+     "react/no-children-prop": "off",
   }
 };

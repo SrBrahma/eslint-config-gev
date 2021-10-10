@@ -98,6 +98,9 @@ module.exports = {
      * https://eslint.org/docs/rules/space-before-function-paren */
     "space-before-function-paren": ["warn", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
 
+    /** Wrong: ()=>{}
+     * Right: () => {} */
+    "arrow-spacing": "warn",
 
   // Etc
     // "eslint:recommended" sets it as "error". We change it to "warn"!
