@@ -7,6 +7,13 @@
 
 # Changelog
 
+## 2.15.0
+**react**
+"react-hooks/exhaustive-deps": ["warn", {
+  "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+}],
+**_(deps autofix! yea)_**
+
 ## 2.14.0
 Added:
 

@@ -51,5 +51,13 @@ module.exports = {
      * like conditional wrapping component.
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md */
      "react/no-children-prop": "off",
+
+     /** Enable deps autofix. I've only had infinite loops once, and the autofix was off,
+      * I just accept the suggestions and don't spend time analysing it. Rare to happen, easy to notice.
+      *
+      * https://github.com/facebook/react/issues/18235#issuecomment-898636301 */
+     "react-hooks/exhaustive-deps": ["warn", {
+       "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+      }],
   }
 };
