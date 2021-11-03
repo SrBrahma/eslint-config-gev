@@ -7,6 +7,9 @@
 
 # Changelog
 
+## 2.16.0
+**ts**: "@typescript-eslint/no-unsafe-argument": "off"
+
 ## 2.15.0
 **react**
 "react-hooks/exhaustive-deps": ["warn", {
@@ -21,7 +24,7 @@ Added:
 
 **ts** "no-empty-pattern": "off"
 
-**reacts** "react/no-children-prop": "off",
+**reacts** "react/no-children-prop": "off"
 
 
 ## 2.13.0
