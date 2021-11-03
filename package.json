@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.15.0",
+  "version": "2.15.1",
   "description": "Common ESLint configs for my JS/TS projects",
   "main": "index.js",
   "scripts": {},
@@ -31,7 +31,7 @@
     "typescript": "*"
   },
   "dependencies": {
-    "eslint-plugin-no-autofix": "1.1.2",
+    "eslint-plugin-no-autofix": "1.2.0",
     "eslint-plugin-simple-import-sort": "7.0.0"
   }
 }
