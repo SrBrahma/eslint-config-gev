@@ -79,7 +79,7 @@ module.exports = {
 
     // Newline after [ and before ] on multiline arrays.
     // https://eslint.org/docs/rules/array-bracket-newline
-    "array-bracket-newline": ["warn", { "multiline": true }],
+    "array-bracket-newline": ["warn", "consistent"],
 
     // Newline after { and before } on multiline objects.
     // https://eslint.org/docs/rules/object-curly-newline

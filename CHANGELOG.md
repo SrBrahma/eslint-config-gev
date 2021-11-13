@@ -7,24 +7,27 @@
 
 # Changelog
 
+## 2.17.0
+**js**: `"array-bracket-newline"` from `{ "multiline": true }` to `"consistent"`
+
 ## 2.16.0
-**ts**: "@typescript-eslint/no-unsafe-argument": "off"
+**ts**: `"@typescript-eslint/no-unsafe-argument": "off"`
 
 ## 2.15.0
 **react**
-"react-hooks/exhaustive-deps": ["warn", {
+```"react-hooks/exhaustive-deps": ["warn", {
   "enableDangerousAutofixThisMayCauseInfiniteLoops": true
 }],
-**_(deps autofix! yea)_**
+```
+**_(hooks deps autofix! yea)_**
 
 ## 2.14.0
-Added:
 
-**js** "arrow-spacing": "warn"
+**js** `"arrow-spacing": "warn"`
 
-**ts** "no-empty-pattern": "off"
+**ts** `"no-empty-pattern": "off"`
 
-**reacts** "react/no-children-prop": "off"
+**reacts** `"react/no-children-prop": "off"`
 
 
 ## 2.13.0
