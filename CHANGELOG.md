@@ -7,6 +7,9 @@
 
 # Changelog
 
+## 2.18.1
+`dependencies` to `peerDependencies` so they are automatically installed and no longer required to be manually installed.
+
 ## 2.18.0
 **js**:
 * `"import/newline-after-import": ["warn", { "count": 3 }]`
