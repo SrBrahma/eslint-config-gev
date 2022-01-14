@@ -3,7 +3,8 @@
 module.exports = {
   "plugins": [
     "no-autofix",
-    "simple-import-sort"
+    "simple-import-sort",
+    "import"
   ],
   "rules": {
   // Prettyfier / Utils
@@ -157,8 +158,17 @@ module.exports = {
       "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$", // Other relative imports. Put same-folder imports and `.` last.
       "^.+\\.s?css$", // Style imports.
     ]]}],
+    /** Sorts imports
+     * https://github.com/lydell/eslint-plugin-simple-import-sort */
     "simple-import-sort/exports": "warn",
 
+    /** 3 newlines after imports block
+     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md */
+    "import/newline-after-import": ["warn", { "count": 3 }],
+
+    /** Merges multiple imports statements from same module.
+     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md */
+    "import/no-duplicates": "warn",
 
     /** https://eslint.org/docs/rules/no-confusing-arrow */
     "no-confusing-arrow": "warn",

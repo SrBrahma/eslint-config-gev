@@ -7,6 +7,11 @@
 
 # Changelog
 
+## 2.18.0
+**js**:
+* `"import/newline-after-import": ["warn", { "count": 3 }]`
+* `"import/no-duplicates": "warn"`
+
 ## 2.17.0
 **js**: `"array-bracket-newline"` from `{ "multiline": true }` to `"consistent"`
 
