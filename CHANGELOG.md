@@ -7,8 +7,12 @@
 
 # Changelog
 
+## 2.19.0
+**ts**:
+* `"@typescript-eslint/no-unnecessary-condition": "warn"`
+
 ## 2.18.1
-`dependencies` to `peerDependencies` so they are automatically installed and no longer required to be manually installed.
+~~`dependencies` to `peerDependencies` so they are automatically installed and no longer required to be manually installed.~~ Aparently didn't work.
 
 ## 2.18.0
 **js**:
