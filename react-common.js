@@ -60,5 +60,7 @@ module.exports = {
      "react-hooks/exhaustive-deps": ["warn", {
        "enableDangerousAutofixThisMayCauseInfiniteLoops": true
       }],
+      /** https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md */
+      "react/jsx-no-useless-fragment": ["warn", {"allowExpressions": true}],
   }
 };
