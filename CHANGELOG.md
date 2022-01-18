@@ -7,6 +7,8 @@
 
 # Changelog
 
+## 2.20.0
+**react**: Now extending `"plugin:react/jsx-runtime"` for React 17 support, `import React` is no longer required.
 ## 2.19.0
 **ts**:
 * `"@typescript-eslint/no-unnecessary-condition": "warn"`
