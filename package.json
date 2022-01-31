@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.22.0",
+  "version": "2.23.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "scripts": {},

@@ -7,6 +7,8 @@
 
 # Changelog
 
+## 2.23.0
+**react**: Removed `"react/jsx-no-useless-fragment"`.
 ## 2.22.0
 **react**: `"react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "always"}]`
 ## 2.21.0
