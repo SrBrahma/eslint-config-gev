@@ -62,5 +62,10 @@ module.exports = {
       }],
       /** https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md */
       "react/jsx-no-useless-fragment": ["warn", {"allowExpressions": true}],
+
+      /** From <A b={'c'}>d</A> to <A b='c'>{'d'}<A/>
+       * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md */
+      "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "always"}],
+
   }
 };
