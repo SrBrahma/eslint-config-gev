@@ -64,9 +64,15 @@ module.exports = {
       // Dropped it as it won't allow <></> to fit JSX.Element return.
       // "react/jsx-no-useless-fragment": ["warn", {"allowExpressions": true}],
 
-      /** From <A b={'c'}>d</A> to <A b='c'>{'d'}<A/>
+      /** From <A b={'c'}>d</A> to <A b="c">{'d'}<A/>
+       *
+       * Note that it always converts to double-quotes when changing,
+       * so we use `jsx-quotes` rule for props and `quotes` rule for children.
+       *
        * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md */
       "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "always"}],
 
+      /** Convert <A b="c"/> to <A b='c'/>. */
+      "jsx-quotes": ["error", "prefer-single"],
   }
 };

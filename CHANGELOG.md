@@ -6,6 +6,8 @@
 -->
 
 # Changelog
+## 2.25.0
+**react**: `"jsx-quotes": ["error", "prefer-single"]`
 ## 2.24.0
 **react-native**:
 * `"react-native/no-unused-styles": "warn"`
