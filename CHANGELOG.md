@@ -6,7 +6,10 @@
 -->
 
 # Changelog
-
+## 2.24.0
+**react-native**:
+* `"react-native/no-unused-styles": "warn"`
+* `"react-native/no-single-element-style-arrays" : "warn"`
 ## 2.23.0
 **react**: Removed `"react/jsx-no-useless-fragment"`.
 ## 2.22.0
