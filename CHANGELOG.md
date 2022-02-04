@@ -6,6 +6,8 @@
 -->
 
 # Changelog
+## 2.26.1
+**js**: Added missing `plugin: ["unused-imports"]`
 ## 2.26.0
 **js**: Re-enabled `"unused-imports/no-unused-imports": "warn"`.
 ## 2.25.1

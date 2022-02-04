@@ -4,7 +4,8 @@ module.exports = {
   "plugins": [
     "no-autofix",
     "simple-import-sort",
-    "import"
+    "import",
+    "unused-imports"
   ],
   "rules": {
   // Prettyfier / Utils
