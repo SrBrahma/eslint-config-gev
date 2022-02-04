@@ -24,13 +24,14 @@ If interested, take a look into the source files to see what will be used as plu
 
 * `npm i -D eslint-config-gev"
 
-You may also need to `npm i -D eslint` if using a package manager that doesn't install peerDependencies automatically (npm >= 7 **does install** automatically!).
-* Add the following to the top of your .eslintrc.js
+* Add the following to the top of your .eslintrc.js:
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-config/patch/modern-module-resolution');
+require("@rushstack/eslint-patch/modern-module-resolution");
 ```
+
+With it, you won't need to install `eslint` and all the plugins we use!
 
 ### Typescript projects:
 * Add `"eslint-config-gev"` *(or `"eslint-config-gev/ts"`)* to the `"extends": [...]` field in your eslintrc.
@@ -54,7 +55,7 @@ require('@rushstack/eslint-config/patch/modern-module-resolution');
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-config/patch/modern-module-resolution');
+require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
   "env": {
@@ -92,7 +93,7 @@ module.exports = {
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-config/patch/modern-module-resolution');
+require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
   "env": {
@@ -132,7 +133,7 @@ module.exports = {
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-config/patch/modern-module-resolution');
+require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
   "env": {
