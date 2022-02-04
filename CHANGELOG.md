@@ -6,6 +6,10 @@
 -->
 
 # Changelog
+## 2.27.0
+### Now using [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch)!
+#### You won't need to install all the plugins anymore.
+
 ## 2.26.1
 **js**: Added missing `plugin: ["unused-imports"]`
 ## 2.26.0

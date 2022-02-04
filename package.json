@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.26.1",
+  "version": "2.27.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "scripts": {},
@@ -24,15 +24,20 @@
     "url": "https://github.com/SrBrahma/eslint-config/issues"
   },
   "homepage": "https://github.com/SrBrahma/eslint-config#readme",
-  "optionalDependencies": {
+  "dependencies": {
+    "@rushstack/eslint-patch": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
-    "eslint": "*",
-    "typescript": "*"
-  },
-  "peerDependencies": {
     "eslint-plugin-import": "*",
     "eslint-plugin-no-autofix": "*",
-    "eslint-plugin-simple-import-sort": "*"
+    "eslint-plugin-simple-import-sort": "*",
+    "eslint-plugin-unused-imports": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-native": "*"
+  },
+  "peerDependencies": {
+    "eslint": "*",
+    "typescript": "*"
   }
 }

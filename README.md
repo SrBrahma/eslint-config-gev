@@ -22,30 +22,26 @@ If interested, take a look into the source files to see what will be used as plu
 
 ## 💿 Install:
 
-The other packages after this one are there to ensure the basic requirements are installed and updated.
+* `npm i -D eslint-config-gev"
+
+You may also need to `npm i -D eslint` if using a package manager that doesn't install peerDependencies automatically (npm >= 7 **does install** automatically!).
+* Add the following to the top of your .eslintrc.js
+
+```js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@rushstack/eslint-config/patch/modern-module-resolution');
+```
 
 ### Typescript projects:
-
-+ `npm i -D eslint-config-gev@latest eslint@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
-
 * Add `"eslint-config-gev"` *(or `"eslint-config-gev/ts"`)* to the `"extends": [...]` field in your eslintrc.
 
-
 ### Typescript + React projects:
-
-* `npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
-
 * Add `"eslint-config-gev/react"` to the `"extends": [...]` field in your eslintrc.
 
-
 ### Typescript + React Native projects:
-
-* `npm i -D eslint-config-gev@latest eslint@latest eslint-plugin-react@latest eslint-plugin-react-hooks@latest eslint-plugin-react-native@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest`
-
 * Add `"eslint-config-gev/react-native"` to the `"extends": [...]` field in your eslintrc.
 
 ### Javascript:
-* `npm i -D eslint-config-gev@latest eslint@latest`
 * Add `"eslint-config-gev/js"` to the `"extends": [...]` field in your eslintrc.
 
 
@@ -57,6 +53,9 @@ The other packages after this one are there to ensure the basic requirements are
 <details><summary><b>eslintrc.js for Typescript</b></summary>
 
 ```js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@rushstack/eslint-config/patch/modern-module-resolution');
+
 module.exports = {
   "env": {
     "es2021": true,
@@ -92,6 +91,9 @@ module.exports = {
 <details><summary><b>eslintrc.js for Typescript + React</b></summary>
 
 ```js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@rushstack/eslint-config/patch/modern-module-resolution');
+
 module.exports = {
   "env": {
     "es2021": true,
@@ -129,6 +131,9 @@ module.exports = {
 <details><summary><b>eslintrc.js for Typescript + React Native</b></summary>
 
 ```js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@rushstack/eslint-config/patch/modern-module-resolution');
+
 module.exports = {
   "env": {
     "es2021": true,
