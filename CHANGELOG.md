@@ -6,6 +6,8 @@
 -->
 
 # Changelog
+## 2.26.0
+**js**: Re-enabled `"unused-imports/no-unused-imports": "warn"`.
 ## 2.25.1
 **ts**: `"@typescript-eslint/restrict-plus-operands": "off"` as it's bugging often.
 ## 2.25.0

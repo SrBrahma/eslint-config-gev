@@ -178,15 +178,15 @@ module.exports = {
      * https://eslint.org/docs/rules/arrow-parens */
     "arrow-parens": "warn",
 
+    /** Automatically removes unused imports. Saves time! But may be annoying! I re-enabled after moving it to limbo.
+     *
+     * https://github.com/sweepline/eslint-plugin-unused-imports */
+    "unused-imports/no-unused-imports": "warn",
+
+
   // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
 
-    // Commented. It was annoying when it removed imports I didnt want to remove yet.
-    /** Automatically remove unused imports. It saves time! - but may remove your
-     * imports that you will still use, when ctrl-s'ing.
-     *
-     * https://github.com/sweepline/eslint-plugin-unused-imports */
-    // "unused-imports/no-unused-imports": "warn",
 
     // Commented this one below. It was annoying in react componentes, where `condition && \n <Component/>` is a common practice.
     /** Make multi line operators to be in the start of the new lines, not on the ending
