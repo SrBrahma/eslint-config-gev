@@ -148,6 +148,9 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": ["warn", {
       "allowArgumentsExplicitlyTypedAsAny": true
     }],
+
+    /** [2022-02-03] It's bugging often, so I disabled it. */
+    "@typescript-eslint/restrict-plus-operands": "off",
   }
 };
 

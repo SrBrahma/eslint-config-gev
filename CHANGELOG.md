@@ -6,6 +6,8 @@
 -->
 
 # Changelog
+## 2.25.1
+**ts**: `"@typescript-eslint/restrict-plus-operands": "off"` as it's bugging often.
 ## 2.25.0
 **react**: `"jsx-quotes": ["error", "prefer-single"]`
 ## 2.24.0
