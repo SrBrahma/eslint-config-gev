@@ -6,6 +6,10 @@
 -->
 
 # Changelog
+
+## 2.27.2
+**js**: Added `ignoreRestSiblings` to `no-unused-vars`
+
 ## 2.27.0~1
 ### Now using [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch)!
 #### You won't need to install all the plugins anymore, nor the `eslint`.

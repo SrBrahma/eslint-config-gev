@@ -105,8 +105,8 @@ module.exports = {
     "arrow-spacing": "warn",
 
   // Etc
-    // "eslint:recommended" sets it as "error". We change it to "warn"!
-    "no-unused-vars": "warn",
+    /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
+    "no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
 
     // Changes from error to warn, and allows `while (true)`.
     "no-constant-condition": ["warn", { "checkLoops": false }],
@@ -185,7 +185,7 @@ module.exports = {
     "unused-imports/no-unused-imports": "warn",
 
 
-  // Limbo. Disabled, but may be reenabled at some point.
+    // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
 
 
