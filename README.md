@@ -176,6 +176,8 @@ module.exports = {
 <details><summary><b>eslintrc.js for Javascript</b></summary>
 
 ```js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require("@rushstack/eslint-patch/modern-module-resolution");
 module.exports = {
   "env": {
     "es2021": true,
@@ -204,7 +206,3 @@ module.exports = {
 </br>
 
 ## 📰 [Changelog](./CHANGELOG.md)
-
-## 🔮 Future
-
-* **lerna** integration for multiple packages (and different peerDeps)
