@@ -7,6 +7,9 @@
 
 # Changelog
 
+## 2.28.0
+**ts**: Added `"@typescript-eslint/consistent-type-imports": "warn"`
+
 ## 2.27.2
 **js**: Added `ignoreRestSiblings` to `no-unused-vars`
 

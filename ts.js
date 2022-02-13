@@ -151,6 +151,10 @@ module.exports = {
 
     /** [2022-02-03] It's bugging often, so I disabled it. */
     "@typescript-eslint/restrict-plus-operands": "off",
+
+    /** Improves tree-shaking and improves TS optimization.
+     * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/consistent-type-imports.md */
+    "@typescript-eslint/consistent-type-imports": "warn"
   }
 };
 
