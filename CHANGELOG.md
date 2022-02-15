@@ -7,6 +7,10 @@
 
 # Changelog
 
+## 2.30.0
+**js**: Dropped `"no-empty-function"`
+**ts**: Dropped `"@typescript-eslint/no-empty-function"`
+
 ## 2.29.0
 **js**: Added `"no-mixed-operators": "warn"`
 

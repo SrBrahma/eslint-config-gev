@@ -102,7 +102,9 @@ module.exports = {
     ...replaceBaseRule("no-loss-of-precision"),
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/default-param-last.md
     ...replaceBaseRule("default-param-last", "error"),
-    ...replaceBaseRule("no-empty-function"),
+
+    /** Disable it to allow empty catch blocks. */
+    "@typescript-eslint/no-empty-function": "off",
 
     /** This is kinda useless. It's more of a pain, actually:
      * If you are writting a function like f({}: Props) to later fill the object with the desired props,

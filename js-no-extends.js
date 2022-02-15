@@ -131,8 +131,8 @@ module.exports = {
     "no-unreachable": "warn",
     /** Warn about empty blocks. Recommended was 'error'. */
     "no-empty": "warn",
-    /** Warn about empty functions. Recommended was 'error'. */
-    "no-empty-function": "warn",
+    /** Disable error about empty functions. This is good to allow .catch(() => {}) */
+    "no-empty-function": "off",
     /** Default recommended is error. Changed it to warn to avoid confusions, as I had.
      * https://eslint.org/docs/rules/no-useless-catch */
     "no-useless-catch": "warn",
