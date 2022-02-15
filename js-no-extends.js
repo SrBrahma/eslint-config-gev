@@ -184,6 +184,7 @@ module.exports = {
      * https://github.com/sweepline/eslint-plugin-unused-imports */
     "unused-imports/no-unused-imports": "warn",
 
+    "no-mixed-operators": "warn",
 
     // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins

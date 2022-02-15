@@ -7,6 +7,9 @@
 
 # Changelog
 
+## 2.29.0
+**js**: Added `"no-mixed-operators": "warn"`
+
 ## 2.28.0
 **ts**: Added `"@typescript-eslint/consistent-type-imports": "warn"`
 
