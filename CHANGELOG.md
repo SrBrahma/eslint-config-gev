@@ -7,6 +7,12 @@
 
 # Changelog
 
+Changes to the `js` flavor are also applied to all the other flavors.
+Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
+
+## 2.31.0
+**js**: Added `"block-spacing": "warn"`. Thanks, [mdjermanovic](https://github.com/eslint/eslint/discussions/15615#discussioncomment-2191461)!
+
 ## 2.30.0
 **js**: Dropped `"no-empty-function"`
 **ts**: Dropped `"@typescript-eslint/no-empty-function"`
