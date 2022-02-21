@@ -10,6 +10,9 @@
 Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.32.0
+**js**: Added `"quote-props": "as-needed"`
+
 ## 2.31.0
 **js**: Added `"block-spacing": "warn"`. Thanks, [mdjermanovic](https://github.com/eslint/eslint/discussions/15615#discussioncomment-2191461)!
 
