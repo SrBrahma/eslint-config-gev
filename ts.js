@@ -156,7 +156,9 @@ module.exports = {
 
     /** Improves tree-shaking and improves TS optimization.
      * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/consistent-type-imports.md */
-    "@typescript-eslint/consistent-type-imports": "warn"
+    "@typescript-eslint/consistent-type-imports": ["warn", {
+      "disallowTypeAnnotations": false // Allows import('foo').Bar. Useful in global.d.ts.
+    }]
   }
 };
 
