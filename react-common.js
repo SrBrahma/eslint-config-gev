@@ -73,6 +73,6 @@ module.exports = {
       "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "always"}],
 
       /** Convert <A b="c"/> to <A b='c'/>. */
-      "jsx-quotes": ["error", "prefer-single"],
+      "jsx-quotes": ["warn", "prefer-single"],
   }
 };

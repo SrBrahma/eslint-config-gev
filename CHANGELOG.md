@@ -10,6 +10,9 @@
 Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.32.3
+**react**: `"jsx-quotes": ["error"` to `"warn"`
+
 ## 2.32.2
 **ts**: Added `"disallowTypeAnnotations": false` to `"consistent-type-imports"`
 
