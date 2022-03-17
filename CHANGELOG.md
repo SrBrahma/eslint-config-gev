@@ -10,72 +10,75 @@
 Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.33.0
+**js**: Added `"object-shorthand": ["warn", "always"]`.
+
 ## 2.32.3
-**react**: `"jsx-quotes": ["error"` to `"warn"`
+**react**: `"jsx-quotes": ["error"` to `"warn"`.
 
 ## 2.32.2
-**ts**: Added `"disallowTypeAnnotations": false` to `"consistent-type-imports"`
+**ts**: Added `"disallowTypeAnnotations": false` to `"consistent-type-imports"`.
 
 ## 2.32.0~1
-**js**: Added `"quote-props": ["warn", "as-needed"]`
+**js**: Added `"quote-props": ["warn", "as-needed"]`.
 
 ## 2.31.0
 **js**: Added `"block-spacing": "warn"`. Thanks, [mdjermanovic](https://github.com/eslint/eslint/discussions/15615#discussioncomment-2191461)!
 
 ## 2.30.0
-**js**: Dropped `"no-empty-function"`
-**ts**: Dropped `"@typescript-eslint/no-empty-function"`
+**js**: Dropped `"no-empty-function"`.
+**ts**: Dropped `"@typescript-eslint/no-empty-function"`.
 
 ## 2.29.0
-**js**: Added `"no-mixed-operators": "warn"`
+**js**: Added `"no-mixed-operators": "warn"`.
 
 ## 2.28.0
-**ts**: Added `"@typescript-eslint/consistent-type-imports": "warn"`
+**ts**: Added `"@typescript-eslint/consistent-type-imports": "warn"`.
 
 ## 2.27.2
-**js**: Added `ignoreRestSiblings` to `no-unused-vars`
+**js**: Added `ignoreRestSiblings` to `no-unused-vars`.
 
 ## 2.27.0~1
 ### Now using [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch)!
 #### You won't need to install all the plugins anymore, nor the `eslint`.
 
 ## 2.26.1
-**js**: Added missing `plugin: ["unused-imports"]`
+**js**: Added missing `plugin: ["unused-imports"]`.
 ## 2.26.0
 **js**: Re-enabled `"unused-imports/no-unused-imports": "warn"`.
 ## 2.25.1
 **ts**: `"@typescript-eslint/restrict-plus-operands": "off"` as it's bugging often.
 ## 2.25.0
-**react**: `"jsx-quotes": ["error", "prefer-single"]`
+**react**: `"jsx-quotes": ["error", "prefer-single"]`.
 ## 2.24.0
 **react-native**:
-* `"react-native/no-unused-styles": "warn"`
-* `"react-native/no-single-element-style-arrays" : "warn"`
+* `"react-native/no-unused-styles": "warn"`.
+* `"react-native/no-single-element-style-arrays" : "warn"`.
 ## 2.23.0
 **react**: Removed `"react/jsx-no-useless-fragment"`.
 ## 2.22.0
-**react**: `"react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "always"}]`
+**react**: `"react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "always"}]`.
 ## 2.21.0
-**react**: `"react/jsx-no-useless-fragment": ["warn", {"allowExpressions": true}]`
+**react**: `"react/jsx-no-useless-fragment": ["warn", {"allowExpressions": true}]`.
 ## 2.20.0
 **react**: Now extending `"plugin:react/jsx-runtime"` for React 17 support, `import React` is no longer required.
 ## 2.19.0
 **ts**:
-* `"@typescript-eslint/no-unnecessary-condition": "warn"`
+* `"@typescript-eslint/no-unnecessary-condition": "warn"`.
 
 ## 2.18.1
 ~~`dependencies` to `peerDependencies` so they are automatically installed and no longer required to be manually installed.~~ Aparently didn't work.
 
 ## 2.18.0
 **js**:
-* `"import/newline-after-import": ["warn", { "count": 3 }]`
-* `"import/no-duplicates": "warn"`
+* `"import/newline-after-import": ["warn", { "count": 3 }]`.
+* `"import/no-duplicates": "warn"`.
 
 ## 2.17.0
-**js**: `"array-bracket-newline"` from `{ "multiline": true }` to `"consistent"`
+**js**: `"array-bracket-newline"` from `{ "multiline": true }` to `"consistent"`.
 
 ## 2.16.0
-**ts**: `"@typescript-eslint/no-unsafe-argument": "off"`
+**ts**: `"@typescript-eslint/no-unsafe-argument": "off"`.
 
 ## 2.15.0
 **react**
@@ -87,11 +90,11 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.14.0
 
-**js** `"arrow-spacing": "warn"`
+**js** `"arrow-spacing": "warn"`.
 
-**ts** `"no-empty-pattern": "off"`
+**ts** `"no-empty-pattern": "off"`.
 
-**reacts** `"react/no-children-prop": "off"`
+**reacts** `"react/no-children-prop": "off"`.
 
 
 ## 2.13.0
@@ -100,29 +103,29 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.12.0
 #### js
-* Added "no-confusing-arrow": "warn" and "arrow-parens": "warn"
+* Added "no-confusing-arrow": "warn" and "arrow-parens": "warn".
 
 ## 2.11.0
 #### js
-* Added "react/jsx-tag-spacing"
+* Added "react/jsx-tag-spacing".
 
 ## 2.10.0
 #### js
-* Improved import sort (It's amazing now :)!)
+* Improved import sort (It's amazing now :)!).
 
 ## 2.9.0
 #### js
-* Added "space-in-parens", "space-before-function-paren"
-* Added "simple-import-sort" plugin
+* Added "space-in-parens", "space-before-function-paren".
+* Added "simple-import-sort" plugin.
 
 ## 2.8.2
-* Added GitHub Action to this package
+* Added GitHub Action to this package.
 #### ts
 * Changed ?? to || in its replaceBaseRule function to be Node 12 friendly.
 
 ## 2.8.1
 #### js
-* Removed old 'unused-imports' plugin from js-no-extends
+* Removed old 'unused-imports' plugin from js-no-extends.
 
 ## 2.8.0
 #### js
@@ -132,12 +135,12 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.7.1
 #### js
-* Added `"spaced-comment": ["warn", "always", { "exceptions": ["-", "+"], "markers": ["/"] }]`
-* Added `"switch-colon-spacing": "warn"`
+* Added `"spaced-comment": ["warn", "always", { "exceptions": ["-", "+"], "markers": ["/"] }]`.
+* Added `"switch-colon-spacing": "warn"`.
 
 ## 2.7.0
 #### js
-* Added `"unused-imports/no-unused-imports": "warn"`
+* Added `"unused-imports/no-unused-imports": "warn"`.
 
 ## 2.6.2
 #### js
@@ -231,15 +234,13 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.4.0
 #### react, react-native
-* Added `"react/jsx-equals-spacing"` and `"react/jsx-curly-spacing"`
+* Added `"react/jsx-equals-spacing"` and `"react/jsx-curly-spacing"`.
 * Both are now using the new shared react-common.js file.
 
 
 ## 2.3.2
 #### ts
-* Added `"@typescript-eslint/explicit-module-boundary-types": ["warn", {
-      allowArgumentsExplicitlyTypedAsAny: true
-    }]`
+* Added `"@typescript-eslint/explicit-module-boundary-types": ["warn", { allowArgumentsExplicitlyTypedAsAny: true }]`.
 
 ## 2.3.1
 #### js
@@ -247,7 +248,7 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.3.0
 #### js
-* Added `"brace-style"`, `"array-bracket-newline"`, `"object-curly-newline"`
+* Added `"brace-style"`, `"array-bracket-newline"`, `"object-curly-newline"`.
 
 ## 2.2.1
 #### react,react-native
@@ -260,20 +261,20 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.1.8
 #### ts
-* Added `"require-await": "off"` (there is already a ts equivalent rule for it)
+* Added `"require-await": "off"` (there is already a ts equivalent rule for it).
 
 ## 2.1.7
 #### js
-* Added `"no-constant-condition": ["warn", { "checkLoops": false }]`
+* Added `"no-constant-condition": ["warn", { "checkLoops": false }]`.
 
 ## 2.1.5~6 (2021-07-02)
 * **`[ts]`** - Fixed the extends order. Also, we were extending `"./js.js"` and it extended `"eslint-recommended"`. ts is now extending the new `"js-no-extends.js"`, that don't extends the `"eslint-recommended"`. The `"./js.js"` also extends that new file.
 
 ## 2.1.4 (2021-07-02)
-* **`[ts]`** - Fixed "no-unused-vars". Ref: https://stackoverflow.com/a/61555310/10247962
+* **`[ts]`** - Fixed "no-unused-vars". Ref: https://stackoverflow.com/a/61555310/10247962.
 
 ## 2.1.3 (2021-07-02)
-* **`[ts]`** - Changed `"@typescript-eslint/no-floating-promises": "off"` to `"@typescript-eslint/no-floating-promises": "warn"`
+* **`[ts]`** - Changed `"@typescript-eslint/no-floating-promises": "off"` to `"@typescript-eslint/no-floating-promises": "warn"`.
 
 ## 2.1.2 (2021-06-27)
 * **`[js]`** - Added `"space-before-blocks": "warn"`.
@@ -284,14 +285,14 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.1.0 (2021-06-13)
 
-* **`[js]`** - Added Javascript (for a friend that still doesn't know the wonderful world of TS!)
+* **`[js]`** - Added Javascript (for a friend that still doesn't know the wonderful world of TS!).
 * **`[ts]`** - Now extends `js.js`. No rules were changed, just some of its content was moved to js file.
 
 
 ## 2.0.3 (2021-05-27)
 
-* **`[react]`** - Reordered extends
-* Reordered extends in README example
+* **`[react]`** - Reordered extends.
+* Reordered extends in README example.
 
 
 ## 2.0.2 (2021-05-06)
@@ -301,14 +302,14 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 2.0.1 (2021-05-03)
 
-* **`[ts]`** - Added
+* **`[ts]`** - Added.
 ```
 "@typescript-eslint/no-misused-promises": [ "error", {
   "checksVoidReturn": false
 }]
 ```
 
-* **`[react-native]`** - Fixed extends order so `./ts.js` have priority
+* **`[react-native]`** - Fixed extends order so `./ts.js` have priority.
 
 
 # 2.0.0 (2021-04-25)
@@ -320,10 +321,10 @@ Changes to the `ts` flavor are also applied to `react` and `react-native` flavor
 
 ## 1.1.0 (2021-04-23)
 
-* Added "@typescript-eslint/no-var-requires": "off"
-* Fixed "__dirname" to __dirname (no quotes)
+* Added "@typescript-eslint/no-var-requires": "off".
+* Fixed "__dirname" to __dirname (no quotes).
 
 
 # 1.0.0 (2021-04-21)
 
-* Release version
+* Release version.

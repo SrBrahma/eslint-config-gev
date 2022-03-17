@@ -193,6 +193,10 @@ module.exports = {
     /** Removes unnecessary quotes from prop keys. https://eslint.org/docs/rules/quote-props */
     "quote-props": ["warn", "as-needed"],
 
+    /** Simplify objects.
+     * https://eslint.org/docs/rules/object-shorthand */
+    "object-shorthand": ["warn", "always"],
+
     // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
 
