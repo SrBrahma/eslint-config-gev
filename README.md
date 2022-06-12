@@ -22,7 +22,12 @@ If interested, take a look into the source files to see what will be used as plu
 
 ## 💿 Install:
 
-* `npm i -D eslint-config-gev"
+```bash
+npm i -D eslint-config-gev
+# or 
+yarn add -D eslint-config-gev
+```
+
 
 * Add the following to the top of your .eslintrc.js:
 
