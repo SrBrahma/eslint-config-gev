@@ -116,6 +116,11 @@ module.exports = {
      * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-unnecessary-condition.md */
     "@typescript-eslint/no-unnecessary-condition": "warn",
 
+    /** Disallow `throw 4` and `throw 'error'`. It will be required to always throw an Error-like object,
+     * such as `throw new Error('error')`.
+     *
+     * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-throw-literal.md */
+    ...replaceBaseRule("no-throw-literal"),
 
 
   /** =========== Unsafe / any ===========

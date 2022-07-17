@@ -197,6 +197,13 @@ module.exports = {
      * https://eslint.org/docs/rules/object-shorthand */
     "object-shorthand": ["warn", "always"],
 
+    /** Disallow `throw 4` and `throw 'error'`. It will be required to always throw an Error-like object,
+     * such as `throw new Error('error')`.
+     *
+     * https://eslint.org/docs/latest/rules/no-throw-literal */
+    "no-throw-literal": "warn",
+
+
     // Limbo. Disabled, but may be reenabled at some point.
     // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
 
