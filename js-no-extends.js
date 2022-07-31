@@ -9,55 +9,55 @@ module.exports = {
   ],
   "rules": {
   // Prettyfier / Utils
-    // 2 spaces ftw. I used to use 4 and reject 2. People change! Sometimes for worse! >:D
+    /** 2 spaces ftw. */
     "indent": ["warn", 2, { "SwitchCase": 1 }],
 
-    // \n instead of \r\n
+    /** \n instead of \r\n */
     "linebreak-style": ["warn", "unix"],
 
-    // Single quotes instead of double. Allows using template even if not required.
+    /** Single quotes instead of double. Allows using template even if not required. */
     "quotes": ["warn", "single", { "allowTemplateLiterals": true, "avoidEscape": true }],
 
-    // Adds `;` to every possible line end.
+    /** Adds `;` to every possible line end. */
     "semi": ["warn", "always"],
 
-    // Adds space after `,`
+    /** Adds space after `,` */
     "comma-spacing": ["warn"],
 
-    // Adds trailing `,` on multiline items using `,`. Easier to add new items.
+    /** Adds trailing `,` on multiline items using `,`. Easier to add new items. */
     "comma-dangle": ["warn", "always-multiline"],
 
-    // TODO may/should be specified the cases https://eslint.org/docs/rules/space-in-brackets#exceptions
+    /** TODO may/should be specified the cases https://eslint.org/docs/rules/space-in-brackets#exceptions */
     "array-bracket-spacing": ["warn", "never"],
 
-    // Spacing `{ spaceBeforeAndAfterItemsInCurlyBrackets }`
+    /** Spacing `{ spaceBeforeAndAfterItemsInCurlyBrackets }` */
     "object-curly-spacing": ["warn", "always"],
 
-    // Space before curly brackets
+    /** Space before curly brackets */
     "space-before-blocks": "warn",
 
-    // Space before and after keywords.
-    // https://eslint.org/docs/rules/keyword-spacing
+    /** Space before and after keywords.
+     * https://eslint.org/docs/rules/keyword-spacing */
     "keyword-spacing": ["warn", {
       "after": true, // wrong: if(); right: if ();
       "before": true, // wrong: }else; right: } else
     }],
 
-    // There are other configs for values aligning https://eslint.org/docs/rules/key-spacing
+    /** There are other configs for values aligning https://eslint.org/docs/rules/key-spacing */
     "key-spacing": ["warn", {
       "beforeColon": false, // wrong: {a : 3}; right: {a: 3};
       "afterColon": true // wrong: {a:3}; right: {a: 3};
     }],
 
-    // Space after unary operators, like void, new, delete... Won't apply to non-words operators like ++.
-    // https://eslint.org/docs/rules/space-unary-ops
+    /** Space after unary operators, like void, new, delete... Won't apply to non-words operators like ++.
+     * https://eslint.org/docs/rules/space-unary-ops */
     "space-unary-ops": ["warn", {
       "words": true,
       "nonwords": false
     }],
 
-    // Space between operators. Wrong: 1+2; right: 1 + 2
-    // https://eslint.org/docs/rules/space-infix-ops
+    /** Space between operators. Wrong: 1+2; right: 1 + 2
+     * https://eslint.org/docs/rules/space-infix-ops */
     "space-infix-ops": ["warn", { "int32Hint": true }],
 
     /** No excess spaces.
@@ -75,16 +75,16 @@ module.exports = {
      * https://eslint.org/docs/rules/no-whitespace-before-property */
     "no-whitespace-before-property": "warn",
 
-    // No spaces after rest/spread. Wrong: ... [1,2]; right: ...[1,2]
-    // https://eslint.org/docs/rules/rest-spread-spacing
+    /**No spaces after rest/spread. Wrong: ... [1,2]; right: ...[1,2]
+     * https://eslint.org/docs/rules/rest-spread-spacing */
     "rest-spread-spacing": ["warn", "never"],
 
-    // Newline after [ and before ] on multiline arrays.
-    // https://eslint.org/docs/rules/array-bracket-newline
+    /** Newline after [ and before ] on multiline arrays.
+     * https://eslint.org/docs/rules/array-bracket-newline */
     "array-bracket-newline": ["warn", "consistent"],
 
-    // Newline after { and before } on multiline objects.
-    // https://eslint.org/docs/rules/object-curly-newline
+    /** Newline after { and before } on multiline objects.
+     * https://eslint.org/docs/rules/object-curly-newline */
     "object-curly-newline": ["warn", { "multiline": true, "consistent": true }],
 
     /** No space inside parentheses.
@@ -108,11 +108,11 @@ module.exports = {
     /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
     "no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
 
-    // Changes from error to warn, and allows `while (true)`.
+    /** Changes from error to warn, and allows `while (true)`. */
     "no-constant-condition": ["warn", { "checkLoops": false }],
 
-    // As said in https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md,
-    // the above rule (@typescript-eslint/require-await) requires this one.
+    /** As said in https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md,
+     * the above rule (@typescript-eslint/require-await) requires this one. */
     "require-await": "warn",
 
     /** Still warn about using let instead of const, but won't auto-fix (no more ctrl+s fixing it!)
@@ -159,13 +159,23 @@ module.exports = {
       "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$", // Other relative imports. Put same-folder imports and `.` last.
       "^.+\\.s?css$", // Style imports.
     ]]}],
+
     /** Sorts imports
      * https://github.com/lydell/eslint-plugin-simple-import-sort */
     "simple-import-sort/exports": "warn",
 
-    /** 3 newlines after imports block
+    /** 3 newlines after imports block.
      * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md */
-    "import/newline-after-import": ["warn", { "count": 3 }],
+    "import/newline-after-import": ["warn", {
+      "count": 3,
+      "considerComments": true
+    }],
+
+    /** Newline after class members.
+     * https://eslint.org/docs/latest/rules/lines-between-class-members */
+    "lines-between-class-members": ["warn", {
+      "exceptAfterSingleLine": true
+    }],
 
     /** Merges multiple imports statements from same module.
      * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md */

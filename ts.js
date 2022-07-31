@@ -122,6 +122,9 @@ module.exports = {
      * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-throw-literal.md */
     ...replaceBaseRule("no-throw-literal"),
 
+    /** Newline after class members.
+     * https://typescript-eslint.io/rules/lines-between-class-members/ */
+     ...replaceBaseRule("lines-between-class-members"),
 
   /** =========== Unsafe / any ===========
    *  === Be responsible and careful! ==== */

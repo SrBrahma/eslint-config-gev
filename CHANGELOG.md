@@ -10,6 +10,11 @@
 Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.35.0
+### js
+* `"lines-between-class-members"`
+* Added `"considerComments": true` to `"import/newline-after-import"`
+
 ## 2.34.0
 **js, ts**: Added `no-throw-literal: "warn"` and its **ts** variant.
 
