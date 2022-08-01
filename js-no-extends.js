@@ -168,7 +168,8 @@ module.exports = {
      * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md */
     "import/newline-after-import": ["warn", {
       "count": 2,
-      "considerComments": true
+      // Not yet released. (currently 2.26.0)
+      // "considerComments": true
     }],
 
     /** Newline after class members.

@@ -10,6 +10,9 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.36.1
+* Removed `"considerComments": true` to `"import/newline-after-import"` as it's not yet released.
+
 ## 2.36.0
 * `"no-multiple-empty-lines": ["warn", { "max":` from `5` to `2`.
 * `"import/newline-after-import": ["warn", { "count":` from `3` to `2`.
