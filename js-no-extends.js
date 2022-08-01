@@ -174,7 +174,7 @@ module.exports = {
 
     /** Newline after class members.
      * https://eslint.org/docs/latest/rules/lines-between-class-members */
-    "lines-between-class-members": ["warn", {
+    "lines-between-class-members": ["warn", "always", {
       "exceptAfterSingleLine": true
     }],
 

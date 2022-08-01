@@ -10,6 +10,9 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.36.2
+* Added `"always"` as 2nd parameter to `"lines-between-class-members"`.
+
 ## 2.36.1
 * Removed `"considerComments": true` to `"import/newline-after-import"` as it's not yet released.
 
