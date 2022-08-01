@@ -7,8 +7,12 @@
 
 # Changelog
 
-Changes to the `js` flavor are also applied to all the other flavors.
+> Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
+
+## 2.36.0
+* `"no-multiple-empty-lines": ["warn", { "max":` from `5` to `2`.
+* `"import/newline-after-import": ["warn", { "count":` from `3` to `2`.
 
 ## 2.35.0
 ### js

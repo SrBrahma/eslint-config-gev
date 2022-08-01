@@ -69,7 +69,7 @@ module.exports = {
 
     /** Limits and cleans excess lines.
      * https://eslint.org/docs/rules/no-multiple-empty-lines */
-    "no-multiple-empty-lines": ["warn", { "max": 5, "maxEOF": 0, "maxBOF": 0 }],
+    "no-multiple-empty-lines": ["warn", { "max": 2, "maxEOF": 0, "maxBOF": 0 }],
 
     /** Wrong: foo .bar; foo. bar; Right: foo.bar
      * https://eslint.org/docs/rules/no-whitespace-before-property */
@@ -164,10 +164,10 @@ module.exports = {
      * https://github.com/lydell/eslint-plugin-simple-import-sort */
     "simple-import-sort/exports": "warn",
 
-    /** 3 newlines after imports block.
+    /** 2 blank lines after imports block.
      * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md */
     "import/newline-after-import": ["warn", {
-      "count": 3,
+      "count": 2,
       "considerComments": true
     }],
 
