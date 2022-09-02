@@ -4,6 +4,6 @@
 module.exports = {
   "extends": [
     "./react-common.js",
-    "./ts.js"
+    "./js.js"
   ],
 };

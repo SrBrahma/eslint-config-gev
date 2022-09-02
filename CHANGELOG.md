@@ -10,6 +10,11 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+
+## 2.37.0
+* Added `react-native-js` and `react-js` configs.
+* Improved README. Now each .eslintrc.js is right after their corresponding config.
+
 ## 2.36.2
 * Added `"always"` as 2nd parameter to `"lines-between-class-members"`.
 

@@ -4,7 +4,7 @@ module.exports = {
   ],
   "extends": [
     "./react-common.js",
-    "./ts.js",
+    "./js.js",
   ],
   "rules": {
     "react-native/no-raw-text": "error",
