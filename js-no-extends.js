@@ -155,6 +155,7 @@ module.exports = {
       // Node.js builtins.
       "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
       "^@?\\w",
+      "~", // Imports with path alias
       "^\\.\\.(?!/?$)", "^\\.\\./?$", // Parent imports. Put `..` last.
       "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$", // Other relative imports. Put same-folder imports and `.` last.
       "^.+\\.s?css$", // Style imports.
@@ -213,6 +214,12 @@ module.exports = {
      *
      * https://eslint.org/docs/latest/rules/no-throw-literal */
     "no-throw-literal": "warn",
+
+    /** Disallow tabs */
+    "no-tabs": "warn",
+
+    /** Disallow var keyword */
+    "no-var": "warn",
 
 
     // Limbo. Disabled, but may be reenabled at some point.

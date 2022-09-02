@@ -11,6 +11,10 @@
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
 
+## 2.38.0
+* Import sort will now consider `~` path alias.
+**js**: Added `"no-tabs": "warn", "no-var": "warn"`
+
 ## 2.37.0
 * Added `react-native-js` and `react-js` configs.
 * Improved README. Now each .eslintrc.js is right after their corresponding config.
