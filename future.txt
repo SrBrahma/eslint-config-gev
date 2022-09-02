@@ -1,6 +1,5 @@
 https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
-https://github.com/Bkucera/eslint-plugin-json-format it's also for package.json
-https://github.com/hapijs/eslint-plugin hapi, but it would make everybody to have it. gev would have to add it by outside.
+https://github.com/Bkucera/eslint-plugin-json-format
 https://github.com/lukeapage/eslint-plugin-switch-case maybe. prob not
 https://github.com/jest-community/eslint-plugin-jest or https://github.com/dangreenisrael/eslint-plugin-jest-formatting
 https://eslint.org/docs/rules/eol-last ~To eol or not?
