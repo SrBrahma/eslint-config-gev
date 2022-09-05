@@ -73,5 +73,10 @@ module.exports = {
 
     /** Convert <A b="c"/> to <A b='c'/>. */
     "jsx-quotes": ["warn", "prefer-single"],
+
+    /** Prefer <> over <React.Fragment> if not using key=''.
+     *
+     * https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md */
+    "react/jsx-fragments": "warn"
   }
 };

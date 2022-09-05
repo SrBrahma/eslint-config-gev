@@ -10,6 +10,8 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.39.0
+**react**: Added `"react/jsx-fragments": "warn"`.
 
 ## 2.38.0
 * Import sort will now consider `~` path alias.
