@@ -43,7 +43,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
 ### Typescript
 * Add `"eslint-config-gev"` *(or `"eslint-config-gev/ts"`)* to the `"extends": [...]` field in your eslintrc.
 
-  <details><summary><b>eslintrc.js example</b></summary>
+  <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
@@ -83,7 +83,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
 ### Javascript
 * Add `"eslint-config-gev/js"` to the `"extends": [...]` field in your eslintrc.
 
-  <details><summary><b>eslintrc.js example</b></summary>
+  <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
@@ -111,7 +111,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
 #### Typescript
 * Add `"eslint-config-gev/react"` to the `"extends": [...]` field in your eslintrc.
 
-  <details><summary><b>eslintrc.js example</b></summary>
+  <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
@@ -153,7 +153,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
 #### Javascript
 * Add `"eslint-config-gev/react-js"` to the `"extends": [...]` field in your eslintrc.
 
-  <details><summary><b>eslintrc.js example</b></summary>
+  <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
@@ -184,7 +184,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
 #### Typescript
 * Add `"eslint-config-gev/react-native"` to the `"extends": [...]` field in your eslintrc.
 
-  <details><summary><b>eslintrc.js example</b></summary>
+  <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
@@ -228,7 +228,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
 #### Javascript
 * Add `"eslint-config-gev/react-native-js"` to the `"extends": [...]` field in your eslintrc.
 
-  <details><summary><b>eslintrc.js example</b></summary>
+  <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
