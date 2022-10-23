@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.41.0",
+  "version": "2.42.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "scripts": {},
@@ -25,16 +25,16 @@
   },
   "homepage": "https://github.com/SrBrahma/eslint-config#readme",
   "dependencies": {
-    "eslint": "*",
-    "@rushstack/eslint-patch": "*",
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-no-autofix": "*",
-    "eslint-plugin-simple-import-sort": "*",
-    "eslint-plugin-unused-imports": "*",
-    "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks": "*",
-    "eslint-plugin-react-native": "*"
+    "@rushstack/eslint-patch": "1.2.0",
+    "@typescript-eslint/eslint-plugin": "5.40.1",
+    "@typescript-eslint/parser": "5.40.1",
+    "eslint": "8.26.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-no-autofix": "1.2.3",
+    "eslint-plugin-react": "7.31.10",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-native": "4.0.0",
+    "eslint-plugin-simple-import-sort": "8.0.0",
+    "eslint-plugin-unused-imports": "2.0.0"
   }
 }

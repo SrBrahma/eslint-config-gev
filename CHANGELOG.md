@@ -10,6 +10,8 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 2.42.0
+Now all dependencies have fixed versions to avoid breaking CI/CD if one of them has a breaking change/bug. Before, they all had '*' as version.
 
 ## 2.41.0
 **js**: Readded `"brace-style": ["warn", "1tbs", { "allowSingleLine": true }],`
