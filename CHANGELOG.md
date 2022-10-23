@@ -10,6 +10,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+
+## 2.41.0
+**js**: Readded `"brace-style": ["warn", "1tbs", { "allowSingleLine": true }],`
+
 ## 2.40.0
 **js**: Added `"curly": ["warn", "multi", "consistent"]`
 

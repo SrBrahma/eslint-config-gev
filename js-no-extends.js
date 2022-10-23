@@ -222,7 +222,12 @@ module.exports = {
     /** Removes curly braces in sigle line control statements.
      *
      * https://eslint.org/docs/latest/rules/curly */
-    "curly": ["warn", "multi", "consistent"]
+    "curly": ["warn", "multi", "consistent"],
+
+    /** `else`/`catch` on same line of closing brace
+     *
+     * https://eslint.org/docs/rules/brace-style */
+    "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
 
     // Commented this one below. It was annoying in react componentes, where `condition && \n <Component/>` is a common practice.
     /** Make multi line operators to be in the start of the new lines, not on the ending
@@ -230,9 +235,6 @@ module.exports = {
     // "operator-linebreak": ["warn", "before", { "overrides": {
     //   "=": "after", "+=": "after", "-=": "after", "*=": "after", "/=": "after",
     // }}],
-    // Commented because it sucks at some cases. It's limited.
-    // { on same line of if/try, } on newline. else/catch on same line of }. Allows singleline.
-    // https://eslint.org/docs/rules/brace-style
-    // "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+
   }
 };
