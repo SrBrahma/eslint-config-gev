@@ -8,7 +8,6 @@ module.exports = {
     "unused-imports"
   ],
   "rules": {
-  // Prettyfier / Utils
     /** 2 spaces ftw. */
     "indent": ["warn", 2, { "SwitchCase": 1 }],
 
@@ -104,7 +103,6 @@ module.exports = {
      * Right: () => {} */
     "arrow-spacing": "warn",
 
-  // Etc
     /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
     "no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
 
@@ -221,10 +219,10 @@ module.exports = {
     /** Disallow var keyword */
     "no-var": "warn",
 
-
-    // Limbo. Disabled, but may be reenabled at some point.
-    // "no-prototype-builtins": "off", // Allow obj.hasOwnProperty https://eslint.org/docs/rules/no-prototype-builtins
-
+    /** Removes curly braces in sigle line control statements.
+     *
+     * https://eslint.org/docs/latest/rules/curly */
+    "curly": ["warn", "multi", "consistent"]
 
     // Commented this one below. It was annoying in react componentes, where `condition && \n <Component/>` is a common practice.
     /** Make multi line operators to be in the start of the new lines, not on the ending
@@ -232,7 +230,6 @@ module.exports = {
     // "operator-linebreak": ["warn", "before", { "overrides": {
     //   "=": "after", "+=": "after", "-=": "after", "*=": "after", "/=": "after",
     // }}],
-
     // Commented because it sucks at some cases. It's limited.
     // { on same line of if/try, } on newline. else/catch on same line of }. Allows singleline.
     // https://eslint.org/docs/rules/brace-style
