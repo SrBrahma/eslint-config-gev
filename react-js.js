@@ -2,8 +2,8 @@
 // add further configs
 
 module.exports = {
-  "extends": [
-    "./react-common.js",
-    "./js.js"
+  extends: [
+    './react-common.js',
+    './js.js',
   ],
 };

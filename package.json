@@ -1,13 +1,30 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.42.0",
+  "version": "2.43.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint:fix": "eslint --ext js --fix .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,js}": "eslint --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SrBrahma/eslint-config.git"
   },
+  "files": [
+    "index.js",
+    "js-no-extends.js",
+    "js.js",
+    "react-common.js",
+    "react-js.js",
+    "react-native-js.js",
+    "react-native.js",
+    "react.js",
+    "ts.js"
+  ],
   "keywords": [
     "gev",
     "eslint",
@@ -36,5 +53,13 @@
     "eslint-plugin-react-native": "4.0.0",
     "eslint-plugin-simple-import-sort": "8.0.0",
     "eslint-plugin-unused-imports": "2.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-no-autofix": "1.2.3",
+    "@types/node": "18.11.4",
+    "execa": "6.1.0",
+    "globby": "11.1.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3"
   }
 }

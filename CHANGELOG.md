@@ -10,8 +10,14 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+
+## 2.43.0
+* Now this package uses itself for its own linting!
+* **ts**: Added `"@typescript-eslint/no-unnecessary-boolean-literal-compare`
+* **ts**: Some TS rules that extended JS ones weren't being used. **This is now fixed with the damn smart ts-extensions.js automatically generated file!**
+
 ## 2.42.0
-Now all dependencies have fixed versions to avoid breaking CI/CD if one of them has a breaking change/bug. Before, they all had '*' as version.
+* Now all dependencies have fixed versions to avoid breaking CI/CD if one of them has a breaking change/bug. Before, they all had '*' as version.
 
 ## 2.41.0
 **js**: Readded `"brace-style": ["warn", "1tbs", { "allowSingleLine": true }],`
