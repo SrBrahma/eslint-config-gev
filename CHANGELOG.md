@@ -11,7 +11,7 @@
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
 
-## 2.43.0~2
+## 2.43.0~3
 * Now this package uses itself for its own linting!
 * **ts**: Added `"@typescript-eslint/no-unnecessary-boolean-literal-compare`
 * **ts**: Some TS rules that extended JS ones weren't being used. **This is now fixed with the damn smart ts-extensions.js automatically generated file!**

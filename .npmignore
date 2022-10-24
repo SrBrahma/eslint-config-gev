@@ -1,3 +1,7 @@
 .github
 test
-future
+future.txt
+scripts
+.husky
+.eslintrc.js
+CHANGELOG.md

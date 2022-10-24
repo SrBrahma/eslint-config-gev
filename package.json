@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.43.2",
+  "version": "2.43.3",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "scripts": {
@@ -15,10 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/SrBrahma/eslint-config.git"
   },
-  "files": [
-    "./*.js",
-    "!.eslintrc.js"
-  ],
   "keywords": [
     "gev",
     "eslint",
