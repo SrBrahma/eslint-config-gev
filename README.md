@@ -26,6 +26,8 @@ If interested, take a look into the source files to see what will be used as plu
 npm i -D eslint-config-gev
 # or
 yarn add -D eslint-config-gev
+# or
+pnpm i -D eslint-config-gev
 ```
 
 
