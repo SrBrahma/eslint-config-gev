@@ -7,7 +7,7 @@ const pkgJson = require('./package.json');
 
 
 const flavorPath = (flavor = '', extension = 'js') => path.resolve(
-  process.cwd(),
+  __dirname,
   'examples',
   flavor ? flavor + `.eslintrc.${extension}` : '',
 );
@@ -23,11 +23,12 @@ function applyFlavor(flavor, {
   force, cjs,
 }) {
   const extension = cjs ? 'cjs' : 'js';
-  const filePath = flavorPath(flavor, extension);
-  const exists = fs.existsSync(filePath);
+  const originPath = flavorPath(flavor, extension);
+  const destPath = path.resolve(`.eslintrc.${extension}`);
+  const exists = fs.existsSync(destPath);
   if (exists && !force)
     program.error('There is already an .eslintrc.js in the directory! Use -f to overwrite.');
-  fs.copyFileSync(filePath, '.eslintrc.js');
+  fs.copyFileSync(originPath, destPath);
 }
 
 
