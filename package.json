@@ -1,12 +1,13 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.43.3",
+  "version": "2.44.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "scripts": {
     "lint:fix": "eslint --ext js --fix .",
     "prepare": "husky install",
-    "generate:ts-extensions": "node ./scripts/makeTsExtensions.js"
+    "generate:ts-extensions": "node ./scripts/makeTsExtensions.js",
+    "pre-commit": "npx lint-staged && node ./scripts/makeTsExtensions.js && git add -A"
   },
   "lint-staged": {
     "*.{ts,js}": "eslint --fix"

@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    './react-common.js',
+    './react-js.js',
     './ts.js',
   ],
 };

@@ -1,22 +1,3 @@
-// Add https://www.npmjs.com/package/eslint-plugin-import ?
-
-
-const jsRules = require('./js-no-extends').rules;
-
-/** Get value from the given rule name, set it off and turn on the TS version.
- *
- * Uses fallback if rule isn't present in js-no-extends.js file.
- *
- * @returns An object containing the base rule deactivation and the new rule.
- * Use ...on it. */
-function replaceBaseRule(name, fallback = 'warn', force = false) {
-  const value = force ? fallback : (jsRules[name] || fallback);
-  return {
-    [name]: 'off',
-    ['@typescript-eslint/' + name]: value,
-  };
-}
-
 module.exports = {
   plugins: [
     '@typescript-eslint',
@@ -24,13 +5,12 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended', // After the others https://stackoverflow.com/a/61555310/10247962
-    './js-no-extends.js', // Further configs!
+    'plugin:@typescript-eslint/recommended', // After the others https://stackoverflow.com/a/61555310
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    './js.js',
     './ts-extensions.js', // Automatic JS to TS rules! I love doing smart stuff! :)
   ],
-
   rules: {
-
     /** ========== Style ========== */
 
     '@typescript-eslint/member-delimiter-style': 'warn',

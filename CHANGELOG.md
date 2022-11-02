@@ -11,6 +11,11 @@
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
 
+## 2.44.0
+* Simplified and prettified example usage
+* Simplified source code (removed `js-no-extends.js` and `react-common.js` and some unused code)
+* `'plugin:@typescript-eslint/recommended-requiring-type-checking'` is now added by default in `ts` flavors `extends`.
+
 ## 2.43.0~3
 * Now this package uses itself for its own linting!
 * **ts**: Added `"@typescript-eslint/no-unnecessary-boolean-literal-compare`

@@ -3,8 +3,7 @@ module.exports = {
     'react-native',
   ],
   extends: [
-    './react-common.js',
-    './js.js',
+    './react-js.js',
   ],
   rules: {
     'react-native/no-raw-text': 'error',

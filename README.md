@@ -1,4 +1,4 @@
-<div align="center">
+<div align='center'>
 
 [![npm](https://img.shields.io/npm/v/eslint-config-gev)](https://www.npmjs.com/package/eslint-config-gev)
 [![npm](https://img.shields.io/npm/dw/eslint-config-gev)](https://www.npmjs.com/package/eslint-config-gev)
@@ -33,7 +33,7 @@ yarn add -D eslint-config-gev
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution');
 ```
 
 With it, you won't need to install `eslint` and all the plugins we use!
@@ -41,36 +41,37 @@ With it, you won't need to install `eslint` and all the plugins we use!
 ## Do one of the following
 
 ### Typescript
-* Add `"eslint-config-gev"` *(or `"eslint-config-gev/ts"`)* to the `"extends": [...]` field in your eslintrc.
+* Add `'eslint-config-gev'` *(or `'eslint-config-gev/ts'`)* to the `extends: [...]` field in your eslintrc.
 
   <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
+  // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
-    "env": {
-      "es2021": true,
-      "node": true
+    root: true,
+    env: {
+      es2021: true,
+      node: true
     },
-    "extends": [
-      "plugin:@typescript-eslint/recommended-requiring-type-checking", // *1
-      "eslint-config-gev", // https://github.com/SrBrahma/eslint-config-gev-gev
+    extends: ['eslint-config-gev/js'],
+    overrides: [
+      {
+        files: ['*.ts'],
+        extends: ['eslint-config-gev/ts'],
+        parser: '@typescript-eslint/parser',
+        parserOptions: {
+          tsconfigRootDir: __dirname, // *1
+          project: ['./tsconfig.json'], // *1
+          ecmaVersion: 12,
+          sourceType: 'module',
+        },
+      }
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "tsconfigRootDir": __dirname, // *1
-      "project": ['./tsconfig.json'], // *1
-      "ecmaVersion": 12,
-      "sourceType": "module",
-    },
-    "ignorePatterns": [
-      "/lib/**/*", // Ignore built files.
-      "/dist/**/*",
-      "/.eslintrc.js" // Ignore itself
-    ],
-    "rules": {
+    ignorePatterns: ['/lib/**/*', '/dist/**/*'],
+    rules: {
     }
   };
 
@@ -81,25 +82,23 @@ With it, you won't need to install `eslint` and all the plugins we use!
   </details>
 
 ### Javascript
-* Add `"eslint-config-gev/js"` to the `"extends": [...]` field in your eslintrc.
+* Add `'eslint-config-gev/js'` to the `extends: [...]` field in your eslintrc.
 
   <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
+  // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
   module.exports = {
-    "env": {
-      "es2021": true,
-      "node": true,
+    root: true,
+    env: {
+      es2021: true,
+      node: true,
     },
-    "extends": [
-      "eslint-config-gev/js", // https://github.com/SrBrahma/eslint-config-gev
-    ],
-    "ignorePatterns": [
-      "/.eslintrc.js" // Ignore itself
-    ],
-    "rules": {
+    extends: ['eslint-config-gev/js'],
+    ignorePatterns: [],
+    rules: {
     }
   };
 
@@ -109,70 +108,65 @@ With it, you won't need to install `eslint` and all the plugins we use!
 
 ### React
 #### Typescript
-* Add `"eslint-config-gev/react"` to the `"extends": [...]` field in your eslintrc.
+* Add `'eslint-config-gev/react'` to the `extends: [...]` field in your eslintrc.
 
   <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
+  // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
-    "env": {
-      "es2021": true,
-      "node": true,
+    root: true,
+    env: {
+      es2021: true,
+      node: true,
     },
-    "extends": [
-      "plugin:@typescript-eslint/recommended-requiring-type-checking", // *1
-      "eslint-config-gev/react", // https://github.com/SrBrahma/eslint-config-gev
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "tsconfigRootDir": __dirname, // *1
-      "project": ['./tsconfig.json'], // *1
-      "ecmaVersion": 12,
-      "sourceType": "module",
-      "ecmaFeatures": { // To support .jsx files
-        "jsx": true
+    extends: ['eslint-config-gev/react-js'],
+    overrides: [
+      {
+        files: ['*.ts', '*.tsx'],
+        extends: ['eslint-config-gev/react'],
+        parser: '@typescript-eslint/parser',
+        parserOptions: {
+          tsconfigRootDir: __dirname,
+          project: ['./tsconfig.json'],
+          ecmaVersion: 12,
+          sourceType: 'module',
+          ecmaFeatures: {
+            jsx: true
+          }
+        },
       }
-    },
-    "ignorePatterns": [
-      "/lib/**/*", // Ignore built files.
-      "/dist/**/*",
-      "/.eslintrc.js" // Ignore itself
-    ],
-    "rules": {
+    ]
+    ignorePatterns: ['/lib/**/*', '/dist/**/*'],
+    rules: {
     }
   };
-
-  // [*1]: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
   ```
 
 </details>
 
 #### Javascript
-* Add `"eslint-config-gev/react-js"` to the `"extends": [...]` field in your eslintrc.
+* Add `'eslint-config-gev/react-js'` to the `extends: [...]` field in your eslintrc.
 
   <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
+  // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
-    "env": {
-      "es2021": true,
-      "node": true,
+    root: true,
+    env: {
+      es2021: true,
+      node: true,
     },
-    "extends": [
-      "eslint-config-gev/react-js", // https://github.com/SrBrahma/eslint-config-gev
-    ],
-    "ignorePatterns": [
-      "/lib/**/*", // Ignore built files.
-      "/dist/**/*",
-      "/.eslintrc.js" // Ignore itself
-    ],
-    "rules": {
+    extends: ['eslint-config-gev/react-js'],
+    ignorePatterns: ['/lib/**/*', '/dist/**/*'],
+    rules: {
     }
   };
 
@@ -182,75 +176,71 @@ With it, you won't need to install `eslint` and all the plugins we use!
 
 ### React Native
 #### Typescript
-* Add `"eslint-config-gev/react-native"` to the `"extends": [...]` field in your eslintrc.
+* Add `'eslint-config-gev/react-native'` to the `extends: [...]` field in your eslintrc.
 
   <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
+  // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
-    "env": {
-      "es2021": true,
-      "node": true,
-      "react-native/react-native": true // *2
+    root: true,
+    env: {
+      es2021: true,
+      node: true,
+      'react-native/react-native': true // *1
     },
-    "extends": [
-      "plugin:@typescript-eslint/recommended-requiring-type-checking", // *1
-      "eslint-config-gev/react-native", // https://github.com/SrBrahma/eslint-config-gev
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "tsconfigRootDir": __dirname, // *1
-      "project": ['./tsconfig.json'], // *1
-      "ecmaVersion": 12,
-      "sourceType": "module",
-      "ecmaFeatures": { // *2
-        "jsx": true
+    extends: ['eslint-config-gev/react-native-js'],
+    overrides: [
+      {
+        files: ['*.ts', '*.tsx'],
+        extends: ['eslint-config-gev/react-native'],
+        parser: '@typescript-eslint/parser',
+        parserOptions: {
+          tsconfigRootDir: __dirname,
+          project: ['./tsconfig.json'],
+          ecmaVersion: 12,
+          sourceType: 'module',
+          ecmaFeatures: { // *1
+            jsx: true
+          }
+        },
       }
-    },
-    "ignorePatterns": [
-      "/lib/**/*", // Ignore built files.
-      "/dist/**/*",
-      "/.eslintrc.js" // Ignore itself
-    ],
-    "rules": {
+    ]
+    rules: {
     }
   };
 
-  // [*1]: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
-  // [*2]: https://github.com/Intellicode/eslint-plugin-react-native#configuration
+  // [*1]: https://github.com/Intellicode/eslint-plugin-react-native#configuration
   ```
 
   </details>
 
 #### Javascript
-* Add `"eslint-config-gev/react-native-js"` to the `"extends": [...]` field in your eslintrc.
+* Add `'eslint-config-gev/react-native-js'` to the `extends: [...]` field in your eslintrc.
 
   <details><summary><b>.eslintrc.js example</b></summary>
 
   ```js
+  // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
-    "env": {
-      "es2021": true,
-      "node": true,
-      "react-native/react-native": true // *2
+    root: true,
+    env: {
+      es2021: true,
+      node: true,
+      'react-native/react-native': true // *1
     },
-    "extends": [
-      "eslint-config-gev/react-native-js", // https://github.com/SrBrahma/eslint-config-gev
-    ],
-    "ignorePatterns": [
-      "/lib/**/*", // Ignore built files.
-      "/dist/**/*",
-      "/.eslintrc.js" // Ignore itself
-    ],
-    "rules": {
+    extends: ['eslint-config-gev/react-native-js'],
+    rules: {
     }
   };
+
+  // [*1]: https://github.com/Intellicode/eslint-plugin-react-native#configuration
   ```
 
   </details>
