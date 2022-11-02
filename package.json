@@ -1,8 +1,9 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.44.0",
+  "version": "2.45.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
+  "bin": "bin.js",
   "scripts": {
     "lint:fix": "eslint --ext js --fix .",
     "prepare": "husky install",
@@ -36,6 +37,7 @@
     "@rushstack/eslint-patch": "1.2.0",
     "@typescript-eslint/eslint-plugin": "5.40.1",
     "@typescript-eslint/parser": "5.40.1",
+    "commander": "9.4.1",
     "eslint": "8.26.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-no-autofix": "1.2.3",
@@ -46,8 +48,8 @@
     "eslint-plugin-unused-imports": "2.0.0"
   },
   "devDependencies": {
-    "eslint-plugin-no-autofix": "1.2.3",
     "@types/node": "18.11.4",
+    "eslint-plugin-no-autofix": "1.2.3",
     "execa": "6.1.0",
     "globby": "11.1.0",
     "husky": "8.0.1",

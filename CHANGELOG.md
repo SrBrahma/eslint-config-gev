@@ -11,6 +11,9 @@
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
 
+## 2.45.0
+* Added executable for creating .eslintrc.js!
+
 ## 2.44.0
 * Simplified and prettified example usage
 * Simplified source code (removed `js-no-extends.js` and `react-common.js` and some unused code)

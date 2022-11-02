@@ -30,6 +30,13 @@ yarn add -D eslint-config-gev
 pnpm i -D eslint-config-gev
 ```
 
+### CLI
+
+After installing, you can run `npx eslint-config-gev <flavor>` to quickly create a basic and functional `.eslintrc.js`, being flavor one of the following: `js, react-js, react-native-js, react-native-ts, react-ts, ts`. This list can be seen by running `npx eslint-config-gev -h`.
+
+Else, continue reading!
+
+### Manual
 
 * Add the following to the top of your .eslintrc.js:
 
@@ -65,8 +72,8 @@ With it, you won't need to install `eslint` and all the plugins we use!
         extends: ['eslint-config-gev/ts'],
         parser: '@typescript-eslint/parser',
         parserOptions: {
-          tsconfigRootDir: __dirname, // *1
-          project: ['./tsconfig.json'], // *1
+          tsconfigRootDir: __dirname,
+          project: ['./tsconfig.json'],
           ecmaVersion: 12,
           sourceType: 'module',
         },
@@ -76,9 +83,6 @@ With it, you won't need to install `eslint` and all the plugins we use!
     rules: {
     }
   };
-
-  // [*1]: Optional but improves the linting for Typescript:
-  // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
 
   ```
   </details>
@@ -141,7 +145,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
           }
         },
       }
-    ]
+    ],
     ignorePatterns: ['/lib/**/*', '/dist/**/*'],
     rules: {
     }
@@ -210,7 +214,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
           }
         },
       }
-    ]
+    ],
     rules: {
     }
   };
