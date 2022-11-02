@@ -6,10 +6,10 @@ const fs = require('fs');
 const pkgJson = require('./package.json');
 
 
-const flavorPath = (flavor = '') => path.resolve(
+const flavorPath = (flavor = '', extension = 'js') => path.resolve(
   __dirname,
   './examples/',
-  flavor ? flavor + '.eslintrc.js' : '',
+  flavor ? flavor + `.eslintrc.${extension}` : '',
 );
 
 const files = fs
@@ -19,8 +19,11 @@ const files = fs
 const flavors = files.map((s) => s.replace('.eslintrc.js', ''));
 
 
-function applyFlavor(flavor, force) {
-  const filePath = flavorPath(flavor);
+function applyFlavor(flavor, {
+  force, cjs,
+}) {
+  const extension = cjs ? 'cjs' : 'js';
+  const filePath = flavorPath(flavor, extension);
   const exists = fs.existsSync(filePath);
   if (exists && !force)
     program.error('There is already an .eslintrc.js in the directory! Use -f to overwrite.');
@@ -33,7 +36,8 @@ program
   .description('Creates .eslintrc.js')
   .version(pkgJson.version, '-v, --version', 'Output the version number.')
   .helpOption('-h, --help', 'Display help for command.') // Capitalize the first letter of description.
-  .option('-f, --force', 'Overwrite existing .eslintrc.js')
+  .option('-f, --force', "Overwrite existing '.eslintrc.js'")
+  .option('--cjs', "Use '.eslintrc.cjs' instead of '.eslintrc.js'")
   // https://github.com/tj/commander.js/issues/518#issuecomment-872769249
   .addArgument(new Argument('<flavor>', `The project kind.`)
     .choices(flavors)) // Will also print in the usage the possible options

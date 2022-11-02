@@ -11,6 +11,9 @@
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
 
+## 2.46.0
+* Added `--cjs` option to CLI
+
 ## 2.45.0
 * Added executable for creating .eslintrc.js!
 
