@@ -42,7 +42,7 @@ program
   .addArgument(new Argument('<flavor>', `The project kind.`)
     .choices(flavors)) // Will also print in the usage the possible options
   .action((flavor) => {
-    const { force } = program.opts();
-    applyFlavor(flavor, force);
+    const { force, cjs } = program.opts();
+    applyFlavor(flavor, { force, cjs });
   })
   .parse();
