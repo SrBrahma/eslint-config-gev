@@ -7,8 +7,8 @@ const pkgJson = require('./package.json');
 
 
 const flavorPath = (flavor = '', extension = 'js') => path.resolve(
-  __dirname,
-  './examples/',
+  process.cwd(),
+  'examples',
   flavor ? flavor + `.eslintrc.${extension}` : '',
 );
 
