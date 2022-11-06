@@ -11,6 +11,9 @@
 Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
 
+## 2.47.0
+* **ts** added `'no-undef': 'off'` to remove false-positives.
+
 ## 2.46.0~3
 * Added `--cjs` option to CLI
 
