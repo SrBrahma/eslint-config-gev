@@ -2,14 +2,6 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
   ],
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      // TS handles this, it raised false-positives sometimes.
-      // https://github.com/Chatie/eslint-config/issues/45#issuecomment-1003990077
-      'no-undef': 'off',
-    },
-  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
@@ -120,6 +112,10 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['warn', {
       allowComparingNullableBooleansToTrue: false,
     }],
+
+    /** TS handles this, it raised false-positives sometimes.
+     * https://github.com/Chatie/eslint-config/issues/45#issuecomment-1003990077 */
+    'no-undef': 'off',
   },
 };
 
