@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "2.47.1",
+  "version": "3.0.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "bin": "bin.js",
@@ -11,7 +11,8 @@
     "pre-commit": "npx lint-staged && node ./scripts/makeTsExtensions.js && git add -A"
   },
   "lint-staged": {
-    "*.{ts,js}": "eslint --fix"
+    "*.{md}": "prettier --write",
+    "*.{js,ts,tsx}": ["eslint --fix", "prettier --write"]
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,8 @@
     "execa": "6.1.0",
     "globby": "11.1.0",
     "husky": "8.0.1",
-    "lint-staged": "13.0.3"
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "prettier-config-gev": "1.0.0"
   }
 }

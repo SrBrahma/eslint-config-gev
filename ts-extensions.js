@@ -7,64 +7,70 @@
 
 module.exports = {
   rules: {
-    ['brace-style']: 'off',
-    ['@typescript-eslint/brace-style']: ['warn', '1tbs', { allowSingleLine: true }],
+['brace-style']: 'off',
+['@typescript-eslint/brace-style']: ["off"],
 
-    ['comma-dangle']: 'off',
-    ['@typescript-eslint/comma-dangle']: ['warn', 'always-multiline'],
+['comma-dangle']: 'off',
+['@typescript-eslint/comma-dangle']: ["off"],
 
-    ['comma-spacing']: 'off',
-    ['@typescript-eslint/comma-spacing']: ['warn'],
+['comma-spacing']: 'off',
+['@typescript-eslint/comma-spacing']: ["off"],
 
-    ['default-param-last']: 'off',
-    ['@typescript-eslint/default-param-last']: ['error'],
+['default-param-last']: 'off',
+['@typescript-eslint/default-param-last']: ["error"],
 
-    ['keyword-spacing']: 'off',
-    ['@typescript-eslint/keyword-spacing']: ['warn', { after: true, before: true }],
+['func-call-spacing']: 'off',
+['@typescript-eslint/func-call-spacing']: ["off"],
 
-    ['lines-between-class-members']: 'off',
-    ['@typescript-eslint/lines-between-class-members']: ['warn', 'always', { exceptAfterSingleLine: true }],
+['keyword-spacing']: 'off',
+['@typescript-eslint/keyword-spacing']: ["off"],
 
-    ['no-dupe-class-members']: 'off',
-    ['@typescript-eslint/no-dupe-class-members']: ['error'],
+['lines-between-class-members']: 'off',
+['@typescript-eslint/lines-between-class-members']: ["warn","always",{"exceptAfterSingleLine":true}],
 
-    ['no-empty-function']: 'off',
-    ['@typescript-eslint/no-empty-function']: ['off'],
+['no-dupe-class-members']: 'off',
+['@typescript-eslint/no-dupe-class-members']: ["error"],
 
-    ['no-extra-semi']: 'off',
-    ['@typescript-eslint/no-extra-semi']: ['error'],
+['no-empty-function']: 'off',
+['@typescript-eslint/no-empty-function']: ["off"],
 
-    ['no-loss-of-precision']: 'off',
-    ['@typescript-eslint/no-loss-of-precision']: ['error'],
+['no-extra-parens']: 'off',
+['@typescript-eslint/no-extra-parens']: ["off"],
 
-    ['no-redeclare']: 'off',
-    ['@typescript-eslint/no-redeclare']: ['error'],
+['no-extra-semi']: 'off',
+['@typescript-eslint/no-extra-semi']: ["off"],
 
-    ['no-throw-literal']: 'off',
-    ['@typescript-eslint/no-throw-literal']: ['warn'],
+['no-loss-of-precision']: 'off',
+['@typescript-eslint/no-loss-of-precision']: ["error"],
 
-    ['no-unused-vars']: 'off',
-    ['@typescript-eslint/no-unused-vars']: ['warn', { ignoreRestSiblings: true }],
+['no-redeclare']: 'off',
+['@typescript-eslint/no-redeclare']: ["error"],
 
-    ['object-curly-spacing']: 'off',
-    ['@typescript-eslint/object-curly-spacing']: ['warn', 'always'],
+['no-throw-literal']: 'off',
+['@typescript-eslint/no-throw-literal']: ["warn"],
 
-    ['quotes']: 'off',
-    ['@typescript-eslint/quotes']: ['warn', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
+['no-unused-vars']: 'off',
+['@typescript-eslint/no-unused-vars']: ["warn",{"ignoreRestSiblings":true}],
 
-    ['require-await']: 'off',
-    ['@typescript-eslint/require-await']: ['warn'],
+['object-curly-spacing']: 'off',
+['@typescript-eslint/object-curly-spacing']: ["off"],
 
-    ['semi']: 'off',
-    ['@typescript-eslint/semi']: ['warn', 'always'],
+['quotes']: 'off',
+['@typescript-eslint/quotes']: [0],
 
-    ['space-before-blocks']: 'off',
-    ['@typescript-eslint/space-before-blocks']: ['warn'],
+['require-await']: 'off',
+['@typescript-eslint/require-await']: ["warn"],
 
-    ['space-before-function-paren']: 'off',
-    ['@typescript-eslint/space-before-function-paren']: ['warn', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
+['semi']: 'off',
+['@typescript-eslint/semi']: ["off"],
 
-    ['space-infix-ops']: 'off',
-    ['@typescript-eslint/space-infix-ops']: ['warn', { int32Hint: true }],
-  },
-};
+['space-before-blocks']: 'off',
+['@typescript-eslint/space-before-blocks']: ["off"],
+
+['space-before-function-paren']: 'off',
+['@typescript-eslint/space-before-function-paren']: ["off"],
+
+['space-infix-ops']: 'off',
+['@typescript-eslint/space-infix-ops']: ["off"],
+  }
+}
