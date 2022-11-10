@@ -1,6 +1,3 @@
 module.exports = {
-  extends: [
-    './react-js.js',
-    './ts.js',
-  ],
+  extends: ['./react-js.js', './ts.js'],
 };

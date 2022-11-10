@@ -5,32 +5,28 @@ const fs = require('fs');
 
 const pkgJson = require('./package.json');
 
+const flavorPath = (flavor = '', extension = 'js') =>
+  path.resolve(
+    __dirname,
+    'examples',
+    flavor ? flavor + `.eslintrc.${extension}` : '',
+  );
 
-const flavorPath = (flavor = '', extension = 'js') => path.resolve(
-  __dirname,
-  'examples',
-  flavor ? flavor + `.eslintrc.${extension}` : '',
-);
-
-const files = fs
-  .readdirSync(flavorPath())
-  .filter((s) => s.includes(('.eslintrc.js')));
+const files = fs.readdirSync(flavorPath()).filter((s) => s.includes('.eslintrc.js'));
 
 const flavors = files.map((s) => s.replace('.eslintrc.js', ''));
 
-
-function applyFlavor(flavor, {
-  force, cjs,
-}) {
+function applyFlavor(flavor, { force, cjs }) {
   const extension = cjs ? 'cjs' : 'js';
   const originPath = flavorPath(flavor, extension);
   const destPath = path.resolve(`.eslintrc.${extension}`);
   const exists = fs.existsSync(destPath);
   if (exists && !force)
-    program.error('There is already an .eslintrc.js in the directory! Use -f to overwrite.');
+    program.error(
+      'There is already an .eslintrc.js in the directory! Use -f to overwrite.',
+    );
   fs.copyFileSync(originPath, destPath);
 }
-
 
 // TODO use a lighter lib for cli parsing
 program
@@ -40,8 +36,7 @@ program
   .option('-f, --force', "Overwrite existing '.eslintrc.js'")
   .option('--cjs', "Use '.eslintrc.cjs' instead of '.eslintrc.js'")
   // https://github.com/tj/commander.js/issues/518#issuecomment-872769249
-  .addArgument(new Argument('<flavor>', `The project kind.`)
-    .choices(flavors)) // Will also print in the usage the possible options
+  .addArgument(new Argument('<flavor>', `The project kind.`).choices(flavors)) // Will also print in the usage the possible options
   .action((flavor) => {
     const { force, cjs } = program.opts();
     applyFlavor(flavor, { force, cjs });

@@ -2,7 +2,6 @@
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-
 module.exports = {
   root: true,
   env: {
@@ -11,8 +10,7 @@ module.exports = {
     'react-native/react-native': true, // *1
   },
   extends: ['eslint-config-gev/react-native-js'],
-  rules: {
-  },
+  rules: {},
 };
 
 // [*1]: https://github.com/Intellicode/eslint-plugin-react-native#configuration

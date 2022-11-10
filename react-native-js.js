@@ -1,10 +1,6 @@
 module.exports = {
-  plugins: [
-    'react-native',
-  ],
-  extends: [
-    './react-js.js',
-  ],
+  plugins: ['react-native'],
+  extends: ['./react-js.js'],
   rules: {
     'react-native/no-raw-text': 'error',
     /** Warns unused styles. Won't autofix.

@@ -6,13 +6,18 @@
   "bin": "bin.js",
   "scripts": {
     "lint:fix": "eslint --ext js --fix .",
+    "prettier:fix": "prettier --write .",
     "prepare": "husky install",
     "generate:ts-extensions": "node ./scripts/makeTsExtensions.js",
-    "pre-commit": "npx lint-staged && node ./scripts/makeTsExtensions.js && git add -A"
+    "pre-commit": "node ./scripts/makeTsExtensions.js && npx lint-staged && git add -A"
   },
+  "prettier": "prettier-config-gev",
   "lint-staged": {
     "*.{md}": "prettier --write",
-    "*.{js,ts,tsx}": ["eslint --fix", "prettier --write"]
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -56,6 +61,6 @@
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
-    "prettier-config-gev": "1.0.0"
+    "prettier-config-gev": "1.1.0"
   }
 }

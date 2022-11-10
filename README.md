@@ -41,7 +41,7 @@ Else, continue reading!
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution');
 ```
 
 With it, you won't need to install `eslint` and all the plugins we use!
@@ -57,7 +57,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
   ```js
   // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
     root: true,
@@ -65,21 +65,21 @@ With it, you won't need to install `eslint` and all the plugins we use!
       es2021: true,
       node: true,
     },
-    extends: ["eslint-config-gev/js"],
+    extends: ['eslint-config-gev/js'],
     overrides: [
       {
-        files: ["*.ts"],
-        extends: ["eslint-config-gev/ts"],
-        parser: "@typescript-eslint/parser",
+        files: ['*.ts'],
+        extends: ['eslint-config-gev/ts'],
+        parser: '@typescript-eslint/parser',
         parserOptions: {
           tsconfigRootDir: __dirname,
-          project: ["./tsconfig.json"],
+          project: ['./tsconfig.json'],
           ecmaVersion: 12,
-          sourceType: "module",
+          sourceType: 'module',
         },
       },
     ],
-    ignorePatterns: ["/lib/**/*", "/dist/**/*"],
+    ignorePatterns: ['/lib/**/*', '/dist/**/*'],
     rules: {},
   };
   ```
@@ -95,14 +95,14 @@ With it, you won't need to install `eslint` and all the plugins we use!
   ```js
   // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
   module.exports = {
     root: true,
     env: {
       es2021: true,
       node: true,
     },
-    extends: ["eslint-config-gev/js"],
+    extends: ['eslint-config-gev/js'],
     ignorePatterns: [],
     rules: {},
   };
@@ -121,7 +121,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
   ```js
   // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
     root: true,
@@ -129,24 +129,24 @@ With it, you won't need to install `eslint` and all the plugins we use!
       es2021: true,
       node: true,
     },
-    extends: ["eslint-config-gev/react-js"],
+    extends: ['eslint-config-gev/react-js'],
     overrides: [
       {
-        files: ["*.ts", "*.tsx"],
-        extends: ["eslint-config-gev/react"],
-        parser: "@typescript-eslint/parser",
+        files: ['*.ts', '*.tsx'],
+        extends: ['eslint-config-gev/react'],
+        parser: '@typescript-eslint/parser',
         parserOptions: {
           tsconfigRootDir: __dirname,
-          project: ["./tsconfig.json"],
+          project: ['./tsconfig.json'],
           ecmaVersion: 12,
-          sourceType: "module",
+          sourceType: 'module',
           ecmaFeatures: {
             jsx: true,
           },
         },
       },
     ],
-    ignorePatterns: ["/lib/**/*", "/dist/**/*"],
+    ignorePatterns: ['/lib/**/*', '/dist/**/*'],
     rules: {},
   };
   ```
@@ -162,7 +162,7 @@ With it, you won't need to install `eslint` and all the plugins we use!
   ```js
   // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
     root: true,
@@ -170,8 +170,8 @@ With it, you won't need to install `eslint` and all the plugins we use!
       es2021: true,
       node: true,
     },
-    extends: ["eslint-config-gev/react-js"],
-    ignorePatterns: ["/lib/**/*", "/dist/**/*"],
+    extends: ['eslint-config-gev/react-js'],
+    ignorePatterns: ['/lib/**/*', '/dist/**/*'],
     rules: {},
   };
   ```
@@ -189,26 +189,26 @@ With it, you won't need to install `eslint` and all the plugins we use!
   ```js
   // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
     root: true,
     env: {
       es2021: true,
       node: true,
-      "react-native/react-native": true, // *1
+      'react-native/react-native': true, // *1
     },
-    extends: ["eslint-config-gev/react-native-js"],
+    extends: ['eslint-config-gev/react-native-js'],
     overrides: [
       {
-        files: ["*.ts", "*.tsx"],
-        extends: ["eslint-config-gev/react-native"],
-        parser: "@typescript-eslint/parser",
+        files: ['*.ts', '*.tsx'],
+        extends: ['eslint-config-gev/react-native'],
+        parser: '@typescript-eslint/parser',
         parserOptions: {
           tsconfigRootDir: __dirname,
-          project: ["./tsconfig.json"],
+          project: ['./tsconfig.json'],
           ecmaVersion: 12,
-          sourceType: "module",
+          sourceType: 'module',
           ecmaFeatures: {
             // *1
             jsx: true,
@@ -233,16 +233,16 @@ With it, you won't need to install `eslint` and all the plugins we use!
   ```js
   // https://github.com/SrBrahma/eslint-config-gev
   // This is a workaround for https://github.com/eslint/eslint/issues/3458
-  require("@rushstack/eslint-patch/modern-module-resolution");
+  require('@rushstack/eslint-patch/modern-module-resolution');
 
   module.exports = {
     root: true,
     env: {
       es2021: true,
       node: true,
-      "react-native/react-native": true, // *1
+      'react-native/react-native': true, // *1
     },
-    extends: ["eslint-config-gev/react-native-js"],
+    extends: ['eslint-config-gev/react-native-js'],
     rules: {},
   };
 

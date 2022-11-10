@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { execa } from 'execa';
+import { execa, execaCommandSync } from 'execa';
 import globby from 'globby';
 
 /** Don't override those rules */
@@ -14,21 +14,22 @@ const filePath = path.join(rootPath, 'ts-extensions.js');
  *
  * This is a cool automatic hack to do this convertion.
  */
-async function makeTsExtensions() {
+function makeTsExtensions() {
   /** Record<string, any> */
   const config = JSON.parse(
-    (await execa('npx', ['eslint', '--print-config', 'dont-care.js'], {
+    execaCommandSync('npx eslint --print-config dont-care.js', {
       cwd: rootPath,
-    })).stdout,
+    }).stdout,
   );
 
   /** Record<string, any[]> */
   const jsRulesRecord = config.rules;
 
   /** string[] */
-  const tsRules = (await globby('*.js', {
-    cwd: path.join('node_modules/@typescript-eslint/eslint-plugin/dist/rules'),
-  }))
+  const tsRules = globby
+    .sync('*.js', {
+      cwd: path.join('node_modules/@typescript-eslint/eslint-plugin/dist/rules'),
+    })
     .map((s) => s.replace('.js', ''));
 
   const tsRulesThatExtends = tsRules
@@ -39,7 +40,9 @@ async function makeTsExtensions() {
     // Sort results
     .sort()
     // Add the values from JS
-    .map((tsRule) => [tsRule, jsRulesRecord[tsRule]]);
+    .map((tsRule) => [tsRule, jsRulesRecord[tsRule]])
+    // Remove rules that are disabled
+    .filter(([, [v]]) => v !== 0 && v !== 'off');
 
   writeFile(tsRulesThatExtends);
 }

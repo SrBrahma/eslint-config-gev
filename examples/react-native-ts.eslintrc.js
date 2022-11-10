@@ -2,7 +2,6 @@
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-
 module.exports = {
   root: true,
   env: {
@@ -21,14 +20,14 @@ module.exports = {
         project: ['./tsconfig.json'],
         ecmaVersion: 12,
         sourceType: 'module',
-        ecmaFeatures: { // *1
+        ecmaFeatures: {
+          // *1
           jsx: true,
         },
       },
     },
   ],
-  rules: {
-  },
+  rules: {},
 };
 
 // [*1]: https://github.com/Intellicode/eslint-plugin-react-native#configuration
