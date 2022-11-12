@@ -10,6 +10,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.1.0
+
+- Re-added `import/newline-after-import` with `count: 1` to be compatible with Prettier (it only removes newlines).
+
 # 3.0.0~1
 
 All formatting rules are now disabled. This is a change in this config's philosophy and I have decided this as ESLint format gets slow on larger codebases and due to [this](https://typescript-eslint.io/docs/linting/troubleshooting/formatting/). You can still use eslint-config-gev@2 to use the formatting rules. Created [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev).

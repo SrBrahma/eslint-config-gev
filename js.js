@@ -66,6 +66,17 @@ module.exports = {
      * https://github.com/lydell/eslint-plugin-simple-import-sort */
     'simple-import-sort/exports': 'warn',
 
+    /** 2 blank lines after imports block.
+     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md */
+    'import/newline-after-import': [
+      'warn',
+      {
+        count: 1, // Can't be >1 as would conflict with prettier
+        // Not yet released. (currently 2.26.0)
+        // "considerComments": true
+      },
+    ],
+
     /** Newline after class members.
      * https://eslint.org/docs/latest/rules/lines-between-class-members */
     'lines-between-class-members': [
