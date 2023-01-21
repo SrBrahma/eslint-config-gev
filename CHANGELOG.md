@@ -10,6 +10,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.2.0
+
+- Removed `@typescript-eslint/explicit-module-boundary-types`. Not worth the effort on most cases; typing returns is more of a good practice, shouldn't be enforced as it slows down development.
+
 ## 3.1.0
 
 - Re-added `import/newline-after-import` with `count: 1` to be compatible with Prettier (it only removes newlines).

@@ -82,15 +82,6 @@ module.exports = {
     // Allows func(x as any).
     '@typescript-eslint/no-unsafe-argument': 'off',
 
-    // Allow exported function to have an argument typed as any.
-    // TODO ?: https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.2/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
-    '@typescript-eslint/explicit-module-boundary-types': [
-      'warn',
-      {
-        allowArgumentsExplicitlyTypedAsAny: true,
-      },
-    ],
-
     /** [2022-02-03] It's bugging often, so I disabled it. */
     '@typescript-eslint/restrict-plus-operands': 'off',
 
