@@ -87,6 +87,15 @@ module.exports = {
     /** TS handles this, it raised false-positives sometimes.
      * https://github.com/Chatie/eslint-config/issues/45#issuecomment-1003990077 */
     'no-undef': 'off',
+
+    /** -=-=-=- Disallow dangerous stuff, converts recommended warn to error -=-=-=- */
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-unsafe-assignment': 'error',
+    '@typescript-eslint/no-unsafe-return': 'error',
+    '@typescript-eslint/no-unsafe-member-access': 'error',
+    '@typescript-eslint/no-unsafe-argument': 'error',
+    '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-non-null-assertion': 'error',
   },
 };
 

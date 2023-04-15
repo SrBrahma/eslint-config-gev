@@ -3,6 +3,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.3.2
+
+- Reverted the 3.3.0~1 changes and made them to be 'error'. They were just being warnings by the recommended rules default.
+
 ## 3.3.0~1
 
 - Removed the following rules overrides that were allowing `any` usage:
