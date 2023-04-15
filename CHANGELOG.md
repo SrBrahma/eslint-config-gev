@@ -1,14 +1,24 @@
-<!-- template:
-## 2..
-###
-```js
-```
--->
-
 # Changelog
 
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
+
+## 3.3.0~1
+
+- Removed the following rules overrides that were allowing `any` usage:
+
+  - `'@typescript-eslint/no-explicit-any': 'off'`
+  - `'@typescript-eslint/no-unsafe-assignment': 'off'`
+  - `'@typescript-eslint/no-unsafe-return': 'off'`
+  - `'@typescript-eslint/no-unsafe-member-access': 'off'`
+  - `'@typescript-eslint/no-unsafe-argument': 'off'`
+  - `'@typescript-eslint/no-unsafe-call': 'off'`
+
+- Removed `'@typescript-eslint/no-non-null-assertion': 'off'`
+
+- Updated dependencies
+
+They can still be disabled for specific lines where they may apply in a good way.
 
 ## 3.2.0
 

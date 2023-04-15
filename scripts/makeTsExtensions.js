@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execa, execaCommandSync } from 'execa';
-import globby from 'globby';
+import { globbySync } from 'globby';
 
 /** Don't override those rules */
 const blacklist = ['indent'];
@@ -26,11 +26,9 @@ function makeTsExtensions() {
   const jsRulesRecord = config.rules;
 
   /** string[] */
-  const tsRules = globby
-    .sync('*.js', {
-      cwd: path.join('node_modules/@typescript-eslint/eslint-plugin/dist/rules'),
-    })
-    .map((s) => s.replace('.js', ''));
+  const tsRules = globbySync('*.js', {
+    cwd: path.join('node_modules/@typescript-eslint/eslint-plugin/dist/rules'),
+  }).map((s) => s.replace('.js', ''));
 
   const tsRulesThatExtends = tsRules
     // Gets what JS active rules have TS extensions
@@ -69,10 +67,7 @@ ${rules.map((r) => getReplaceString(...r)).join('\n\n')}
 }
 
 function getReplaceString(rule, value) {
-  return (
-    `['${rule}']: 'off',\n` +
-    `['@typescript-eslint/${rule}']: ${JSON.stringify(value)},`
-  );
+  return `['${rule}']: 'off',\n` + `['@typescript-eslint/${rule}']: ${JSON.stringify(value)},`;
 }
 
 makeTsExtensions();

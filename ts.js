@@ -55,32 +55,13 @@ module.exports = {
      * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-unnecessary-condition.md */
     '@typescript-eslint/no-unnecessary-condition': 'warn',
 
-    /** =========== Unsafe / any ===========
+    /** =========== Unsafe ===========
      *  === Be responsible and careful! ==== */
 
     // Allows using `a!.b`. Not safe, but sometimes we really know it is valid.
-    '@typescript-eslint/no-non-null-assertion': 'off',
 
     // Let us have our empty stuff!
     '@typescript-eslint/no-empty-interface': 'off',
-
-    // Allows using `any` as explicit type. Sometimes, we know what we are doing!
-    '@typescript-eslint/no-explicit-any': 'off',
-
-    // Allows `as any`. Sometimes it's really useful for really complex types.
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-
-    // Allows the function return as `any`.
-    '@typescript-eslint/no-unsafe-return': 'off',
-
-    // Allows acessing props of any type var. Useful for `if ((X as any).Y)`, to check if it exists.
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-
-    // Allows calling new (Intl as any).RelativeTimeFormat(...), as TS doesn't know it yet.
-    '@typescript-eslint/no-unsafe-call': 'off',
-
-    // Allows func(x as any).
-    '@typescript-eslint/no-unsafe-argument': 'off',
 
     /** [2022-02-03] It's bugging often, so I disabled it. */
     '@typescript-eslint/restrict-plus-operands': 'off',
