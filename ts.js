@@ -51,9 +51,13 @@ module.exports = {
      * https://eslint.org/docs/rules/no-empty-pattern */
     'no-empty-pattern': 'off',
 
-    /** I added to remove useless optional chainings, but it also does other operators checks
-     * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-unnecessary-condition.md */
-    '@typescript-eslint/no-unnecessary-condition': 'warn',
+    /** https://typescript-eslint.io/rules/no-unnecessary-condition/ */
+    '@typescript-eslint/no-unnecessary-condition': [
+      'warn',
+      {
+        allowConstantLoopConditions: true, // Allow `while (true)`
+      },
+    ],
 
     /** =========== Unsafe ===========
      *  === Be responsible and careful! ==== */
