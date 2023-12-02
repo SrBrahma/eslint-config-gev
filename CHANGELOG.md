@@ -3,6 +3,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.6.0
+
+- Revert previous minor for functions and use `'eslint-plugin-prefer-arrow-functions'` instead as it has autofix.
+
 ## 3.5.0
 
 - Add `'func-style'`, `'prefer-arrow-callback'` rules and `eslint-plugin-jsdoc` package.

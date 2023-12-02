@@ -6,6 +6,7 @@ module.exports = {
     'unused-imports',
     'no-relative-import-paths',
     'jsdoc',
+    'prefer-arrow-functions',
   ],
   extends: ['eslint:recommended', 'plugin:jsdoc/recommended', './removeFormatter/js.js'],
   rules: {
@@ -150,15 +151,14 @@ module.exports = {
      * https://www.npmjs.com/package/eslint-plugin-no-relative-import-paths
      */
     'no-relative-import-paths/no-relative-import-paths': ['warn', { rootDir: 'src' }],
+
     /**
-     * Prefer expression functions
-     * https://eslint.org/docs/latest/rules/func-style
+     * https://github.com/JamieMason/eslint-plugin-prefer-arrow-functions
      */
-    'func-style': 'warn',
-    /**
-     * Prefer expression functions on callbacks
-     * https://eslint.org/docs/latest/rules/prefer-arrow-callback
-     */
-    'prefer-arrow-callback': 'error',
+    'prefer-arrow-functions/prefer-arrow-functions': ['warn'],
+    /** https://github.com/gajus/eslint-plugin-jsdoc */
+    'jsdoc/require-jsdoc': 'off',
+    'jsdoc/require-param': 'off',
+    'jsdoc/require-returns': 'off',
   },
 };
