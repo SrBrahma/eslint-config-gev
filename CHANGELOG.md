@@ -3,6 +3,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.4.0
+
+- Add https://www.npmjs.com/package/eslint-plugin-no-relative-import-paths
+
 ## 3.3.4
 
 - Fixed .cjs extension

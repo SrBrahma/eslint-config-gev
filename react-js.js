@@ -41,10 +41,7 @@ module.exports = {
      * so we use `jsx-quotes` rule for props and `quotes` rule for children.
      *
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md */
-    'react/jsx-curly-brace-presence': [
-      'warn',
-      { props: 'never', children: 'always' },
-    ],
+    'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'always' }],
 
     /** Prefer <> over <React.Fragment> if not using key=''.
      *

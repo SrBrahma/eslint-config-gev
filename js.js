@@ -1,5 +1,11 @@
 module.exports = {
-  plugins: ['no-autofix', 'simple-import-sort', 'import', 'unused-imports'],
+  plugins: [
+    'no-autofix',
+    'simple-import-sort',
+    'import',
+    'unused-imports',
+    'no-relative-import-paths',
+  ],
   extends: ['eslint:recommended', './removeFormatter/js.js'],
   rules: {
     /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
@@ -113,5 +119,10 @@ module.exports = {
      *
      * https://eslint.org/docs/latest/rules/default-param-last */
     'default-param-last': 'error',
+
+    /**
+     * https://www.npmjs.com/package/eslint-plugin-no-relative-import-paths
+     */
+    'no-relative-import-paths/no-relative-import-paths': ['warn', { rootDir: 'src' }],
   },
 };
