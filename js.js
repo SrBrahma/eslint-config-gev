@@ -5,8 +5,9 @@ module.exports = {
     'import',
     'unused-imports',
     'no-relative-import-paths',
+    'jsdoc',
   ],
-  extends: ['eslint:recommended', './removeFormatter/js.js'],
+  extends: ['eslint:recommended', 'plugin:jsdoc/recommended', './removeFormatter/js.js'],
   rules: {
     /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
     'no-unused-vars': ['warn', { ignoreRestSiblings: true }],
@@ -17,14 +18,18 @@ module.exports = {
     /** https://eslint.org/docs/rules/require-await */
     'require-await': 'warn',
 
-    /** Still warn about using let instead of const, but won't auto-fix (no more ctrl+s fixing it!)
+    /**
+     * Still warn about using let instead of const, but won't auto-fix (no more ctrl+s fixing it!)
      * https://eslint.org/docs/rules/prefer-const
-     * https://www.npmjs.com/package/eslint-plugin-no-autofix */
+     * https://www.npmjs.com/package/eslint-plugin-no-autofix
+     */
     'prefer-const': 'off', // Disable the default rule
     'no-autofix/prefer-const': 'warn', // Use the no-autofix
 
-    /** Disallow Number Literals That Lose Precision
-     * https://eslint.org/docs/rules/no-loss-of-precision */
+    /**
+     * Disallow Number Literals That Lose Precision
+     * https://eslint.org/docs/rules/no-loss-of-precision
+     */
     'no-loss-of-precision': 'error',
 
     /** Warn about unreachable code. */
@@ -34,18 +39,23 @@ module.exports = {
     'no-empty': 'warn',
     /** Disable error about empty functions. This is good to allow .catch(() => {}) */
     'no-empty-function': 'off',
-    /** Default recommended is error. Changed it to warn to avoid confusions, as I had.
-     * https://eslint.org/docs/rules/no-useless-catch */
+    /**
+     * Default recommended is error. Changed it to warn to avoid confusions, as I had.
+     * https://eslint.org/docs/rules/no-useless-catch
+     */
     'no-useless-catch': 'warn',
 
-    /** Space after comment.
-     * https://eslint.org/docs/rules/spaced-comment */
+    /**
+     * Space after comment.
+     * https://eslint.org/docs/rules/spaced-comment
+     */
     'spaced-comment': ['warn', 'always', { exceptions: ['-', '+'], markers: ['/'] }],
 
-    /** Sort imports and exports
+    /**
+     * Sort imports and exports
      * https://github.com/lydell/eslint-plugin-simple-import-sort
      * https://github.com/lydell/eslint-plugin-simple-import-sort/issues/83#issue-976190535
-     * */
+     */
     'simple-import-sort/imports': [
       'warn',
       {
@@ -68,12 +78,16 @@ module.exports = {
       },
     ],
 
-    /** Sorts exports
-     * https://github.com/lydell/eslint-plugin-simple-import-sort */
+    /**
+     * Sorts exports
+     * https://github.com/lydell/eslint-plugin-simple-import-sort
+     */
     'simple-import-sort/exports': 'warn',
 
-    /** 2 blank lines after imports block.
-     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md */
+    /**
+     * 2 blank lines after imports block.
+     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
+     */
     'import/newline-after-import': [
       'warn',
       {
@@ -83,8 +97,10 @@ module.exports = {
       },
     ],
 
-    /** Newline after class members.
-     * https://eslint.org/docs/latest/rules/lines-between-class-members */
+    /**
+     * Newline after class members.
+     * https://eslint.org/docs/latest/rules/lines-between-class-members
+     */
     'lines-between-class-members': [
       'warn',
       'always',
@@ -93,36 +109,56 @@ module.exports = {
       },
     ],
 
-    /** Merges multiple imports statements from same module.
-     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md */
+    /**
+     * Merges multiple imports statements from same module.
+     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md
+     */
     'import/no-duplicates': 'warn',
 
-    /** Automatically removes unused imports. Saves time! But may be annoying! I re-enabled after moving it to limbo.
+    /**
+     * Automatically removes unused imports. Saves time! But may be annoying! I re-enabled after moving it to limbo.
      *
-     * https://github.com/sweepline/eslint-plugin-unused-imports */
+     * https://github.com/sweepline/eslint-plugin-unused-imports
+     */
     'unused-imports/no-unused-imports': 'warn',
 
-    /** Simplify objects.
-     * https://eslint.org/docs/rules/object-shorthand */
+    /**
+     * Simplify objects.
+     * https://eslint.org/docs/rules/object-shorthand
+     */
     'object-shorthand': ['warn', 'always'],
 
-    /** Disallow `throw 4` and `throw 'error'`. It will be required to always throw an Error-like object,
+    /**
+     * Disallow `throw 4` and `throw 'error'`. It will be required to always throw an Error-like object,
      * such as `throw new Error('error')`.
      *
-     * https://eslint.org/docs/latest/rules/no-throw-literal */
+     * https://eslint.org/docs/latest/rules/no-throw-literal
+     */
     'no-throw-literal': 'warn',
 
     /** Disallow var keyword */
     'no-var': 'warn',
 
-    /** Enforce default parameters to be last
+    /**
+     * Enforce default parameters to be last
      *
-     * https://eslint.org/docs/latest/rules/default-param-last */
+     * https://eslint.org/docs/latest/rules/default-param-last
+     */
     'default-param-last': 'error',
 
     /**
      * https://www.npmjs.com/package/eslint-plugin-no-relative-import-paths
      */
     'no-relative-import-paths/no-relative-import-paths': ['warn', { rootDir: 'src' }],
+    /**
+     * Prefer expression functions
+     * https://eslint.org/docs/latest/rules/func-style
+     */
+    'func-style': 'warn',
+    /**
+     * Prefer expression functions on callbacks
+     * https://eslint.org/docs/latest/rules/prefer-arrow-callback
+     */
+    'prefer-arrow-callback': 'error',
   },
 };

@@ -3,6 +3,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.5.0
+
+- Add `'func-style'`, `'prefer-arrow-callback'` rules and `eslint-plugin-jsdoc` package.
+
 ## 3.4.0
 
 - Add https://www.npmjs.com/package/eslint-plugin-no-relative-import-paths
