@@ -3,6 +3,13 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.7.0
+
+- Add `'@typescript-eslint/array-type': ['warn', { default: 'generic' }]`
+- Add `'@typescript-eslint/prefer-string-starts-ends-with': 'warn'`
+- Add package `@stylistic/eslint-plugin`
+- Add `"padding-line-between-statements"` for multiple situations
+
 ## 3.6.0
 
 - Revert previous minor for functions and use `'eslint-plugin-prefer-arrow-functions'` instead as it has autofix.

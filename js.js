@@ -7,6 +7,7 @@ module.exports = {
     'no-relative-import-paths',
     'jsdoc',
     'prefer-arrow-functions',
+    '@stylistic',
   ],
   extends: ['eslint:recommended', 'plugin:jsdoc/recommended', './removeFormatter/js.js'],
   rules: {
@@ -160,5 +161,18 @@ module.exports = {
     'jsdoc/require-jsdoc': 'off',
     'jsdoc/require-param': 'off',
     'jsdoc/require-returns': 'off',
+
+    '@stylistic/padding-line-between-statements': [
+      'warn',
+      // Line before return
+      { blankLine: 'always', prev: '*', next: 'return' },
+      // Line after vars block
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+      // Line before function
+      { blankLine: 'always', prev: '*', next: 'function' },
+      // Line before type/interface (TS)
+      { blankLine: 'always', prev: '*', next: ['interface', 'type'] },
+    ],
   },
 };

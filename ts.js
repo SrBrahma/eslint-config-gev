@@ -45,10 +45,12 @@ module.exports = {
     /** Disable it to allow empty catch blocks. */
     '@typescript-eslint/no-empty-function': 'off',
 
-    /** This is kinda useless. It's more of a pain, actually:
+    /**
+     * This is kinda useless. It's more of a pain, actually:
      * If you are writting a function like f({}: Props) to later fill the object with the desired props,
      * it will mark it as an error.
-     * https://eslint.org/docs/rules/no-empty-pattern */
+     * https://eslint.org/docs/rules/no-empty-pattern
+     */
     'no-empty-pattern': 'off',
 
     /** https://typescript-eslint.io/rules/no-unnecessary-condition/ */
@@ -59,8 +61,10 @@ module.exports = {
       },
     ],
 
-    /** =========== Unsafe ===========
-     *  === Be responsible and careful! ==== */
+    /**
+     * =========== Unsafe ===========
+     *  === Be responsible and careful! ====
+     */
 
     // Allows using `a!.b`. Not safe, but sometimes we really know it is valid.
 
@@ -70,8 +74,10 @@ module.exports = {
     /** [2022-02-03] It's bugging often, so I disabled it. */
     '@typescript-eslint/restrict-plus-operands': 'off',
 
-    /** Improves tree-shaking and improves TS optimization.
-     * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/consistent-type-imports.md */
+    /**
+     * Improves tree-shaking and improves TS optimization.
+     * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/consistent-type-imports.md
+     */
     '@typescript-eslint/consistent-type-imports': [
       'warn',
       {
@@ -79,8 +85,10 @@ module.exports = {
       },
     ],
 
-    /** Remove unnecessary boolean literal conditionals`.
-     * https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare */
+    /**
+     * Remove unnecessary boolean literal conditionals`.
+     * https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
+     */
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
       'warn',
       {
@@ -88,8 +96,10 @@ module.exports = {
       },
     ],
 
-    /** TS handles this, it raised false-positives sometimes.
-     * https://github.com/Chatie/eslint-config/issues/45#issuecomment-1003990077 */
+    /**
+     * TS handles this, it raised false-positives sometimes.
+     * https://github.com/Chatie/eslint-config/issues/45#issuecomment-1003990077
+     */
     'no-undef': 'off',
 
     /** -=-=-=- Disallow dangerous stuff, converts recommended warn to error -=-=-=- */
@@ -100,6 +110,18 @@ module.exports = {
     '@typescript-eslint/no-unsafe-argument': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
+
+    /**
+     * Prefer Array<string> instead of string[]. Faster to read and to change.
+     *
+     * https://typescript-eslint.io/rules/array-type/
+     */
+    '@typescript-eslint/array-type': ['warn', { default: 'generic' }],
+
+    /**
+     * https://typescript-eslint.io/rules/prefer-string-starts-ends-with/
+     */
+    '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
   },
 };
 
