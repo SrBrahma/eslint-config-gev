@@ -3,6 +3,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.8.0
+
+- Add `arrow-body-style`
+
 ## 3.7.0
 
 - Add `'@typescript-eslint/array-type': ['warn', { default: 'generic' }]`

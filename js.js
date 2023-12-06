@@ -174,5 +174,10 @@ module.exports = {
       // Line before type/interface (TS)
       { blankLine: 'always', prev: '*', next: ['interface', 'type'] },
     ],
+    /**
+     * Remove wrapping braces if they can be omitted
+     * https://eslint.org/docs/latest/rules/arrow-body-style
+     */
+    'arrow-body-style': 'warn',
   },
 };
