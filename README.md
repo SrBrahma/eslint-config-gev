@@ -7,17 +7,15 @@
 
 # eslint-config-gev
 
-My curated ESLint configs for Javascript/Typescript. All my projects are using this.
+My curated ESLint configs for Javascript/Typescript that I've been improving over the years. All of my projects use this.
 
-~~Intended to work without Prettier, as ESLint can really manage the code looks by itself.~~
-
-The above is no longer true in the current v3; I have opted to move to prettier for those reasons. Use my [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev) for formatting. You can still use this plugin with the all the great formatting by installing the major v2.
+In the past, this package also took care of formatting the code, but ESLint proved to be slow when dealing with larger codebases, so I created this Prettier config that I use together with ESLint: [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev).
 
 You can also use my [**`gev`** npx package](https://github.com/srbrahma/gev) that will create a new project with everything properly and automatically configured.
 
 Works accordingly to https://eslint.org/docs/developer-guide/shareable-configs
 
-If interested, take a look into the source files to see what will be used as plugins, extends and rules.
+Take a look into the source files to see what will be used as plugins, extends, and rules.
 
 ## 💿 Install:
 
@@ -29,11 +27,9 @@ yarn add -D eslint-config-gev
 pnpm i -D eslint-config-gev
 ```
 
-### CLI
+### CLI - Automated way
 
-After installing, you can run `npx eslint-config-gev <flavor>` to quickly create a basic and functional `.eslintrc.js`, being flavor one of the following: `js, react-js, react-native-js, react-native-ts, react-ts, ts`. This list can be seen by running `npx eslint-config-gev -h`.
-
-Else, continue reading!
+After installing, run `npx eslint-config-gev <flavor>` to quickly create a basic and functional `.eslintrc.js`, being flavor one of the following: `js, react-js, react-native-js, react-native-ts, react-ts, ts`. This list can be seen by running `npx eslint-config-gev -h`.
 
 ### Manual
 
