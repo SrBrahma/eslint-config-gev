@@ -149,11 +149,6 @@ module.exports = {
     'default-param-last': 'error',
 
     /**
-     * https://www.npmjs.com/package/eslint-plugin-no-relative-import-paths
-     */
-    'no-relative-import-paths/no-relative-import-paths': ['warn', { rootDir: 'src' }],
-
-    /**
      * https://github.com/JamieMason/eslint-plugin-prefer-arrow-functions
      */
     'prefer-arrow-functions/prefer-arrow-functions': ['warn'],
