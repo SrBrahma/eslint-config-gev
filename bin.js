@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { defineCommand, runMain } = require('citty');
+const { defineCommand, runMain, showUsage } = require('citty');
 const path = require('path');
 const fs = require('fs');
 
@@ -48,7 +48,7 @@ const main = defineCommand({
   args: {
     force: {
       type: 'boolean',
-      alias: '-f',
+      alias: 'f',
       description: "Overwrites the existing '.eslintrc'",
     },
     js: {
@@ -60,8 +60,15 @@ const main = defineCommand({
       required: true,
       description: `Your project kind. One of these: ${flavorsString}`,
     },
+    help: {
+      type: 'boolean',
+      alias: 'h',
+      description: 'Display help',
+    },
   },
-  run: ({ args: { flavor, force, js } }) => {
+  run: ({ args: { flavor, force, js, help } }) => {
+    if (help) showUsage(main);
+
     if (!flavors.includes(flavor))
       throw new Error(`The flavor must be one of these: ${flavorsString}`);
 
