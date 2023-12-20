@@ -180,5 +180,7 @@ module.exports = {
      * https://eslint.org/docs/latest/rules/arrow-body-style
      */
     'arrow-body-style': 'warn',
+    /** https://eslint.org/docs/latest/rules/prefer-template */
+    'prefer-template': 'warn',
   },
 };

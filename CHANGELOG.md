@@ -3,6 +3,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.10.4
+
+- Add `prefer-template`.
+
 ## 3.10.0~3
 
 - Improved the bin. Now the dependency is added with the command and we are using a lighter package for the CLI parsing.

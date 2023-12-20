@@ -6,7 +6,7 @@ const fs = require('fs');
 const pkgJson = require('./package.json');
 
 const getFlavorPath = (flavor = '') =>
-  path.resolve(__dirname, 'examples', flavor ? flavor + `.eslintrc.js` : '');
+  path.resolve(__dirname, 'examples', flavor ? `${flavor}.eslintrc.js` : '');
 
 const files = fs.readdirSync(getFlavorPath()).filter((s) => s.includes('.eslintrc.js'));
 
@@ -19,7 +19,7 @@ const addDependency = (packageName, version, dev = false) => {
 
   const depKey = dev ? 'devDependencies' : 'dependencies';
 
-  (packageJsonObj[depKey] ??= {})[packageName] = version;
+  (packageJsonObj[depKey] ??= {})[packageName] = `^${version}`;
 
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonObj, null, 2));
 };
