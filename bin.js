@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { defineCommand, runMain, showUsage } = require('citty');
+const { defineCommand, runMain } = require('citty');
 const path = require('path');
 const fs = require('fs');
 
@@ -60,15 +60,8 @@ const main = defineCommand({
       required: true,
       description: `Your project kind. One of these: ${flavorsString}`,
     },
-    help: {
-      type: 'boolean',
-      alias: 'h',
-      description: 'Display help',
-    },
   },
-  run: ({ args: { flavor, force, js, help } }) => {
-    if (help) showUsage(main);
-
+  run: ({ args: { flavor, force, js } }) => {
     if (!flavors.includes(flavor))
       throw new Error(`The flavor must be one of these: ${flavorsString}`);
 

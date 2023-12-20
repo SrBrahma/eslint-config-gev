@@ -21,7 +21,7 @@ Take a look into the source files to see what will be used as plugins, extends, 
 
 ### Automatically
 
-Run `npx eslint-config-gev <flavor>`, being flavor one of the following: `ts, react-ts, react-native-ts, js, react-js, react-native-js`. This list and further options can be seen by running `npx eslint-config-gev -h`.
+Run `npx eslint-config-gev <flavor>`, being flavor one of the following: `ts, react-ts, react-native-ts, js, react-js, react-native-js`. This list and further options can be seen by running `npx eslint-config-gev --help`.
 
 This command adds the required package to your package.json and sets up the `.eslintrc.cjs`.
 
