@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "3.9.0",
+  "version": "3.10.0",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "bin": "bin.js",
@@ -11,6 +11,10 @@
     "generate:ts-extensions": "node ./scripts/makeTsExtensions.js",
     "pre-commit": "node ./scripts/makeTsExtensions.js && npx lint-staged && git add -A"
   },
+  "files": [
+    "*.js",
+    "examples/*.js"
+  ],
   "prettier": "prettier-config-gev",
   "lint-staged": {
     "*.{md}": "prettier --write",
@@ -44,7 +48,7 @@
     "@stylistic/eslint-plugin": "^1.4.1",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
-    "commander": "9.4.1",
+    "citty": "^0.1.5",
     "eslint": "8.55.0",
     "eslint-plugin-import": "2.29.0",
     "eslint-plugin-jsdoc": "^46.9.0",

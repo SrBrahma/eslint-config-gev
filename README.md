@@ -19,6 +19,14 @@ Take a look into the source files to see what will be used as plugins, extends, 
 
 ## 💿 Install:
 
+### Automatically
+
+Run `npx eslint-config-gev <flavor>`, being flavor one of the following: `ts, react-ts, react-native-ts, js, react-js, react-native-js`. This list and further options can be seen by running `npx eslint-config-gev -h`.
+
+This command adds the required package to your package.json and sets up the `.eslintrc.cjs`.
+
+### Manually
+
 ```bash
 npm i -D eslint-config-gev
 # or
@@ -26,12 +34,6 @@ yarn add -D eslint-config-gev
 # or
 pnpm i -D eslint-config-gev
 ```
-
-### CLI - Automated way
-
-After installing, run `npx eslint-config-gev <flavor>` to quickly create a basic and functional `.eslintrc.cjs`, being flavor one of the following: `js, react-js, react-native-js, react-native-ts, react-ts, ts`. This list can be seen by running `npx eslint-config-gev -h`.
-
-### Manual
 
 - Add the following to the top of your .eslintrc.js:
 
