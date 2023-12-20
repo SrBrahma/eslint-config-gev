@@ -3,6 +3,11 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 3.9.0
+
+- Added `require-extensions` plugin. Let's have `.js` in all imports for ESM compatibility.
+- `npx eslint-config-gev <flavor>` will have `.cjs` as extension by default, instead of `.js`. Dropped the `--cjs` flag and added the `--js`.
+
 ## 3.8.1
 
 - Remove `no-relative-import-paths/no-relative-import-paths`

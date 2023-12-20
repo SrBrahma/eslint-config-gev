@@ -8,8 +8,14 @@ module.exports = {
     'jsdoc',
     'prefer-arrow-functions',
     '@stylistic',
+    'require-extensions',
   ],
-  extends: ['eslint:recommended', 'plugin:jsdoc/recommended', './removeFormatter/js.js'],
+  extends: [
+    'eslint:recommended',
+    'plugin:jsdoc/recommended',
+    './removeFormatter/js.js',
+    'plugin:require-extensions/recommended',
+  ],
   rules: {
     /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
     'no-unused-vars': ['warn', { ignoreRestSiblings: true }],

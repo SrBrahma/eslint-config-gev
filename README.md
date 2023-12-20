@@ -29,7 +29,7 @@ pnpm i -D eslint-config-gev
 
 ### CLI - Automated way
 
-After installing, run `npx eslint-config-gev <flavor>` to quickly create a basic and functional `.eslintrc.js`, being flavor one of the following: `js, react-js, react-native-js, react-native-ts, react-ts, ts`. This list can be seen by running `npx eslint-config-gev -h`.
+After installing, run `npx eslint-config-gev <flavor>` to quickly create a basic and functional `.eslintrc.cjs`, being flavor one of the following: `js, react-js, react-native-js, react-native-ts, react-ts, ts`. This list can be seen by running `npx eslint-config-gev -h`.
 
 ### Manual
 

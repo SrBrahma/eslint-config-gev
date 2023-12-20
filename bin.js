@@ -12,8 +12,8 @@ const files = fs.readdirSync(flavorPath()).filter((s) => s.includes('.eslintrc.j
 
 const flavors = files.map((s) => s.replace('.eslintrc.js', ''));
 
-function applyFlavor(flavor, { force, cjs }) {
-  const extension = cjs ? 'cjs' : 'js';
+function applyFlavor(flavor, { force, js }) {
+  const extension = js ? 'js' : 'cjs';
   const destPath = path.resolve(`.eslintrc.${extension}`);
   const exists = fs.existsSync(destPath);
   if (exists && !force)
@@ -29,11 +29,11 @@ program
   .version(pkgJson.version, '-v, --version', 'Output the version number.')
   .helpOption('-h, --help', 'Display help for command.') // Capitalize the first letter of description.
   .option('-f, --force', "Overwrite existing '.eslintrc.js'")
-  .option('--cjs', "Use '.eslintrc.cjs' instead of '.eslintrc.js'")
+  .option('--js', "Use '.eslintrc.js' instead of '.eslintrc.cjs'")
   // https://github.com/tj/commander.js/issues/518#issuecomment-872769249
   .addArgument(new Argument('<flavor>', `The project kind.`).choices(flavors)) // Will also print in the usage the possible options
   .action((flavor) => {
-    const { force, cjs } = program.opts();
-    applyFlavor(flavor, { force, cjs });
+    const { force, js } = program.opts();
+    applyFlavor(flavor, { force, js });
   })
   .parse();
