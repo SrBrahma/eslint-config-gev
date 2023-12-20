@@ -14,15 +14,14 @@ const flavors = files.map((s) => s.replace('.eslintrc.js', ''));
 const flavorsString = flavors.join(', ');
 
 const addDependency = (packageName, version, dev = false) => {
-  const packageJsonPath = path.join(__dirname, 'package.json');
-  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  const packageJsonPath = 'package.json';
+  const packageJsonObj = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
   const depKey = dev ? 'devDependencies' : 'dependencies';
 
-  packageJson[depKey] = packageJson[depKey] || {};
-  packageJson[depKey][packageName] = version;
+  (packageJsonObj[depKey] ??= {})[packageName] = version;
 
-  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonObj, null, 2));
 };
 
 const setupEslint = (flavor, { force, js }) => {
