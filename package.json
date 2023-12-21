@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "3.10.4",
+  "version": "3.10.5",
   "description": "Common ESLint configs for my JS/TS and React/RN projects",
   "main": "index.js",
   "bin": "bin.js",
@@ -13,7 +13,8 @@
   },
   "files": [
     "*.js",
-    "examples/*.js"
+    "examples/*.js",
+    "removeFormatter/*.js"
   ],
   "prettier": "prettier-config-gev",
   "lint-staged": {
