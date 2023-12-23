@@ -7,7 +7,7 @@
 
 # eslint-config-gev
 
-My curated ESLint configs for Javascript/Typescript that I've been improving over the years. All of my projects use this.
+Curated ESLint configs that I've been improving over the years. All my projects use this.
 
 Since v4, **this now should be used together with Biome**. Internally it uses my other package, the [eslint-config-biome](https://github.com/SrBrahma/eslint-config-biome). If you want to stay without Biome, use v3 together with Prettier (I recommend [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev))
 
