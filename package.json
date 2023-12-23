@@ -1,29 +1,19 @@
 {
   "name": "eslint-config-gev",
-  "version": "3.10.5",
-  "description": "Common ESLint configs for my JS/TS and React/RN projects",
+  "version": "4.0.0",
+  "description": "Curated ESLint configs for TS/JS and React/RN projects",
   "main": "index.js",
   "bin": "bin.js",
   "scripts": {
-    "lint:fix": "eslint --ext js --fix .",
-    "prettier:fix": "prettier --write .",
+    "gen-ts-extensions": "bun run ./scripts/makeTsExtensions.ts",
+    "format:check": "eslint . && biome check .",
+    "format": "eslint --fix . && biome check --apply-unsafe .",
+    "pre-commit": "bun format:check && bun test && bun run gen-ts-extensions && git add -A",
     "prepare": "husky install",
-    "generate:ts-extensions": "node ./scripts/makeTsExtensions.js",
-    "pre-commit": "node ./scripts/makeTsExtensions.js && npx lint-staged && git add -A"
+    "test:watch": "bun test --watch",
+    "watch": "bun --watch run scripts/makeTsExtensions.ts"
   },
-  "files": [
-    "*.js",
-    "examples/*.js",
-    "removeFormatter/*.js"
-  ],
-  "prettier": "prettier-config-gev",
-  "lint-staged": {
-    "*.{md}": "prettier --write",
-    "*.{js,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
+  "files": ["*.js", "examples/*.js", "removeFormatter/*.js"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SrBrahma/eslint-config.git"
@@ -46,30 +36,29 @@
   "homepage": "https://github.com/SrBrahma/eslint-config#readme",
   "dependencies": {
     "@rushstack/eslint-patch": "1.6.0",
-    "@stylistic/eslint-plugin": "^1.4.1",
+    "@stylistic/eslint-plugin": "1.4.1",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
-    "citty": "^0.1.5",
+    "citty": "0.1.5",
     "eslint": "8.55.0",
     "eslint-plugin-import": "2.29.0",
-    "eslint-plugin-jsdoc": "^46.9.0",
+    "eslint-plugin-jsdoc": "46.9.0",
     "eslint-plugin-no-autofix": "1.2.3",
-    "eslint-plugin-no-relative-import-paths": "^1.5.3",
-    "eslint-plugin-prefer-arrow-functions": "^3.2.4",
+    "eslint-plugin-no-relative-import-paths": "1.5.3",
+    "eslint-plugin-prefer-arrow-functions": "3.2.4",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react-native": "4.1.0",
-    "eslint-plugin-require-extensions": "^0.1.3",
+    "eslint-plugin-require-extensions": "0.1.3",
     "eslint-plugin-simple-import-sort": "10.0.0",
     "eslint-plugin-unused-imports": "3.0.0"
   },
   "devDependencies": {
-    "@types/node": "20.10.2",
-    "execa": "7.1.1",
+    "@biomejs/biome": "^1.4.1",
+    "@sindresorhus/tsconfig": "5.0.0",
+    "@types/bun": "^1.0.0",
+    "eslint-config-biome": "^1.3.0",
     "globby": "13.1.4",
-    "husky": "8.0.3",
-    "lint-staged": "15.1.0",
-    "prettier": "3.1.0",
-    "prettier-config-gev": "1.1.3"
+    "husky": "8.0.3"
   }
 }

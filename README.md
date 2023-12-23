@@ -9,13 +9,7 @@
 
 My curated ESLint configs for Javascript/Typescript that I've been improving over the years. All of my projects use this.
 
-In the past, this package also took care of formatting the code, but ESLint proved to be slow when dealing with larger codebases, so I created this Prettier config that I use together with ESLint: [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev).
-
-You can also use my [**`gev`** npx package](https://github.com/srbrahma/gev) that will create a new project with everything properly and automatically configured.
-
-Works accordingly to https://eslint.org/docs/developer-guide/shareable-configs
-
-Take a look into the source files to see what will be used as plugins, extends, and rules.
+Since v4, **this now should be used together with Biome**. Internally it uses my other package, the [eslint-config-biome](https://github.com/SrBrahma/eslint-config-biome). If you want to stay without Biome, use v3 together with Prettier (I recommend [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev))
 
 ## 💿 Install:
 
@@ -29,10 +23,6 @@ This command adds the required package to your package.json and sets up the `.es
 
 ```bash
 npm i -D eslint-config-gev
-# or
-yarn add -D eslint-config-gev
-# or
-pnpm i -D eslint-config-gev
 ```
 
 - Add the following to the top of your .eslintrc.js:

@@ -3,9 +3,15 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 4.0.0
+
+- You should now use this package together with Biome, for improved performance. All ESLint rules that have a Biome corresponding rules are now disabled.
+
+- Removed `react-native-js` and `react-js` flavors.
+
 ## 3.10.5
 
-Fix missing files
+- Fix missing files
 
 ## 3.10.4
 
