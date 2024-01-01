@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "4.1.4",
+  "version": "4.1.5",
   "description": "Curated ESLint configs for TS/JS and React/RN projects",
   "main": "index.js",
   "bin": "bin.js",

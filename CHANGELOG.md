@@ -3,7 +3,7 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
-## 4.1.0-4
+## 4.1.0-5
 
 - Add next flavor
 

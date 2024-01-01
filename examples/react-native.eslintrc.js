@@ -9,7 +9,7 @@ module.exports = {
     node: true,
     "react-native/react-native": true, // *1
   },
-  extends: ["eslint-config-gev/react-native-js"],
+  extends: ["eslint-config-gev/js"],
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
