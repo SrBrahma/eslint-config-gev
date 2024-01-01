@@ -8,7 +8,19 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["eslint-config-gev/next"],
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      extends: ["eslint-config-gev/ts", "eslint-config-gev/next"],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json"],
+        ecmaVersion: 12,
+        sourceType: "module",
+      },
+    },
+  ],
   ignorePatterns: [],
   rules: {},
 }
