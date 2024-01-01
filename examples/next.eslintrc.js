@@ -11,7 +11,7 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
-      extends: ["eslint-config-gev/ts", "eslint-config-gev/next"],
+      extends: ["eslint-config-gev/next"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
         tsconfigRootDir: __dirname,
