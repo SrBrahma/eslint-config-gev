@@ -8,7 +8,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["eslint-config-gev/js"],
+  extends: ["eslint-config-gev/next"],
   ignorePatterns: [],
   rules: {},
 }
