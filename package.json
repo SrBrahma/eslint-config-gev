@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/SrBrahma/eslint-config#readme",
   "dependencies": {
+    "@next/eslint-plugin-next": "^14.0.4",
     "@rushstack/eslint-patch": "1.6.0",
     "@stylistic/eslint-plugin": "1.4.1",
     "@typescript-eslint/eslint-plugin": "6.13.1",

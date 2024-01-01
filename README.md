@@ -9,13 +9,13 @@
 
 Curated ESLint configs that I've been improving over the years. All my projects use this.
 
-Since v4, **this now should be used together with Biome**. Internally it uses my other package, the [eslint-config-biome](https://github.com/SrBrahma/eslint-config-biome). If you want to stay without Biome, use v3 together with Prettier (I recommend [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev))
+Since v4, **this should be used together with Biome**. Internally it uses my other package, the [eslint-config-biome](https://github.com/SrBrahma/eslint-config-biome). If you want to stay without Biome, use v3 together with Prettier (I recommend [prettier-config-gev](https://github.com/SrBrahma/prettier-config-gev))
 
 ## 💿 Install:
 
 ### Automatically
 
-Run `npx eslint-config-gev <flavor>`, being flavor one of the following: `ts, react-ts, react-native-ts, js, react-js, react-native-js`. This list and further options can be seen by running `npx eslint-config-gev --help`.
+Run `npx eslint-config-gev <flavor>`, being flavor one of the following: `ts, next, react, react-native, js`. This list and further options can be seen by running `npx eslint-config-gev --help`.
 
 This command adds the required package to your package.json and sets up the `.eslintrc.cjs`.
 
