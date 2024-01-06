@@ -10,7 +10,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime", // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md#when-not-to-use-it
     "./ts.js",
-    "./removeFormatter/react.js",
   ],
   rules: {
     "react/prop-types": "off",

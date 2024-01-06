@@ -7,7 +7,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "./js.js",
     "./ts-extensions.js", // Automatic JS to TS rules! I love doing smart stuff! :)
-    "./removeFormatter/ts.js",
     "biome",
   ],
   rules: {

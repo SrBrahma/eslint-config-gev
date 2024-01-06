@@ -2,9 +2,9 @@
   "typescript.preferences.importModuleSpecifierEnding": "js",
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports.biome": true,
-    "quickfix.biome": true
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "quickfix.biome": "explicit"
   },
   "editor.defaultFormatter": "biomejs.biome"
 }

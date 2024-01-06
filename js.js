@@ -1,21 +1,43 @@
 module.exports = {
   plugins: [
-    "no-autofix",
-    "simple-import-sort",
-    "import",
     "unused-imports",
     "no-relative-import-paths",
     "jsdoc",
     "prefer-arrow-functions",
     "@stylistic",
     "require-extensions",
+    "json-files",
   ],
   extends: [
     "eslint:recommended",
     "plugin:jsdoc/recommended",
-    "./removeFormatter/js.js",
     "plugin:require-extensions/recommended",
     "biome",
+  ],
+  overrides: [
+    {
+      files: ["package.json"],
+      plugins: ["json-files"],
+      rules: {
+        "json-files/sort-package-json": [
+          "warn",
+          {
+            sortOrder: [
+              "name",
+              "version",
+              "description",
+              "author",
+              "main",
+              "bin",
+              "scripts",
+              "files",
+              "license",
+              "homepage",
+            ],
+          },
+        ],
+      },
+    },
   ],
   rules: {
     /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
@@ -26,14 +48,6 @@ module.exports = {
 
     /** https://eslint.org/docs/rules/require-await */
     "require-await": "warn",
-
-    /**
-     * Still warn about using let instead of const, but won't auto-fix (no more ctrl+s fixing it!)
-     * https://eslint.org/docs/rules/prefer-const
-     * https://www.npmjs.com/package/eslint-plugin-no-autofix
-     */
-    "prefer-const": "off", // Disable the default rule
-    "no-autofix/prefer-const": "warn", // Use the no-autofix
 
     /**
      * Disallow Number Literals That Lose Precision
@@ -65,52 +79,6 @@ module.exports = {
     ],
 
     /**
-     * Sort imports and exports
-     * https://github.com/lydell/eslint-plugin-simple-import-sort
-     * https://github.com/lydell/eslint-plugin-simple-import-sort/issues/83#issue-976190535
-     */
-    "simple-import-sort/imports": [
-      "warn",
-      {
-        groups: [
-          [
-            "^\\u0000", // Side effect imports.
-            "^react", // `react` related packages come first.
-            // Node.js builtins.
-            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
-            "^@?\\w",
-            "~", // Imports with path alias
-            "^\\.\\.(?!/?$)",
-            "^\\.\\./?$", // Parent imports. Put `..` last.
-            "^\\./(?=.*/)(?!/?$)",
-            "^\\.(?!/?$)",
-            "^\\./?$", // Other relative imports. Put same-folder imports and `.` last.
-            "^.+\\.s?css$", // Style imports.
-          ],
-        ],
-      },
-    ],
-
-    /**
-     * Sorts exports
-     * https://github.com/lydell/eslint-plugin-simple-import-sort
-     */
-    "simple-import-sort/exports": "warn",
-
-    /**
-     * 2 blank lines after imports block.
-     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
-     */
-    "import/newline-after-import": [
-      "warn",
-      {
-        count: 1, // Can't be >1 as would conflict with prettier
-        // Not yet released. (currently 2.26.0)
-        // "considerComments": true
-      },
-    ],
-
-    /**
      * Newline after class members.
      * https://eslint.org/docs/latest/rules/lines-between-class-members
      */
@@ -121,12 +89,6 @@ module.exports = {
         exceptAfterSingleLine: true,
       },
     ],
-
-    /**
-     * Merges multiple imports statements from same module.
-     * https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md
-     */
-    "import/no-duplicates": "warn",
 
     /**
      * Automatically removes unused imports. Saves time! But may be annoying! I re-enabled after moving it to limbo.

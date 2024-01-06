@@ -3,6 +3,13 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+
+## 4.2.0
+
+- Upgraded `eslint-config-biome`; removed internals no longer required due to this upgrade.
+- Improved package.json sorting.
+- `next` now extends `plugin:@next/next/core-web-vitals`.
+
 ## 4.1.0-5
 
 - Add next flavor
