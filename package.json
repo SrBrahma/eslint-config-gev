@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-gev",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Curated ESLint configs for TS, JS, Next, React, and React Native projects",
   "author": "SrBrahma",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "format:check": "biome check . && eslint . package.json",
     "pre-commit": "bun format:check && bun test && bun start && git add -A",
     "prepare": "husky install",
-    "start": "bun  scripts/makeTsExtensions.ts",
+    "start": "bun scripts/makeTsExtensions.ts",
     "test:watch": "bun test --watch",
     "watch": "bun --watch scripts/makeTsExtensions.ts"
   },

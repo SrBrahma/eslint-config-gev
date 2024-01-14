@@ -6,9 +6,16 @@ module.exports = {
     "plugin:@typescript-eslint/recommended", // After the others https://stackoverflow.com/a/61555310
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "./js.js",
-    "./ts-extensions.js", // Automatic JS to TS rules! I love doing smart stuff! :)
-    "biome",
+    "./ts-extensions.js",
   ],
+
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      extends: ["biome"],
+    },
+  ],
+
   rules: {
     // Allows explicitating implicit types, like `const a: number = 10`
     "@typescript-eslint/no-inferrable-types": "off",

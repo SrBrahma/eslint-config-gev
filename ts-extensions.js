@@ -7,18 +7,12 @@
 
 module.exports = {
   rules: {
-    "default-param-last": "off",
-    "@typescript-eslint/default-param-last": ["error"],
-
     "lines-between-class-members": "off",
     "@typescript-eslint/lines-between-class-members": [
       "warn",
       "always",
       { exceptAfterSingleLine: true },
     ],
-
-    "no-loss-of-precision": "off",
-    "@typescript-eslint/no-loss-of-precision": ["error"],
 
     "no-throw-literal": "off",
     "@typescript-eslint/no-throw-literal": ["warn"],

@@ -12,7 +12,6 @@ module.exports = {
     "eslint:recommended",
     "plugin:jsdoc/recommended",
     "plugin:require-extensions/recommended",
-    "biome",
   ],
   overrides: [
     {
@@ -37,6 +36,10 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      files: ["*.js", "*.jsx"],
+      extends: ["biome"],
     },
   ],
   rules: {

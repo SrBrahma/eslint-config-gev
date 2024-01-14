@@ -4,6 +4,10 @@
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
 
+## 4.2.1
+
+- Fixed `biome` not being in overrides
+
 ## 4.2.0
 
 - Upgraded `eslint-config-biome`; removed internals no longer required due to this upgrade.
