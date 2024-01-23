@@ -2,7 +2,6 @@
 
 [![npm](https://img.shields.io/npm/v/eslint-config-gev)](https://www.npmjs.com/package/eslint-config-gev)
 [![npm](https://img.shields.io/npm/dw/eslint-config-gev)](https://www.npmjs.com/package/eslint-config-gev)
-[![bun](https://github.com/SrBrahma/eslint-config-gev/blob/main/bun.png?raw=true)](https://bun.sh/)
 </div>
 
 # eslint-config-gev
