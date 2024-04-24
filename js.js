@@ -5,13 +5,11 @@ module.exports = {
     "jsdoc",
     "prefer-arrow-functions",
     "@stylistic",
-    "require-extensions",
     "json-files",
   ],
   extends: [
     "eslint:recommended",
     "plugin:jsdoc/recommended",
-    "plugin:require-extensions/recommended",
   ],
   overrides: [
     {
