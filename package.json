@@ -8,13 +8,16 @@
   "scripts": {
     "format": "biome check --apply-unsafe . && eslint --fix . package.json",
     "format:check": "biome check . && eslint . package.json",
-    "pre-commit": "bun format:check && bun test && bun start && git add -A",
+    "pre-commit": "bun format && bun test && bun start && git add -A",
     "prepare": "husky install",
     "start": "bun scripts/makeTsExtensions.ts",
     "test:watch": "bun test --watch",
     "watch": "bun --watch scripts/makeTsExtensions.ts"
   },
-  "files": ["*.js", "examples/*.js"],
+  "files": [
+    "*.js",
+    "examples/*.js"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/SrBrahma/eslint-config-gev#readme",
   "keywords": [

@@ -7,10 +7,7 @@ module.exports = {
     "@stylistic",
     "json-files",
   ],
-  extends: [
-    "eslint:recommended",
-    "plugin:jsdoc/recommended",
-  ],
+  extends: ["eslint:recommended", "plugin:jsdoc/recommended"],
   overrides: [
     {
       files: ["package.json"],
