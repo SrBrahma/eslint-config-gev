@@ -1,6 +1,6 @@
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
 require("@rushstack/eslint-patch/modern-module-resolution")
-const path = require("path")
+const path = require("node:path")
 
 module.exports = {
   root: true,

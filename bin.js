@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const { defineCommand, runMain } = require("citty")
-const path = require("path")
-const fs = require("fs")
+const path = require("node:path")
+const fs = require("node:fs")
 
 const pkgJson = require("./package.json")
 
