@@ -3,6 +3,10 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 4.4.0
+
+- Upgrade deps
+
 ## 4.3.0
 
 - Removed `require-extensions` plugin. Bun ftw!
