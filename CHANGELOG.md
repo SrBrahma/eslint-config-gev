@@ -3,9 +3,14 @@
 > Changes to the `js` flavor are also applied to all the other flavors.
 > Changes to the `ts` flavor are also applied to `react` and `react-native` flavors.
 
+## 4.5.0
+
+- Added `"react-refresh/only-export-components"`
+- Upgraded deps
+
 ## 4.4.0
 
-- Upgrade deps
+- Upgraded deps
 
 ## 4.3.0
 
