@@ -1,11 +1,9 @@
 module.exports = {
   plugins: ["@typescript-eslint"],
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended", // After the others https://stackoverflow.com/a/61555310
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "./js.js",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
     "./ts-extensions.js",
   ],
 

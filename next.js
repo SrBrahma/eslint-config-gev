@@ -1,4 +1,3 @@
 module.exports = {
-  plugins: ["@typescript-eslint"],
-  extends: ["plugin:@next/next/core-web-vitals", "./react.js"],
+  extends: ["next/core-web-vitals", "next/typescript", "./react.js"],
 }
