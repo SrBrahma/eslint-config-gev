@@ -1,6 +1,5 @@
-module.exports = {
-  "react/prop-types": "off",
-  "react/display-name": "off",
+/** @type {import("eslint").Linter.Config.HasRules} */
+const config = {
   /**
    * Enable deps autofix. I've only had infinite loops once, and the autofix was off,
    * I just accept the suggestions and don't spend time analysing it. Rare to happen, easy to notice.
@@ -37,3 +36,5 @@ module.exports = {
    */
   "react/jsx-fragments": "warn",
 }
+
+module.exports = config

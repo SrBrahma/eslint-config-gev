@@ -1,18 +1,19 @@
 {
   "name": "eslint-config-gev",
-  "version": "4.6.2",
+  "version": "4.7.0",
   "description": "Curated ESLint configs for TS, JS, Next, React, and React Native projects",
   "author": "SrBrahma",
   "main": "index.js",
   "bin": "bin.js",
   "scripts": {
-    "format": "biome check --unsafe --fix . && eslint --fix . package.json",
-    "format:check": "biome check --unsafe . && eslint . package.json",
+    "format": "biome check --unsafe --fix . && eslint --fix .",
+    "format:check": "biome check --unsafe . && eslint .",
     "pre-commit": "bun format && bun start && bun test && git add -A",
     "prepare": "bunx husky",
     "start": "bun scripts/makeTsExtensions.ts",
     "test:watch": "bun test --watch",
-    "watch": "bun --watch scripts/makeTsExtensions.ts"
+    "watch": "bun --watch scripts/makeTsExtensions.ts",
+    "update-deps": "bunx npm-check-updates -i"
   },
   "files": [
     "*.js",
@@ -40,7 +41,6 @@
     "eslint-config-biome": "^1.9.3",
     "eslint-config-next": "^15.0.3",
     "eslint-plugin-jsdoc": "48.2.6",
-    "eslint-plugin-json-files": "^4.4.2",
     "eslint-plugin-no-autofix": "2.1.0",
     "eslint-plugin-no-relative-import-paths": "1.5.5",
     "eslint-plugin-prefer-arrow-functions": "3.4.1",

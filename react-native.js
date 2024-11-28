@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import("eslint").Linter.Config} */
+const config = {
   plugins: ["react-native"],
   extends: ["./react.js"],
   rules: {
@@ -15,3 +16,5 @@ module.exports = {
     "react-native/no-single-element-style-arrays": "warn",
   },
 }
+
+module.exports = config

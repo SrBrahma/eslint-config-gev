@@ -2,7 +2,8 @@
 require("@rushstack/eslint-patch/modern-module-resolution")
 const path = require("node:path")
 
-module.exports = {
+/** @type {import("eslint").Linter.Config} */
+const config = {
   root: true,
   env: {
     es2021: true,
@@ -23,3 +24,5 @@ module.exports = {
     },
   ],
 }
+
+module.exports = config

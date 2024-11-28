@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import("eslint").Linter.Config} */
+const config = {
   plugins: ["@typescript-eslint"],
   extends: [
     "./js.js",
@@ -80,17 +81,6 @@ module.exports = {
     "@typescript-eslint/restrict-plus-operands": "off",
 
     /**
-     * Improves tree-shaking and improves TS optimization.
-     * https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/consistent-type-imports.md
-     */
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      {
-        disallowTypeAnnotations: false, // Allows import('foo').Bar. Useful in global.d.ts.
-      },
-    ],
-
-    /**
      * Remove unnecessary boolean literal conditionals`.
      * https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
      */
@@ -108,7 +98,6 @@ module.exports = {
     "no-undef": "off",
 
     /** -=-=-=- Disallow dangerous stuff, converts recommended warn to error -=-=-=- */
-    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-unsafe-assignment": "error",
     "@typescript-eslint/no-unsafe-return": "error",
     "@typescript-eslint/no-unsafe-member-access": "error",
@@ -127,14 +116,14 @@ module.exports = {
      * https://typescript-eslint.io/rules/prefer-string-starts-ends-with/
      */
     "@typescript-eslint/prefer-string-starts-ends-with": "warn",
+
+    "@typescript-eslint/strict-boolean-expressions": [
+      "warn",
+      {
+        allowNullableBoolean: true,
+      },
+    ],
   },
 }
 
-// Limbo. Disabled, but may be reenabled at some point.
-// "@typescript-eslint/explicit-module-boundary-types": "off", // Removes the need of exported functions to have explicit rtn type
-// TS doesn't allow "== false" yet (4.1.2), so, this rule isn't good enough to test for falsy values.
-// https://github.com/microsoft/TypeScript/issues/26592#issuecomment-731608973
-// "@typescript-eslint/strict-boolean-expressions": ["warn", {
-//   allowNullableBoolean: true,
-// }],
-//
+module.exports = config

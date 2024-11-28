@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import("eslint").Linter.Config} */
+const config = {
   settings: {
     react: {
       version: "detect", // To remove the warning.
@@ -12,6 +13,7 @@ module.exports = {
     "./ts.js",
   ],
   rules: {
+    "react/prop-types": "off",
     ...require("./shared-react.js"),
     /** https://www.npmjs.com/package/eslint-plugin-react-refresh */
     "react-refresh/only-export-components": [
@@ -21,3 +23,5 @@ module.exports = {
     ],
   },
 }
+
+module.exports = config

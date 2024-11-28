@@ -75,11 +75,13 @@ const writeFile = (rules: Array<RuleAndValue>) => {
   * This disables the JS rules and have their values in the TS corresponding rules.
   */
 
- module.exports = {
+ /** @type {import("eslint").Linter.Config} */
+const config = {
    rules: {
 ${rules.map((r) => `    ${getReplaceString(r)}`).join("\n\n")}
    }
  }
+module.exports = config;
  `,
   )
 }
@@ -90,7 +92,7 @@ const main = () => {
   writeFile(rules)
 
   Bun.spawnSync(
-    ["bunx", "@biomejs/biome", "check", outFilePath, "--apply-unsafe"],
+    ["bunx", "@biomejs/biome", "check", outFilePath, "--unsafe", "--fix"],
     {
       cwd: rootPath,
       stderr: "inherit",

@@ -1,37 +1,14 @@
-module.exports = {
+/** @type {import("eslint").Linter.Config} */
+const config = {
   plugins: [
     "unused-imports",
     "no-relative-import-paths",
     "jsdoc",
     "prefer-arrow-functions",
     "@stylistic",
-    "json-files",
   ],
   extends: ["eslint:recommended", "plugin:jsdoc/recommended"],
   overrides: [
-    {
-      files: ["package.json"],
-      plugins: ["json-files"],
-      rules: {
-        "json-files/sort-package-json": [
-          "warn",
-          {
-            sortOrder: [
-              "name",
-              "version",
-              "description",
-              "author",
-              "main",
-              "bin",
-              "scripts",
-              "files",
-              "license",
-              "homepage",
-            ],
-          },
-        ],
-      },
-    },
     {
       files: ["*.js", "*.jsx"],
       extends: ["biome"],
@@ -40,9 +17,6 @@ module.exports = {
   rules: {
     /** ignoreRestSiblings: Ignore {unusedProp, ...rest} */
     "no-unused-vars": ["warn", { ignoreRestSiblings: true }],
-
-    /** Changes from error to warn, and allows `while (true)`. */
-    "no-constant-condition": ["warn", { checkLoops: false }],
 
     /** https://eslint.org/docs/rules/require-await */
     "require-await": "warn",
@@ -55,16 +29,8 @@ module.exports = {
 
     /** Warn about unreachable code. */
     "no-unreachable-loop": "warn",
-    "no-unreachable": "warn",
-    /** Warn about empty blocks. Recommended was 'error'. */
-    "no-empty": "warn",
     /** Disable error about empty functions. This is good to allow .catch(() => {}) */
     "no-empty-function": "off",
-    /**
-     * Default recommended is error. Changed it to warn to avoid confusions, as I had.
-     * https://eslint.org/docs/rules/no-useless-catch
-     */
-    "no-useless-catch": "warn",
 
     /**
      * Space after comment.
@@ -109,20 +75,15 @@ module.exports = {
      */
     "no-throw-literal": "warn",
 
-    /** Disallow var keyword */
-    "no-var": "warn",
-
-    /**
-     * Enforce default parameters to be last
-     *
-     * https://eslint.org/docs/latest/rules/default-param-last
-     */
-    "default-param-last": "error",
-
     /**
      * https://github.com/JamieMason/eslint-plugin-prefer-arrow-functions
      */
-    "prefer-arrow-functions/prefer-arrow-functions": ["warn"],
+    "prefer-arrow-functions/prefer-arrow-functions": [
+      "warn",
+      {
+        allowNamedFunctions: true,
+      },
+    ],
     /** https://github.com/gajus/eslint-plugin-jsdoc */
     "jsdoc/require-jsdoc": "off",
     "jsdoc/require-param": "off",
@@ -149,7 +110,7 @@ module.exports = {
      * https://eslint.org/docs/latest/rules/arrow-body-style
      */
     "arrow-body-style": "warn",
-    /** https://eslint.org/docs/latest/rules/prefer-template */
-    "prefer-template": "warn",
   },
 }
+
+module.exports = config

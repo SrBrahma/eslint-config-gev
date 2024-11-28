@@ -5,7 +5,8 @@
  * This disables the JS rules and have their values in the TS corresponding rules.
  */
 
-module.exports = {
+/** @type {import("eslint").Linter.Config} */
+const config = {
   rules: {
     "lines-between-class-members": "off",
     "@typescript-eslint/lines-between-class-members": [
@@ -24,3 +25,4 @@ module.exports = {
     "@typescript-eslint/require-await": ["warn"],
   },
 }
+module.exports = config

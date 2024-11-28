@@ -12,8 +12,6 @@ Since v4, **this should be used together with Biome**. Internally it uses my oth
 
 ## 💿 Install:
 
-### Automatically
-
 Run `npx eslint-config-gev <flavor>`, being flavor one of the following: `ts, next, react, react-native, js`. This list and further options can be seen by running `npx eslint-config-gev --help`.
 
 This command adds the required package to your package.json and sets up the `.eslintrc.cjs`.
