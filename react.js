@@ -13,5 +13,11 @@ module.exports = {
   ],
   rules: {
     ...require("./shared-react.js"),
+    /** https://www.npmjs.com/package/eslint-plugin-react-refresh */
+    "react-refresh/only-export-components": [
+      "warn",
+      // Only Vite supports this.
+      { allowConstantExport: true },
+    ],
   },
 }

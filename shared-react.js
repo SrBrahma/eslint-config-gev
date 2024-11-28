@@ -36,11 +36,4 @@ module.exports = {
    * https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md
    */
   "react/jsx-fragments": "warn",
-
-  /** https://www.npmjs.com/package/eslint-plugin-react-refresh */
-  "react-refresh/only-export-components": [
-    "warn",
-    // Only Vite supports this.
-    { allowConstantExport: true },
-  ],
 }
