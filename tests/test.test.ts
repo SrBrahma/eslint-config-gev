@@ -2,7 +2,7 @@ import { test } from "bun:test"
 import path from "node:path"
 import { $ } from "bun"
 
-const flavors = ["index", "ts", "js", "react", "react-native"]
+const flavors = ["index", "ts", "js", "react", "next", "react-native"]
 
 $.cwd(path.resolve(__dirname))
 
