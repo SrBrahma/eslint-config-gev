@@ -1,5 +1,8 @@
 /** @type {import("eslint").Linter.Config} */
 const config = {
+  parserOptions: {
+    warnOnUnsupportedTypeScriptVersion: false,
+  },
   plugins: ["@typescript-eslint"],
   extends: [
     "./js.js",
