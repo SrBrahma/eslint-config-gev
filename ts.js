@@ -119,13 +119,6 @@ const config = {
      * https://typescript-eslint.io/rules/prefer-string-starts-ends-with/
      */
     "@typescript-eslint/prefer-string-starts-ends-with": "warn",
-
-    "@typescript-eslint/strict-boolean-expressions": [
-      "warn",
-      {
-        allowNullableBoolean: true,
-      },
-    ],
   },
 }
 
