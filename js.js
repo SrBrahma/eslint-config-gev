@@ -104,6 +104,11 @@ const config = {
       { blankLine: "always", prev: "*", next: "function" },
       // Line before type/interface (TS)
       { blankLine: "always", prev: "*", next: ["interface", "type"] },
+      // Line after import block
+      { blankLine: "always", prev: "import", next: "*" },
+      { blankLine: "any", prev: "import", next: "import" },
+      // Line before export block
+      { blankLine: "always", prev: "*", next: "export" },
     ],
     /**
      * Remove wrapping braces if they can be omitted
