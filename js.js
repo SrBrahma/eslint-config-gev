@@ -115,6 +115,8 @@ const config = {
      * https://eslint.org/docs/latest/rules/arrow-body-style
      */
     "arrow-body-style": "warn",
+
+    "import/no-anonymous-default-export": "off",
   },
 }
 
