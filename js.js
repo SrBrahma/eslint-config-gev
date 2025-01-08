@@ -6,8 +6,19 @@ const config = {
     "jsdoc",
     "prefer-arrow-functions",
     "@stylistic",
+    "import",
   ],
-  extends: ["eslint:recommended", "plugin:jsdoc/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:jsdoc/recommended",
+    "plugin:import/typescript",
+  ],
+  settings: {
+    "import/resolver": {
+      typescript: true,
+      node: true,
+    },
+  },
   overrides: [
     {
       files: ["*.js", "*.jsx"],
@@ -55,7 +66,7 @@ const config = {
     ],
 
     /**
-     * Automatically removes unused imports. Saves time! But may be annoying! I re-enabled after moving it to limbo.
+     * Automatically removes unused imports. Saves time!
      *
      * https://github.com/sweepline/eslint-plugin-unused-imports
      */
@@ -117,6 +128,7 @@ const config = {
     "arrow-body-style": "warn",
 
     "import/no-anonymous-default-export": "off",
+    "import/no-unresolved": "error",
   },
 }
 
