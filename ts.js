@@ -119,6 +119,12 @@ const config = {
      * https://typescript-eslint.io/rules/prefer-string-starts-ends-with/
      */
     "@typescript-eslint/prefer-string-starts-ends-with": "warn",
+    /**
+     * Requires all the switch's possibilities to be defined.
+     *
+     * https://typescript-eslint.io/rules/switch-exhaustiveness-check/
+     */
+    "@typescript-eslint/switch-exhaustiveness-check": "warn",
   },
 }
 
